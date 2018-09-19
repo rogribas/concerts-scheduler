@@ -122,10 +122,13 @@ EVENT_ID = 0
 def get_day_links(day_id, days):
     day_links = ''
     for idx, day in enumerate(days):
+        str_idx = str(idx)
+        if idx == 0:
+            str_idx = ''
         if idx == day_id:
-            day_links += '<a href="./index'+str(idx)+'.html"><button disabled>'+day+'</button></a>'
+            day_links += '<a href="./index'+str_idx+'.html"><button disabled>'+day+'</button></a>'
         else:
-            day_links += '<a href="./index'+str(idx)+'.html"><button>'+day+'</button></a>'
+            day_links += '<a href="./index'+str_idx+'.html"><button>'+day+'</button></a>'
 
     return day_links
 
@@ -136,7 +139,11 @@ def create_day_html(title, stages, day_id, days):
     stages_html = '\n'.join(stages)
     day_html = get_raw_day(title, num_stages, day_links, stages_html)
     # Create day file
-    f_day = open('./docs/index'+str(DAY_ID)+'.html', 'w')
+    if DAY_ID != 0:
+        str_day_id = str(DAY_ID)
+    else:
+        str_day_id = ''
+    f_day = open('./docs/index'+str_day_id+'.html', 'w')
     f_day.write(day_html)
     f_day.close()
     DAY_ID += 1
