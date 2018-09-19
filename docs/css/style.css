@@ -296,7 +296,6 @@ button {
   /* this is used to set a background color for the event and the modal window */
   background: #577F92;
 }
-
 .cd-schedule .single-event[data-event="event-1"]:hover {
   background: #618da1;
 }
@@ -305,59 +304,52 @@ button {
 .cd-schedule [data-event="event-2"] .header-bg {
   background: #443453;
 }
-
 .cd-schedule .single-event[data-event="event-2"]:hover {
   background: #513e63;
 }
 
-.cd-schedule .single-event[data-event="event-3"],
-.cd-schedule [data-event="event-3"] .header-bg {
-  background: #A2B9B2;
-}
-
-.cd-schedule .single-event[data-event="event-3"]:hover {
-  background: #b1c4be;
-}
-
 .cd-schedule .single-event[data-event="event-4"],
 .cd-schedule [data-event="event-4"] .header-bg {
-  background: #f6b067;
+  background: #074F82;
+}
+.cd-schedule .single-event[data-event="event-4"]:hover {
+  background: #016d81;
 }
 
-.cd-schedule .single-event[data-event="event-4"]:hover {
-  background: #f7bd7f;
+.cd-schedule .single-event[data-event="event-3"],
+.cd-schedule [data-event="event-3"] .header-bg {
+  background: #359A82;
+}
+.cd-schedule .single-event[data-event="event-3"]:hover {
+  background: #5db49f;
 }
 
 .cd-schedule .single-event[data-event="event-5"],
 .cd-schedule [data-event="event-5"] .header-bg {
-  /* this is used to set a background color for the event and the modal window */
-  background: #577F92;
+  background: #f6b067;
 }
 .cd-schedule .single-event[data-event="event-5"]:hover {
-  background: #618da1;
+  background: #f7bd7f;
 }
 
 .cd-schedule .single-event[data-event="event-6"],
 .cd-schedule [data-event="event-6"] .header-bg {
-  /* this is used to set a background color for the event and the modal window */
-  background: #50AF92;
+  background: #A2B9B2;
 }
 .cd-schedule .single-event[data-event="event-6"]:hover {
-  background: #50Ada1;
+  background: #b1c4be;
 }
 
 .cd-schedule .single-event[data-event="event-7"],
 .cd-schedule [data-event="event-7"] .header-bg {
-  /* this is used to set a background color for the event and the modal window */
-  background: #074F82;
+  background: #896682;
 }
 .cd-schedule .single-event[data-event="event-7"]:hover {
-  background: #016d81;
+  background: #9a7a94;
 }
 
 .cd-schedule .single-event[data-event="event-8"],
 .cd-schedule [data-event="event-8"] .header-bg {
-  /* this is used to set a background color for the event and the modal window */
   background: #577F92;
 }
 .cd-schedule .single-event[data-event="event-8"]:hover {
@@ -366,7 +358,6 @@ button {
 
 .cd-schedule .single-event[data-event="event-9"],
 .cd-schedule [data-event="event-9"] .header-bg {
-  /* this is used to set a background color for the event and the modal window */
   background: #577F92;
 }
 .cd-schedule .single-event[data-event="event-9"]:hover {
@@ -375,7 +366,6 @@ button {
 
 .cd-schedule .single-event[data-event="event-10"],
 .cd-schedule [data-event="event-10"] .header-bg {
-  /* this is used to set a background color for the event and the modal window */
   background: #577F92;
 }
 .cd-schedule .single-event[data-event="event-10"]:hover {
@@ -384,7 +374,6 @@ button {
 
 .cd-schedule .single-event[data-event="event-11"],
 .cd-schedule [data-event="event-11"] .header-bg {
-  /* this is used to set a background color for the event and the modal window */
   background: #577F92;
 }
 .cd-schedule .single-event[data-event="event-11"]:hover {
@@ -393,7 +382,6 @@ button {
 
 .cd-schedule .single-event[data-event="event-12"],
 .cd-schedule [data-event="event-12"] .header-bg {
-  /* this is used to set a background color for the event and the modal window */
   background: #577F92;
 }
 .cd-schedule .single-event[data-event="event-12"]:hover {
@@ -402,7 +390,6 @@ button {
 
 .cd-schedule .single-event[data-event="event-13"],
 .cd-schedule [data-event="event-13"] .header-bg {
-  /* this is used to set a background color for the event and the modal window */
   background: #577F92;
 }
 .cd-schedule .single-event[data-event="event-13"]:hover {
@@ -411,7 +398,6 @@ button {
 
 .cd-schedule .single-event[data-event="event-14"],
 .cd-schedule [data-event="event-14"] .header-bg {
-  /* this is used to set a background color for the event and the modal window */
   background: #577F92;
 }
 .cd-schedule .single-event[data-event="event-14"]:hover {
@@ -420,7 +406,6 @@ button {
 
 .cd-schedule .single-event[data-event="event-15"],
 .cd-schedule [data-event="event-14"] .header-bg {
-  /* this is used to set a background color for the event and the modal window */
   background: #577F92;
 }
 .cd-schedule .single-event[data-event="event-15"]:hover {

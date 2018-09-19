@@ -156,7 +156,7 @@ def get_event_info(event):
     event_end = datetime.strptime(event_start, '%H:%M')
     event_end = event_end + timedelta(minutes=45)
     event_end = event_end.strftime('%H:%M')
-    event_youtube = event['link']
+    event_youtube = event['link'] if event['link'] else ''
     event_name = event['event']
     return event_start, event_end, event_name, event_youtube
 

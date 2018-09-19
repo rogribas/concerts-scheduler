@@ -1,5 +1,17 @@
-- Divendres:
+- Divendres 21:
     - Plaça de Joan Coromines:
+        - event: CABOT
+          time: '18:45'
+          link:
+          info:
+        - event: L'HOME INVENT
+          time: '19:30'
+          link:
+          info:
+        - event: PUBILLES NINJA
+          time: '20:15'
+          link:
+          info:
         - event: BALAGO
           time: '21:00'
           link: https://www.youtube.com/embed/lOA-m6gStbg
@@ -38,8 +50,59 @@
           time: '01:00'
           link: https://www.youtube.com/embed/T76GB4ZO6wQ
           info:
-- Dissabte:
+    - Moll de la Fusta:
+        - event: NAKANY KANTÉ
+          time: '22:00'
+          link:
+          info:
+        - event: ORCHESTRA BAOBAB
+          time: '23:45'
+          link:
+          info:
+        - event: SUN KUTI & EGYPT 80
+          time: '01:30'
+          link:
+          info:
+    - Passeig Lluís Companys:
+        - event: NIL MOLINER
+          time: '20:30'
+          link:
+          info:
+        - event: ANIMAL
+          time: '21:30'
+          link:
+          info:
+        - event: RAMÓN MIRABET
+          time: '22:45'
+          link:
+          info:
+        - event: BUHOS
+          time: '00:30'
+          link:
+          info:
+    - Av. Maria Cristina:
+        - event: LAKASTE
+          time: '21:00'
+          link:
+          info:
+        - event: AMAIA MONTERO
+          time: '22:30'
+          link:
+          info:
+        - event: MANU GUIX
+          time: '01:00'
+          link:
+          info:
+- Dissabte 22:
     - Plaça de Joan Coromines:
+        - event: DANAE & GOLO
+          time: '18:45'
+          link:
+          info:
+        - event: PAULA PESO
+          time: '19:30'
+          link:
+          info:
         - event: SURMA
           time: '21:00'
           link: https://www.youtube.com/embed/wlTbkMFWu78
@@ -78,7 +141,58 @@
           time: '01:00'
           link: https://www.youtube.com/embed/-KqNLAnU6Mc
           info:
-- Diumenge:
+    - Moll de la Fusta:
+        - event: FUR
+          time: '21:00'
+          link:
+          info:
+        - event: DOCTOR CALYPSO
+          time: '22:00'
+          link:
+          info:
+        - event: GREEN VALLEY
+          time: '23:45'
+          link:
+          info:
+        - event: ALEX BASS & THE SAME SONG BAND
+          time: '01:30'
+          link:
+          info:
+    - Platja del Bogatell:
+        - event: LA IAIA
+          time: '21:30'
+          link:
+          info:
+        - event: LOVE OF LESBIAN
+          time: '23:30'
+          link:
+          info:
+        - event: FUNDACIÓN TONY MANERO
+          time: '01:30'
+          link:
+          info:
+    - Av. Maria Cristina:
+        - event: HALLDOR MAR
+          time: '21:00'
+          link:
+          info:
+        - event: ISLA IGLÚ
+          time: '22:00'
+          link:
+          info:
+        - event: SENSE SAL
+          time: '23:15'
+          link:
+          info:
+        - event: OBESES
+          time: '00:30'
+          link:
+          info:
+        - event: DJs EUROPA FM
+          time: '02:15'
+          link:
+          info:
+- Diumenge 23:
     - Plaça de Joan Coromines:
         - event: FERRAN PALAU
           time: '21:00'
@@ -160,7 +274,58 @@
           time: '21:15'
           link: https://www.youtube.com/embed/LMb4GQpiqlU
           info:
-- Diumenge:
+    - Moll de la Fusta:
+        - event: PANTANITO
+          time: '22:00'
+          link:
+          info:
+        - event: EL KANKA
+          time: '23:45'
+          link:
+          info:
+        - event: SABOR DE GRÀCIA
+          time: '02:00'
+          link:
+          info:
+    - Platja del Bogatell:
+        - event: DOCTOR PRATS
+          time: '21:00'
+          link:
+          info:
+        - event: ELS CATARRES
+          time: '23:45'
+          link:
+          info:
+        - event: GERTRUDIS
+          time: '01:00'
+          link:
+          info:
+    - Av. Maria Cristina:
+        - event: FILIPPO LANDINI
+          time: '20:30'
+          link:
+          info:
+        - event: SIDECARS
+          time: '21:15'
+          link:
+          info:
+        - event: CELTAS CORTOS
+          time: '22:35'
+          link:
+          info:
+        - event: PROJECTE MUT
+          time: '23:55'
+          link:
+          info:
+        - event: LA PEGATINA
+          time: '00:50'
+          link:
+          info:
+        - event: DJs LOS 40
+          time: '02:00'
+          link:
+          info:
+- Dilluns 24:
     - Antiga Fàbrica Estrella Damm:
         - event: HAZTE LAPÓN
           time: '15:45'
@@ -177,4 +342,18 @@
         - event: LA PLATA
           time: '20:15'
           link: https://www.youtube.com/embed/BTruEEx-jmM
+          info:
+    - Moll de la Fusta:
+        - event: DROP COLLECTIVE
+          time: '17:00'
+          link:
+          info:
+    - Plaça Reial:
+        - event: HAVANERES, NEUS MAR
+          time: '17:00'
+          link:
+          info:
+        - event: HAVANERES, ARJAU
+          time: '19:00'
+          link:
           info:
