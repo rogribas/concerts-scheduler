@@ -136,7 +136,7 @@ def create_day_html(title, stages, day_id, days):
     stages_html = '\n'.join(stages)
     day_html = get_raw_day(title, num_stages, day_links, stages_html)
     # Create day file
-    f_day = open('./files/index'+str(DAY_ID)+'.html', 'w')
+    f_day = open('./docs/index'+str(DAY_ID)+'.html', 'w')
     f_day.write(day_html)
     f_day.close()
     DAY_ID += 1
@@ -159,7 +159,7 @@ def get_create_event_html(event_info, stage_id):
     event_start, event_end, event_name, event_youtube = get_event_info(event_info)
 
     # Create event file
-    f_event = open('./files/event-'+str(EVENT_ID)+'.html', 'w')
+    f_event = open('./docs/event-'+str(EVENT_ID)+'.html', 'w')
     f_event.write('''<div class="event-info">
     	<div width="500px">
     		<iframe class="youtube-video" width="420" height="315" z-index="55555"
