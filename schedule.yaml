@@ -391,12 +391,6 @@
           link:
           group: "BAM"
           info:
-    - Plaça Major de Nou Barris:
-        - event: Orquestra Simfònica VOZES
-          time: '19:00'
-          link:
-          group: "Música Mercè"
-          info:
     - Avinguda de la Catedral:
         - event: Luis Pastor
           time: '21:00'
@@ -443,4 +437,4 @@
           time: '01:50'
           link:
           group: "Les ràdios de la Mercè"
-          info:
+          info: 
