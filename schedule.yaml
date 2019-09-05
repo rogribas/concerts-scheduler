@@ -1,359 +1,464 @@
-- Divendres 21:
-    - Plaça de Joan Coromines:
-        - event: CABOT
-          time: '18:45'
-          link:
-          info:
-        - event: L'HOME INVENT
-          time: '19:30'
-          link:
-          info:
-        - event: PUBILLES NINJA
-          time: '20:15'
-          link:
-          info:
-        - event: BALAGO
+- Divendres 20:
+    - Plaça Joan Coromines:
+        - event: Reis da República
           time: '21:00'
-          link: https://www.youtube.com/embed/lOA-m6gStbg
+          link:
+          group: "BAM"
           info:
-        - event: NADAH EL SHAZLY
+        - event: Whales
           time: '22:30'
-          link: https://www.youtube.com/embed/lvKvCnCoQk0
+          link:
+          group: "BAM"
           info:
-        - event: TIGER MENJA ZEBRA
+        - event: Conan Osiris
           time: '00:00'
-          link: https://www.youtube.com/embed/gATdLxEFjho
+          link:
+          group: "BAM"
           info:
     - Plaça dels Àngels:
-        - event: MAISHA
-          time: '21:40'
-          link: https://www.youtube.com/embed/LzORYDWio4c
+        - event: Arlo Parks
+          time: '21:45'
+          link:
+          group: "BAM"
           info:
-        - event: KOKOROKO
+        - event: DUCKWRTH
           time: '23:15'
-          link: https://www.youtube.com/embed/zUnKDK1iklo
+          link:
+          group: "BAM"
           info:
-        - event: MEUTE
+        - event: Playback Maracas & The Electronic Moon Orchestra
           time: '00:45'
-          link: https://www.youtube.com/embed/s2DQK1kcYrU
-          info:
-    - Rambla del Raval:
-        - event: CANDELEROS
-          time: '22:00'
-          link: https://www.youtube.com/embed/27FqUlYNTrU
-          info:
-        - event: EROTIC MARKET
-          time: '23:30'
-          link: https://www.youtube.com/embed/NKlFml3qzqY
-          info:
-        - event: BATUK
-          time: '01:00'
-          link: https://www.youtube.com/embed/T76GB4ZO6wQ
+          link:
+          group: "BAM"
           info:
     - Moll de la Fusta:
-        - event: NAKANY KANTÉ
+        - event: DASA
+          time: '21:00'
+          link:
+          group: "Música Mercè"
+          info:
+        - event: Pau Riba i De Mortimers
           time: '22:00'
           link:
+          group: "Música Mercè"
           info:
-        - event: ORCHESTRA BAOBAB
+        - event: Ran Ran Ran
           time: '23:45'
           link:
+          group: "Música Mercè"
           info:
-        - event: SUN KUTI & EGYPT 80
+        - event: El Petit de Cal Eril
           time: '01:30'
           link:
+          group: "Música Mercè"
           info:
-    - Passeig Lluís Companys:
-        - event: NIL MOLINER
-          time: '20:30'
-          link:
-          info:
-        - event: ANIMAL
+    - Platja del Bogatell:
+        - event: La Casa Azul
           time: '21:30'
           link:
+          group: "Música Mercè"
           info:
-        - event: RAMÓN MIRABET
+        - event: Dorian
+          time: '23:30'
+          link:
+          group: "Música Mercè"
+          info:
+        - event: Oques Grasses
+          time: '01:30'
+          link:
+          group: "Música Mercè"
+          info:
+    - Avinguda de la Catedral:
+        - event: Tarek Yamani Trio
+          time: '22:30'
+          link:
+          group: "Música Mercè"
+          info:
+        - event: Tania Saleh Beirut Windows
+          time: '00:15'
+          link:
+          group: "Música Mercè"
+          info:
+    - Av. Maria Cristina:
+        - event: Eivibonny
+          time: '21:00'
+          link:
+          group: "Les ràdios de la Mercè"
+          info:
+        - event: Edurne
           time: '22:45'
           link:
+          group: "Les ràdios de la Mercè"
           info:
-        - event: BUHOS
-          time: '00:30'
+        - event: Carlos Baute
+          time: '23:30'
           link:
+          group: "Les ràdios de la Mercè"
           info:
-    - Av. Maria Cristina:
-        - event: LAKASTE
-          time: '21:00'
+        - event: Miquel Abras
+          time: '01:30'
           link:
+          group: "Les ràdios de la Mercè"
           info:
-        - event: AMAIA MONTERO
-          time: '22:30'
+
+
+
+
+- Dissabte 21:
+    - Antiga Fàbrica Estrella Damm:
+        - event: Sara Fontán
+          time: '15:00'
           link:
+          group: "BAM"
           info:
-        - event: MANU GUIX
-          time: '01:00'
+        - event: Courtney Mary Andrews
+          time: '16:30'
           link:
+          group: "BAM"
           info:
-- Dissabte 22:
-    - Plaça de Joan Coromines:
-        - event: DANAE & GOLO
-          time: '18:45'
+        - event: Maria Rodés
+          time: '18:00'
           link:
+          group: "BAM"
           info:
-        - event: PAULA PESO
+        - event: Yawners
           time: '19:30'
           link:
+          group: "BAM"
           info:
-        - event: SURMA
+        - event: Y la Bamba
           time: '21:00'
-          link: https://www.youtube.com/embed/wlTbkMFWu78
+          link:
+          group: "BAM"
           info:
-        - event: BRUNO PERNADAS
+    - Plaça Joan Coromines:
+        - event: Bedouine
+          time: '21:00'
+          link:
+          group: "BAM"
+          info:
+        - event: Biig Piig
           time: '22:30'
-          link: https://www.youtube.com/embed/Hh_b2a-axEo
+          link:
+          group: "BAM"
           info:
-        - event: CAPICUA
+        - event: Snapped Ankles
           time: '00:00'
-          link: https://www.youtube.com/embed/58awapAjrmA
+          link:
+          group: "BAM"
           info:
     - Plaça dels Àngels:
-        - event: AKUA NARU
-          time: '21:40'
-          link: https://www.youtube.com/embed/6Kj2FW0xg4U
+        - event: Jay Jay Johanson
+          time: '21:45'
+          link:
+          group: "BAM"
           info:
-        - event: MASEGO
+        - event: Michelle David & The Gospel Sessions
           time: '23:15'
-          link: https://www.youtube.com/embed/hC8CH0Z3L54
+          link:
+          group: "BAM"
           info:
-        - event: ODDISEE
+        - event: Iceage
           time: '00:45'
-          link: https://www.youtube.com/embed/wiuqP51iDpQ
-          info:
-    - Rambla del Raval:
-        - event: TOMASA DEL REAL
-          time: '22:00'
-          link: https://www.youtube.com/embed/FjNutfto9fk
-          info:
-        - event: OSHUN
-          time: '23:30'
-          link: https://www.youtube.com/embed/L6NXVY9G3Fk
-          info:
-        - event: AMMAR 808
-          time: '01:00'
-          link: https://www.youtube.com/embed/-KqNLAnU6Mc
+          link:
+          group: "BAM"
           info:
     - Moll de la Fusta:
-        - event: FUR
-          time: '21:00'
-          link:
-          info:
-        - event: DOCTOR CALYPSO
+        - event: Dobet Gnahoré
           time: '22:00'
-          link:
+          link: 
+          group: "Música Mercè"
           info:
-        - event: GREEN VALLEY
+        - event: Baloji
           time: '23:45'
-          link:
+          link: 
+          group: "Música Mercè"
           info:
-        - event: ALEX BASS & THE SAME SONG BAND
+        - event: Gaye Su Akynol
           time: '01:30'
-          link:
+          link: 
+          group: "Música Mercè"
           info:
+
+
     - Platja del Bogatell:
-        - event: LA IAIA
-          time: '21:30'
+        - event: Da Souza
+          time: '21:00'
           link:
+          group: "Música Mercè"
           info:
-        - event: LOVE OF LESBIAN
-          time: '23:30'
+        - event: Joan Dausà
+          time: '22:10'
           link:
+          group: "Música Mercè"
           info:
-        - event: FUNDACIÓN TONY MANERO
+        - event: La Pegatina
+          time: '23:20'
+          link:
+          group: "Música Mercè"
+          info:
+        - event: The Gramophone Allstars Big Band
+          time: '01:20'
+          link:
+          group: "Música Mercè"
+          info:
+    - Avinguda de la Catedral:
+        - event: Chicuelo
+          time: '22:30'
+          link:
+          group: "Música Mercè"
+          info:
+        - event: Los Aurora
+          time: '00:15'
+          link:
+          group: "Música Mercè"
+          info:
+
+    - Av. Maria Cristina:
+        - event: Suu
+          time: '21:00'
+          link:
+          group: "Les ràdios de la Mercè"
+          info:
+        - event: Lildami
+          time: '21:45'
+          link:
+          group: "Les ràdios de la Mercè"
+          info:
+        - event: Carlos Sadness
+          time: '22:45'
+          link:
+          group: "Les ràdios de la Mercè"
+          info:
+        - event: Elefantes
+          time: '00:00'
+          link:
+          group: "Les ràdios de la Mercè"
+          info:
+        - event: Arnau Griso
           time: '01:30'
           link:
+          group: "Les ràdios de la Mercè"
           info:
-    - Av. Maria Cristina:
-        - event: HALLDOR MAR
-          time: '21:00'
+
+- Diumenge 22:
+    - Antiga Fàbrica Estrella Damm:
+        - event: Honolulu
+          time: '15:00'
           link:
+          group: "BAM"
           info:
-        - event: ISLA IGLÚ
-          time: '22:00'
+        - event: North State
+          time: '16:30'
           link:
+          group: "BAM"
           info:
-        - event: SENSE SAL
-          time: '23:15'
-          link:
-          info:
-        - event: OBESES
-          time: '00:30'
-          link:
-          info:
-        - event: DJs EUROPA FM
-          time: '02:15'
-          link:
-          info:
-- Diumenge 23:
-    - Plaça de Joan Coromines:
-        - event: FERRAN PALAU
-          time: '21:00'
-          link: https://www.youtube.com/embed/9TVBXqD7QGo
-          info:
-        - event: IDER
-          time: '22:30'
-          link: https://www.youtube.com/embed/MvXqgIGODbw
-          info:
-        - event: WARMDUSCHER
-          time: '00:00'
-          link: https://www.youtube.com/embed/EnRCJmaNBf0
-          info:
-    - Plaça dels Àngels:
-        - event: MERCURY REV
-          time: '21:40'
-          link: https://www.youtube.com/embed/fusKcZjj7dg
-          info:
-        - event: THE MONOCHROME SET
-          time: '23:15'
-          link: https://www.youtube.com/embed/mW4uIBaZOAM
-          info:
-        - event: FINDLAY
-          time: '00:45'
-          link: https://www.youtube.com/embed/gk9iZItvtcA
-          info:
-    - Rambla del Raval:
-        - event: LES FILLES DE ILLIGHADAD
-          time: '22:00'
-          link: https://www.youtube.com/embed/HIAOG9nhrt8
-          info:
-        - event: LINIKER E OS CARAMELOWS
-          time: '23:30'
-          link: https://www.youtube.com/embed/YNCIrv79fsc
-          info:
-        - event: PONGO
-          time: '01:00'
-          link: https://www.youtube.com/embed/0N-TAHqQHmo
-          info:
-    - Escenari Apolo:
-        - event: BARCELONA JAZZ ORCHESTRA
-          time: '16:00'
-          link: ''
-          info:
-        - event: REAL COMBO LISBONENSE
+        - event: Say Yes Dog
           time: '18:00'
-          link: https://www.youtube.com/embed/uKRxLwf__pA
-          info:
-        - event: THE MANI-LAS
-          time: '22:00'
-          link: https://www.youtube.com/embed/-alBwvp-c_Q
-          info:
-        - event: THROES + THE SHINE
-          time: '23:30'
-          link: https://www.youtube.com/embed/iy0TgBjDwAE
-          info:
-        - event: NATHY PELUSO
-          time: '01:00'
-          link: https://www.youtube.com/embed/Kuqomj-6q5s
-          info:
-    - Antiga Fàbrica Estrella Damm:
-        - event: MARINA HERLOP
-          time: '15:45'
-          link: https://www.youtube.com/embed/D0zEjxSCgSA
-          info:
-        - event: MARINA GALLARDO
-          time: '17:15'
-          link: https://www.youtube.com/embed/Riv8T7pqtZ4
-          info:
-        - event: TÉMÉ TAN
-          time: '18:45'
-          link: https://www.youtube.com/embed/r9asrM2_iAc
-          info:
-        - event: CLÉA VINCENT
-          time: '20:15'
-          link: https://www.youtube.com/embed/atP_iaUkls0
-          info:
-        - event: SIDE CHICK
-          time: '21:15'
-          link: https://www.youtube.com/embed/LMb4GQpiqlU
-          info:
-    - Moll de la Fusta:
-        - event: PANTANITO
-          time: '22:00'
           link:
+          group: "BAM"
           info:
-        - event: EL KANKA
-          time: '23:45'
+        - event: Fanso
+          time: '19:30'
           link:
+          group: "BAM"
           info:
-        - event: SABOR DE GRÀCIA
-          time: '02:00'
-          link:
-          info:
-    - Platja del Bogatell:
-        - event: DOCTOR PRATS
+        - event: Tversky
           time: '21:00'
           link:
+          group: "BAM"
           info:
-        - event: ELS CATARRES
-          time: '23:45'
-          link:
-          info:
-        - event: GERTRUDIS
-          time: '01:00'
-          link:
-          info:
-    - Av. Maria Cristina:
-        - event: FILIPPO LANDINI
-          time: '20:30'
-          link:
-          info:
-        - event: SIDECARS
-          time: '21:15'
-          link:
-          info:
-        - event: CELTAS CORTOS
-          time: '22:35'
-          link:
-          info:
-        - event: PROJECTE MUT
-          time: '23:55'
-          link:
-          info:
-        - event: LA PEGATINA
-          time: '00:50'
-          link:
-          info:
-        - event: DJs LOS 40
-          time: '02:00'
-          link:
-          info:
-- Dilluns 24:
-    - Antiga Fàbrica Estrella Damm:
-        - event: HAZTE LAPÓN
-          time: '15:45'
-          link: https://www.youtube.com/embed/1Woq8FT0t0A
-          info:
-        - event: LA ESTRELLA DE DAVID
-          time: '17:15'
-          link: https://www.youtube.com/embed/3tN7QBWJUg4
-          info:
-        - event: LA BIEN QUERIDA
-          time: '18:45'
-          link: https://www.youtube.com/embed/hJKo8u9EaHc
-          info:
-        - event: LA PLATA
-          time: '20:15'
-          link: https://www.youtube.com/embed/BTruEEx-jmM
-          info:
-    - Moll de la Fusta:
-        - event: DROP COLLECTIVE
-          time: '17:00'
-          link:
-          info:
-    - Plaça Reial:
-        - event: HAVANERES, NEUS MAR
-          time: '17:00'
-          link:
-          info:
-        - event: HAVANERES, ARJAU
+    - Plaça Joan Coromines:
+        - event: Gurr
           time: '19:00'
           link:
+          group: "BAM"
+          info:
+        - event: Yugen Blakrok
+          time: '21:00'
+          link:
+          group: "BAM"
+          info:
+        - event: Vanishing Twin
+          time: '22:30'
+          link:
+          group: "BAM"
+          info:
+    - Plaça dels Àngels:
+        - event: María José Llergo
+          time: '20:45'
+          link:
+          group: "BAM"
+          info:
+        - event: Mattiel
+          time: '21:45'
+          link:
+          group: "BAM"
+          info:
+        - event: Derby Motoreta's Burrito Kachimba
+          time: '23:5'
+          link:
+          group: "BAM"
+          info:
+    - Moll de la Fusta:
+        - event: Nubya Garcia
+          time: '20:00'
+          link:
+          group: "BAM"
+          info:
+        - event: Nubiyan Twist
+          time: '21:30'
+          link:
+          group: "BAM"
+          info:
+        - event: Jungle By Night
+          time: '23:00'
+          link:
+          group: "BAM"
+          info:
+    - Plaça Major de Nou Barris:
+        - event: OBC
+          time: '21:00'
+          link:
+          group: "Música Mercè"
+          info:
+    - Av. Maria Cristina:
+        - event: Sense Sal
+          time: '19:00'
+          link:
+          group: "Les ràdios de la Mercè"
+          info:
+        - event: Miki Nuñez
+          time: '20:30'
+          link:
+          group: "Les ràdios de la Mercè"
+          info:
+        - event: Gertrudis
+          time: '22:00'
+          link:
+          group: "Les ràdios de la Mercè"
+          info:
+        - event: DJ RAC105
+          time: '23:15'
+          link:
+          group: "Les ràdios de la Mercè"
+          info:
+- Dilluns 23:
+    - Plaça Major de Nou Barris:
+        - event: Orquestra Simfònica VOZES
+          time: '19:00'
+          link:
+          group: "Música Mercè"
+          info:
+    - Avinguda de la Catedral:
+        - event: Luis Pastor
+          time: '21:00'
+          link:
+          group: "Música Mercè"
+          info:
+        - event: Paula Valls
+          time: '22:30'
+          link:
+          group: "Música Mercè"
+          info:
+        - event: Oumou Sangaré
+          time: '00:15'
+          link:
+          group: "Música Mercè"
+          info:
+    - Av. Maria Cristina:
+        - event: Chloe Phillips
+          time: '20:15'
+          link:
+          group: "Les ràdios de la Mercè"
+          info:
+        - event: Porto Bello
+          time: '20:45'
+          link:
+          group: "Les ràdios de la Mercè"
+          info:
+        - event: Nil Moliner
+          time: '21:50'
+          link:
+          group: "Les ràdios de la Mercè"
+          info:
+        - event: Els Catarres
+          time: '22:55'
+          link:
+          group: "Les ràdios de la Mercè"
+          info:
+        - event: Doctor Prats
+          time: '00:25'
+          link:
+          group: "Les ràdios de la Mercè"
+          info:
+        - event: Buhos
+          time: '01:50'
+          link:
+          group: "Les ràdios de la Mercè"
+          info:          
+- Dimarts 24:
+    - Plaça Joan Coromines:
+        - event: Pread
+          time: '21:00'
+          link:
+          group: "BAM"
+          info:
+        - event: Charlotte Adigéry
+          time: '22:30'
+          link:
+          group: "BAM"
+          info:
+        - event: The Mauskovic Dance Band
+          time: '00:00'
+          link:
+          group: "BAM"
+          info:
+    - Plaça dels Àngels:
+        - event: Black Midi
+          time: '21:45'
+          link:
+          group: "BAM"
+          info:
+        - event: The Wedding Present
+          time: '23:15'
+          link:
+          group: "BAM"
+          info:
+        - event: Weval
+          time: '00:45'
+          link:
+          group: "BAM"
+          info:
+    - Moll de la Fusta:
+        - event: Malikah
+          time: '20:45'
+          link:
+          group: "BAM"
+          info:
+        - event: Tribade
+          time: '22:05'
+          link:
+          group: "BAM"
+          info:
+        - event: El Rass
+          time: '23:25'
+          link:
+          group: "BAM"
+          info:
+        - event: Danitsa
+          time: '00:45'
+          link:
+          group: "BAM"
+          info:
+    - Avinguda de la Catedral:
+        - event: Big Band Jam Session
+          time: '18:00'
+          link:
+          group: "Música Mercè"
+          info:
+        - event: Oumou Sangaré
+          time: '00:15'
+          link:
+          group: "Música Mercè"
           info:
