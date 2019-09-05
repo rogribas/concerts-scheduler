@@ -338,6 +338,59 @@
           group: "Les ràdios de la Mercè"
           info:
 - Dilluns 23:
+    - Plaça Joan Coromines:
+        - event: Pread
+          time: '21:00'
+          link:
+          group: "BAM"
+          info:
+        - event: Charlotte Adigéry
+          time: '22:30'
+          link:
+          group: "BAM"
+          info:
+        - event: The Mauskovic Dance Band
+          time: '00:00'
+          link:
+          group: "BAM"
+          info:
+    - Plaça dels Àngels:
+        - event: Black Midi
+          time: '21:45'
+          link:
+          group: "BAM"
+          info:
+        - event: The Wedding Present
+          time: '23:15'
+          link:
+          group: "BAM"
+          info:
+        - event: Weval
+          time: '00:45'
+          link:
+          group: "BAM"
+          info:
+    - Moll de la Fusta:
+        - event: Malikah
+          time: '20:45'
+          link:
+          group: "BAM"
+          info:
+        - event: Tribade
+          time: '22:05'
+          link:
+          group: "BAM"
+          info:
+        - event: El Rass
+          time: '23:25'
+          link:
+          group: "BAM"
+          info:
+        - event: Danitsa
+          time: '00:45'
+          link:
+          group: "BAM"
+          info:
     - Plaça Major de Nou Barris:
         - event: Orquestra Simfònica VOZES
           time: '19:00'
@@ -392,59 +445,6 @@
           group: "Les ràdios de la Mercè"
           info:          
 - Dimarts 24:
-    - Plaça Joan Coromines:
-        - event: Pread
-          time: '21:00'
-          link:
-          group: "BAM"
-          info:
-        - event: Charlotte Adigéry
-          time: '22:30'
-          link:
-          group: "BAM"
-          info:
-        - event: The Mauskovic Dance Band
-          time: '00:00'
-          link:
-          group: "BAM"
-          info:
-    - Plaça dels Àngels:
-        - event: Black Midi
-          time: '21:45'
-          link:
-          group: "BAM"
-          info:
-        - event: The Wedding Present
-          time: '23:15'
-          link:
-          group: "BAM"
-          info:
-        - event: Weval
-          time: '00:45'
-          link:
-          group: "BAM"
-          info:
-    - Moll de la Fusta:
-        - event: Malikah
-          time: '20:45'
-          link:
-          group: "BAM"
-          info:
-        - event: Tribade
-          time: '22:05'
-          link:
-          group: "BAM"
-          info:
-        - event: El Rass
-          time: '23:25'
-          link:
-          group: "BAM"
-          info:
-        - event: Danitsa
-          time: '00:45'
-          link:
-          group: "BAM"
-          info:
     - Avinguda de la Catedral:
         - event: Big Band Jam Session
           time: '18:00'
