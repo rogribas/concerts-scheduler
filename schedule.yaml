@@ -316,12 +316,6 @@
           link:
           group: "BAM"
           info:
-    - Plaça Major de Nou Barris:
-        - event: OBC
-          time: '21:00'
-          link:
-          group: "Música Mercè"
-          info:
     - Av. Maria Cristina:
         - event: Sense Sal
           time: '19:00'
