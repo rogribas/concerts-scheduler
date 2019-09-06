@@ -339,6 +339,21 @@
           info:
 - Dilluns 23:
     - Plaça Joan Coromines:
+        - event: Grup de Reforç
+          time: '18:45'
+          link:
+          group: "Sona 9"
+          info:
+        - event: URPA
+          time: '19:30'
+          link:
+          group: "Sona 9"
+          info:
+        - event: Relat
+          time: '20:15'
+          link:
+          group: "Sona 9"
+          info:
         - event: Pread
           time: '21:00'
           link:
