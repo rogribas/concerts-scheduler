@@ -151,12 +151,13 @@ def get_event_info(event):
     event_end = event_end.strftime('%H:%M')
     event_youtube = event['link'] if event['link'] else ''
     event_name = event['event']
-    return event_start, event_end, event_name, event_youtube
+    event_group = event['group']
+    return event_start, event_end, event_name, event_youtube, event_group
 
 def get_create_event_html(event_info, stage_id):
     global EVENT_ID
     EVENT_ID += 1
-    event_start, event_end, event_name, event_youtube = get_event_info(event_info)
+    event_start, event_end, event_name, event_youtube, event_group = get_event_info(event_info)
 
     # Create event file
     f_event = open('./docs/event-'+str(EVENT_ID)+'.html', 'w')
@@ -172,6 +173,7 @@ def get_create_event_html(event_info, stage_id):
     # Return event HTML
     return '''<li class="single-event" data-start="'''+event_start+'''" data-end="'''+event_end+'''"  data-content="event-'''+str(EVENT_ID)+'''" data-event="event-'''+str(stage_id)+'''">
         <a target="_blank" href="'''+event_youtube+'''">
+            <em class="event-name" style="font-size: 8px; color: #eee">'''+event_group+'''</em>
             <em class="event-name">'''+event_name+'''</em>
         </a>
     </li>'''
