@@ -94,7 +94,7 @@ jQuery(document).ready(function($){
 		this.singleEvents.each(function(){
 			//place each event in the grid -> need to set top position and height
 			var start = getScheduleTimestamp($(this).attr('data-start')),
-				duration = 45;//getScheduleTimestamp($(this).attr('data-end')) - start;
+				duration = getScheduleTimestamp($(this).attr('data-end')) - start;
 
 			console.log('timesstart');
 			console.log(start);

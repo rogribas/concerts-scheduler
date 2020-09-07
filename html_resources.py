@@ -27,6 +27,12 @@ def get_raw_day(title, num_stages, day_links, stages_html):
 <div class="cd-schedule loading">
 	<div class="timeline">
 		<ul>
+            <li><span>12:00</span></li>
+            <li><span>12:30</span></li>
+            <li><span>13:00</span></li>
+            <li><span>13:30</span></li>
+            <li><span>14:00</span></li>
+            <li><span>14:30</span></li>
             <li><span>15:00</span></li>
             <li><span>15:30</span></li>
             <li><span>16:00</span></li>
@@ -46,19 +52,6 @@ def get_raw_day(title, num_stages, day_links, stages_html):
 			<li><span>23:00</span></li>
 			<li><span>23:30</span></li>
 			<li><span>00:00</span></li>
-			<li><span>00:30</span></li>
-			<li><span>01:00</span></li>
-			<li><span>01:30</span></li>
-			<li><span>02:00</span></li>
-			<li><span>02:30</span></li>
-			<li><span>03:00</span></li>
-			<li><span>03:30</span></li>
-			<li><span>04:00</span></li>
-			<li><span>04:30</span></li>
-			<li><span>05:00</span></li>
-			<li><span>05:30</span></li>
-			<li><span>06:00</span></li>
-			<li><span>06:30</span></li>
 		</ul>
 	</div> <!-- .timeline -->
 
@@ -154,7 +147,7 @@ def get_stage_html(stage_name, events):
 def get_event_info(event):
     event_start = event['time']
     event_end = datetime.strptime(event_start, '%H:%M')
-    event_end = event_end + timedelta(minutes=45)
+    event_end = event_end + timedelta(minutes=90)
     event_end = event_end.strftime('%H:%M')
     event_youtube = event['link'] if event['link'] else ''
     event_name = event['event']
@@ -178,7 +171,7 @@ def get_create_event_html(event_info, stage_id):
 
     # Return event HTML
     return '''<li class="single-event" data-start="'''+event_start+'''" data-end="'''+event_end+'''"  data-content="event-'''+str(EVENT_ID)+'''" data-event="event-'''+str(stage_id)+'''">
-        <a href="#0">
+        <a target="_blank" href="'''+event_youtube+'''">
             <em class="event-name">'''+event_name+'''</em>
         </a>
     </li>'''
