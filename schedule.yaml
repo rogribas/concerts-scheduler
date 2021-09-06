@@ -1,397 +1,514 @@
-- Dijous 24:
-    - "Anella Olímpica":
-        - event: "Blaumut"
-          time: '20:00'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-escenari-europa-fm-amb-blaumut-i-varry-brava-dins-de-les-radios-de-la-merce'
+- DJ. 23:
+    - "Camp de Futbol Municipal Vall d'Hebron":
+        - event: "31 FAM: Jetlag Tour"
+          time: '20:20'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-31-fam-jetlag-tour-dins-de-la-merce-es-musica'
+          group: 'La Mercè és Música'
+        - event: "Queralt Lahoz: Pureza en concert"
+          time: '21:40'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-queralt-lahoz-pureza-en-concert-dins-de-la-merce-es-musica'
+          group: 'La Mercè és Música'
+        - event: "La dame blanche"
+          time: '23:00'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-la-dame-blanche-dins-de-la-merce-es-musica'
+          group: 'La Mercè és Música'
+    - "Estadi Olímpic Lluís Companys":
+        - event: "Arc de Triomf"
+          time: '20:20'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-escenari-els-40-pop-dins-de-les-radios-de-la-merce'
           group: 'Les Ràdios de la Mercè'
-    - "Aparcament de Mar Bella":
-        - event: "Magalí Datzira (Escola Superior de Música de Catalunya)"
-          time: '12:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-magali-datzira-escola-superior-de-musica-de-catalunya-dins-de-la-merce-es-musica'
-          group: 'La Mercè és Música'
-        - event: "WOMs Collective"
-          time: '18:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-woms-collective-dins-de-la-merce-es-musica'
-          group: 'La Mercè és Música'
-        - event: "Flamingo Tours"
-          time: '21:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-flamingo-tours-dins-de-la-merce-es-musica'
-          group: 'La Mercè és Música'
-    - "Casa de l'Aigua":
-        - event: "Victor Herrero: Hermana"
-          time: '12:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-victor-herrero-hermana-dins-del-bam-barcelona-accio-musical'
-          group: 'BAM - Barcelona Acció Musical'
-        - event: "Rodrigo Cuevas: Trópico de Covadonga"
-          time: '18:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-rodrigo-cuevas-tropico-de-covadonga-dins-del-bam-barcelona-accio-musical'
-          group: 'BAM - Barcelona Acció Musical'
-        - event: "Egosex"
-          time: '21:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-egosex-dins-del-bam-barcelona-accio-musical'
-          group: 'BAM - Barcelona Acció Musical'
-    - "Jardins del Doctor Pla i Armengol":
-        - event: "Maria Jaume / Joina / Relat"
-          time: '12:00'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-sona9maria-jaume-joina-relat-dins-de-la-merce-es-musica'
-          group: 'La Mercè és Música'
-        - event: "Lídia Pujol"
-          time: '18:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-lidia-pujol-dins-de-la-merce-es-musica'
-          group: 'La Mercè és Música'
-        - event: "Magalí Sare & Sebastià Gris: A boy and a girl"
-          time: '21:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concertmagali-sare-sebastia-gris-boy-and-girl-dins-de-la-merce-es-musica'
-          group: 'La Mercè és Música'
-    - "La Model":
-        - event: "Wesphere"
-          time: '12:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-wesphere-dins-del-bam-barcelona-accio-musical'
-          group: 'BAM - Barcelona Acció Musical'
-        - event: "E.J. Marais"
-          time: '18:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-ej-marais-dins-del-bam-barcelona-accio-musical'
-          group: 'BAM - Barcelona Acció Musical'
-        - event: "Leifur James"
-          time: '21:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-leifur-james-dins-del-bam-barcelona-accio-musical'
-          group: 'BAM - Barcelona Acció Musical'
-    - "Parc del Fòrum 1":
-        - event: "Sandré: Ave Muñón"
-          time: '12:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-sandre-ave-munon-dins-del-bam-barcelona-accio-musical'
-          group: 'BAM - Barcelona Acció Musical'
-        - event: "Mina & Bryte"
-          time: '18:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-mina-bryte-dins-del-bam-barcelona-accio-musical'
-          group: 'BAM - Barcelona Acció Musical'
-        - event: "Mainline Magic Orchestra"
-          time: '21:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-mainline-magic-orchestra-dins-del-bam-barcelona-accio-musical'
-          group: 'BAM - Barcelona Acció Musical'
-    - "Parc del Fòrum 2":
-        - event: "Suu: Ventura"
-          time: '12:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-suu-ventura-dins-de-la-merce-es-musica'
-          group: 'La Mercè és Música'
-        - event: "Lildami: Flors mentre visqui"
-          time: '18:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-lildami-flors-mentre-visqui-dins-de-la-merce-es-musica'
-          group: 'La Mercè és Música'
-        - event: "Itaca Band: La lengua de los pájaros"
-          time: '21:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-itaca-band-la-lengua-de-los-pajaros-dins-de-la-merce-es-musica'
-          group: 'La Mercè és Música'
-    - "Park Güell":
-        - event: "The Goliards Collective (Taller de Músics)"
-          time: '12:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-goliards-collective-taller-de-musics-dins-de-la-merce-es-musica'
-          group: 'La Mercè és Música'
-        - event: "Vozes & Ray Colom: Sketches of Spain"
-          time: '18:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-vozes-ray-colom-sketches-spain-dins-de-la-merce-es-musica'
-          group: 'La Mercè és Música'
-        - event: "Giulia Valle: Carlos Cano en clau de jazz"
-          time: '21:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-giulia-valle-carlos-cano-en-clau-de-jazz-dins-de-la-merce-es-musica'
-          group: 'La Mercè és Música'
-    - "Pl. Major de Nou Barris":
-        - event: "Orquestra Simfònica del Gran Teatre del Liceu: Concert de bandes sonores"
-          time: '20:45'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-orquestra-simfonica-del-gran-teatre-del-liceu-concert-de-bandes-sonores-dins-de-la-merce-es'
-          group: 'La Mercè és Música'
-    - "Plaça de Joan Coromines":
-        - event: "Za! i la TransMegaCobla"
-          time: '12:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-za-i-la-transmegacobla-dins-del-bam-barcelona-accio-musical'
-          group: 'BAM - Barcelona Acció Musical'
-        - event: "Emel Mathlouthi"
-          time: '18:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-emel-mathlouthi-dins-del-bam-barcelona-accio-musical'
-          group: 'BAM - Barcelona Acció Musical'
-        - event: "Ray Colom"
-          time: '21:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-ray-colom-dins-del-bam-barcelona-accio-musical'
-          group: 'BAM - Barcelona Acció Musical'
-    - "Recinte Camp Nou":
-        - event: "Brighton 64: Como debe ser"
-          time: '18:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-brighton-64-como-debe-ser-dins-de-la-merce-es-musica'
-          group: 'La Mercè és Música'
-        - event: "Miqui Puig & ACP, en directe"
-          time: '21:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-miqui-puig-acp-en-directe-dins-de-la-merce-es-musica'
-          group: 'La Mercè és Música'
-    - "Teatre Grec":
-        - event: "Seward: Hoveller"
-          time: '12:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-seward-hoveller-dins-de-la-merce-es-musica'
-          group: 'La Mercè és Música'
-        - event: "Roger Mas"
-          time: '18:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-roger-mas-dins-de-la-merce-es-musica'
-          group: 'La Mercè és Música'
-        - event: "Maria del Mar Bonet i amics: Un mar de complicitats"
-          time: '21:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-maria-del-mar-bonet-i-amics-un-mar-de-complicitats-dins-de-la-merce-es-musica'
-          group: 'La Mercè és Música'
-- Dissabte 26:
-    - "Anella Olímpica":
-        - event: "Siderland"
-          time: '20:00'
-          link: 'https://www.barcelona.cat/lamerce/ca/concerts-escenari-cadena-100-amb-siderland-i-hotel-cochambre-dins-de-les-radios-de-la-merce'
+        - event: "Marcel i Júlia"
+          time: '21:20'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-escenari-els-40-pop-dins-de-les-radios-de-la-merce'
           group: 'Les Ràdios de la Mercè'
-    - "Antiga Fàbrica Estrella Damm":
-        - event: "Grauwi + Marta Cascales"
-          time: '12:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-grauwi-marta-cascales-dins-del-bam-barcelona-accio-musical'
-          group: 'BAM - Barcelona Acció Musical'
-        - event: "Renaldo & Clara"
-          time: '18:00'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-renaldo-clara-dins-del-bam-barcelona-accio-musical-0'
-          group: 'BAM - Barcelona Acció Musical'
-        - event: "Melenas"
-          time: '21:00'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-melenas-dins-del-bam-barcelona-accio-musical'
-          group: 'BAM - Barcelona Acció Musical'
-    - "Aparcament de Mar Bella":
-        - event: "Fundació Conservatori Liceu: Liceu Jazz Grup"
-          time: '12:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-fundacio-conservatori-liceu-liceu-jazz-grup-dins-de-la-merce-es-musica'
-          group: 'La Mercè és Música'
-        - event: "Los Mambo Jambo, en directe"
-          time: '18:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-los-mambo-jambo-en-directe-dins-de-la-merce-es-musica'
-          group: 'La Mercè és Música'
-        - event: "Fundación Tony Manero: Disco para adultos"
-          time: '21:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-fundacion-tony-manero-disco-para-adultos-dins-de-la-merce-es-musica'
-          group: 'La Mercè és Música'
-    - "Casa de l'Aigua":
-        - event: "Meritxell Neddermann: In the Backyard of the Castle"
-          time: '12:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-meritxell-neddermann-backyard-castle-dins-del-bam-barcelona-accio-musical'
-          group: 'BAM - Barcelona Acció Musical'
-        - event: "A. A. Williams"
-          time: '21:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-williams-dins-del-bam-barcelona-accio-musical'
-          group: 'BAM - Barcelona Acció Musical'
-        - event: "Lina / Raül Refree"
-          time: '21:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-lina-raul-refree-dins-del-bam-barcelona-accio-musical'
-          group: 'BAM - Barcelona Acció Musical'
+        - event: "The Tyets"
+          time: '22:40'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-escenari-els-40-pop-dins-de-les-radios-de-la-merce'
+          group: 'Les Ràdios de la Mercè'
+        - event: "Lildami"
+          time: '23:20'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-escenari-els-40-pop-dins-de-les-radios-de-la-merce'
+          group: 'Les Ràdios de la Mercè'
     - "Jardins del Doctor Pla i Armengol":
-        - event: "BROT: Iglú / El Batalla"
-          time: '12:00'
-          link: 'https://www.barcelona.cat/lamerce/ca/concertbrot-iglu-el-batalla-dins-de-la-merce-es-musica'
+        - event: "Maria Hein"
+          time: '20:20'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-maria-hein-dins-de-la-merce-es-musica'
           group: 'La Mercè és Música'
-        - event: "Anna Andreu: Els mals costums"
-          time: '18:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concertanna-andreu-els-mals-costums-dins-de-la-merce-es-musica'
+        - event: "Carlota Flâneur: Brains"
+          time: '21:40'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-carlota-flaneur-brains-dins-de-la-merce-es-musica'
           group: 'La Mercè és Música'
-        - event: "Ferran Palau: Kevin"
-          time: '21:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concertferran-palau-kevin-dins-de-la-merce-es-musica'
+        - event: "Núria Graham: Nou disc"
+          time: '23:00'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-nuria-graham-nou-disc-dins-de-la-merce-es-musica'
           group: 'La Mercè és Música'
-    - "La Model":
-        - event: "Laura LaMontagne & PicoAmperio"
-          time: '12:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-laura-lamontagne-picoamperio-dins-del-bam-barcelona-accio-musical'
-          group: 'BAM - Barcelona Acció Musical'
-        - event: "Queralt Lahoz"
-          time: '18:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-queralt-lahoz-dins-del-bam-barcelona-accio-musical'
-          group: 'BAM - Barcelona Acció Musical'
-        - event: "Califato 3/4"
-          time: '21:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-califato-34-dins-el-bam-barcelona-accio-musical'
-          group: 'BAM - Barcelona Acció Musical'
     - "Moll de la Fusta":
-        - event: "Concert d'havaneres amb Les Anxovetes"
-          time: '21:00'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-dhavaneres-amb-les-anxovetes'
-          group: 'La Mercè és Música'
-    - "Parc del Fòrum 1":
-        - event: "Leïti Sene"
-          time: '12:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-leiti-sene-dins-el-bam-barcelona-accio-musical'
-          group: 'BAM - Barcelona Acció Musical'
-        - event: "Neue Grafik Ensemble"
+        - event: "Sandra Monfort: Niño Reptil Ángel"
           time: '18:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-neue-grafik-ensemble-dins-del-bam-barcelona-accio-musical'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-sandra-monfort-nino-reptil-angel-dins-del-bam-barcelona-accio-musical'
           group: 'BAM - Barcelona Acció Musical'
-        - event: "House of Pharaohs"
-          time: '21:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-house-pharaohs-dins-del-bam-barcelona-accio-musical'
+        - event: "Le Diouck"
+          time: '19:30'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-le-diouck-dins-del-bam-barcelona-accio-musical'
           group: 'BAM - Barcelona Acció Musical'
-    - "Parc del Fòrum 2":
-        - event: "Dolo Beltrán: Moonlight"
-          time: '12:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-dolo-beltran-moonlight-dins-de-la-merce-es-musica'
-          group: 'La Mercè és Música'
-        - event: "Gertrudis: No em dona la gana"
-          time: '18:00'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-gertrudis-no-em-dona-la-gana-dins-de-la-merce-es-musica'
-          group: 'La Mercè és Música'
-        - event: "La Sra. Tomasa: Alegre pero peligroso"
+        - event: "Ed Maverick"
+          time: '20:30'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-ed-maverick-dins-del-bam-barcelona-accio-musical'
+          group: 'BAM - Barcelona Acció Musical'
+        - event: "Issam"
           time: '21:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-la-sra-tomasa-alegre-pero-peligroso-dins-de-la-merce-es-musica'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-issam-dins-del-bam-barcelona-accio-musical'
+          group: 'BAM - Barcelona Acció Musical'
+        - event: "Cariño"
+          time: '22:30'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-carino-dins-del-bam-barcelona-accio-musical'
+          group: 'BAM - Barcelona Acció Musical'
+        - event: "Concert  "
+          time: '23:30'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-crystal-murray-dins-del-bam-barcelona-accio-musical'
+          group: 'BAM - Barcelona Acció Musical'
+    - "Plataforma marina del Fòrum":
+        - event: "Ayom"
+          time: '20:20'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-ayom-dins-de-la-merce-es-musica'
           group: 'La Mercè és Música'
-    - "Park Güell":
-        - event: "Escola Jam Session: Big Band Jam Session"
-          time: '12:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-escola-jam-session-big-band-jam-session-dins-de-la-merce-es-musica'
+        - event: "Bandé Gamboa: Horizonte"
+          time: '21:40'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-bande-gamboa-horizonte-dins-de-la-merce-es-musica'
           group: 'La Mercè és Música'
-        - event: "Tarquim: Big Band Jam Session"
-          time: '18:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-tarquim-big-band-jam-session-dins-de-la-merce-es-musica'
+        - event: "Les Amazones d'Afrique"
+          time: '23:00'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-les-amazones-dafrique-dins-de-la-merce-es-musica'
           group: 'La Mercè és Música'
-        - event: "Homenatge a Xavi Turull"
-          time: '21:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-homenatge-xavi-turull-dins-de-la-merce-es-musica'
-          group: 'La Mercè és Música'
-    - "Pl. Major de Nou Barris":
-        - event: "Orquestra Simfònica de Barcelona i Nacional de Catalunya"
+    - "Plaça Major de Nou Barris":
+        - event: "Banda Municipal de Barcelona: Concert de la Mercè. Aniversaris i festa gran"
           time: '20:45'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-orquestra-simfonica-de-barcelona-i-nacional-de-catalunya-dins-de-la-merce-es-musica'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-banda-municipal-de-barcelona-concert-de-la-merce-aniversaris-i-festa-gran-dins-de-la-merce'
           group: 'La Mercè és Música'
     - "Plaça de Joan Coromines":
-        - event: "Jimi Somewhere"
-          time: '21:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-jimi-somewhere-dins-del-bam-barcelona-accio-musical'
+        - event: "Bikôkô: Aura Aura"
+          time: '20:50'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-bikoko-aura-aura-dins-del-bam-barcelona-accio-musical'
           group: 'BAM - Barcelona Acció Musical'
-    - "Recinte Camp Nou":
-        - event: "Las bajas pasiones: Bichx Rarx"
-          time: '12:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-las-bajas-pasiones-bichx-rarx-dins-de-la-merce-es-musica'
-          group: 'La Mercè és Música'
-        - event: "JazzWoman: Maléfica"
-          time: '18:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-jazzwoman-malefica-dins-de-la-merce-es-musica'
-          group: 'La Mercè és Música'
-    - "Teatre Grec":
-        - event: "Quico Pi de la Serra"
-          time: '12:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-quico-pi-de-la-serra-dins-de-la-merce-es-musica'
-          group: 'La Mercè és Música'
-        - event: "Joan Garriga i el Mariatxi Galàctic: El ball i el plany"
-          time: '18:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-joan-garriga-i-el-mariatxi-galactic-el-ball-i-el-plany-dins-de-la-merce-es-musica'
-          group: 'La Mercè és Música'
-        - event: "Sabor de Gràcia"
-          time: '21:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-sabor-de-gracia-dins-de-la-merce-es-musica'
-          group: 'La Mercè és Música'
-- Diumenge 27:
-    - "Anella Olímpica":
-        - event: "31 FAM"
+        - event: "Wind Atlas"
+          time: '22:10'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-wind-atlas-dins-del-bam-barcelona-accio-musical'
+          group: 'BAM - Barcelona Acció Musical'
+        - event: "Fulu Miziki"
+          time: '23:30'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-fulu-miziki-dins-del-bam-barcelona-accio-musical'
+          group: 'BAM - Barcelona Acció Musical'
+    - "Recinte de Fabra i Coats":
+        - event: "Raquel Lúa"
+          time: '19:00'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-raquel-lua-dins-accio-cultura-viva'
+          group: 'Acció Cultura Viva'
+        - event: "Marta Gómez"
           time: '20:00'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-escenari-els40-amb-31-fam-i-flashy-icecream-dins-de-les-radios-de-la-merce'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-marta-gomez-dins-accio-cultura-viva'
+          group: 'Acció Cultura Viva'
+        - event: "Marçal Calvet i Clara Poch"
+          time: '21:00'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-marcal-calvet-i-clara-poch-dins-accio-cultura-viva'
+          group: 'Acció Cultura Viva'
+        - event: "Alavedra"
+          time: '22:00'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-alavedra-dins-accio-cultura-viva'
+          group: 'Acció Cultura Viva'
+        - event: "White Solar Dog"
+          time: '23:00'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-white-solar-dog-dins-accio-cultura-viva'
+          group: 'Acció Cultura Viva'
+    - "Teatre Grec":
+        - event: "Orquestra Àrab de Barcelona: 20 anys de música mediterrània compartida"
+          time: '20:20'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-orquestra-arab-de-barcelona-20-anys-de-musica-mediterrania-compartida-dins-de-la-merce-es'
+          group: 'La Mercè és Música'
+        - event: "Canzionere Grecanico Salentino: Meridiana"
+          time: '21:40'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-canzionere-grecanico-salentino-meridiana-dins-de-la-merce-es-musica'
+          group: 'La Mercè és Música'
+        - event: "Barcelona Gipsy balKan Orchestra: Nova Era"
+          time: '23:00'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-barcelona-gipsy-balkan-orchestra-nova-era-dins-de-la-merce-es-musica'
+          group: 'La Mercè és Música'
+- DV. 24:
+    - "Camp de Futbol Municipal Vall d'Hebron":
+        - event: "Cristian de Moret: Supernova"
+          time: '20:20'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-cristian-de-moret-supernova-dins-de-la-merce-es-musica'
+          group: 'La Mercè és Música'
+        - event: "Senior i el Cor brutal"
+          time: '21:40'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-senior-i-el-cor-brutal-dins-de-la-merce-es-musica'
+          group: 'La Mercè és Música'
+        - event: "Los Enemigos: Bestieza"
+          time: '23:00'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-los-enemigos-bestieza-dins-de-la-merce-es-musica'
+          group: 'La Mercè és Música'
+    - "Estadi Olímpic Lluís Companys":
+        - event: "Sara Roy"
+          time: '20:50'
+          link: 'https://www.barcelona.cat/lamerce/ca/concerts-escenari-cadena-100-dins-de-les-radios-de-la-merce'
           group: 'Les Ràdios de la Mercè'
-    - "Antiga Fàbrica Estrella Damm":
-        - event: "Da Souza"
-          time: '21:00'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-da-souza-dins-del-bam-barcelona-accio-musical'
-          group: 'BAM - Barcelona Acció Musical'
-    - "Aparcament de Mar Bella":
-        - event: "Josele Santiago"
-          time: '12:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-josele-santiago-dins-de-la-merce-es-musica'
-          group: 'La Mercè és Música'
-        - event: "Miquel Serra: L'elegància dorm"
-          time: '18:00'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-miquel-serra-lelegancia-dorm-dins-de-la-merce-es-musica'
-          group: 'La Mercè és Música'
-        - event: "The New Raemon"
-          time: '21:00'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-new-raemon-dins-de-la-merce-es-musica'
-          group: 'La Mercè és Música'
-    - "Casa de l'Aigua":
-        - event: "Ultimate Frisbee"
-          time: '18:00'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-ultimate-frisbee-dins-el-bam-barcelona-accio-musical'
-          group: 'BAM - Barcelona Acció Musical'
-        - event: "Power Burkas"
-          time: '21:00'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-power-burkas-dins-del-bam-barcelona-accio-musical'
-          group: 'BAM - Barcelona Acció Musical'
+        - event: "Beth"
+          time: '22:10'
+          link: 'https://www.barcelona.cat/lamerce/ca/concerts-escenari-cadena-100-dins-de-les-radios-de-la-merce'
+          group: 'Les Ràdios de la Mercè'
+        - event: "Miquel Abras"
+          time: '23:30'
+          link: 'https://www.barcelona.cat/lamerce/ca/concerts-escenari-cadena-100-dins-de-les-radios-de-la-merce'
+          group: 'Les Ràdios de la Mercè'
     - "Jardins del Doctor Pla i Armengol":
-        - event: "Marala: A trenc dalba"
+        - event: "Sona9: Reïna + Les Buch + Lles"
+          time: '12:00'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-sona9-reina-les-buch-lles-dins-de-la-merce-es-musica'
+          group: 'La Mercè és Música'
+        - event: "Iris Deco: Golden"
+          time: '20:20'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-iris-deco-golden-dins-de-la-merce-es-musica'
+          group: 'La Mercè és Música'
+        - event: "Gessamí Boada: On començo jo"
+          time: '21:40'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-gessami-boada-comenco-jo-dins-de-la-merce-es-musica'
+          group: 'La Mercè és Música'
+        - event: "Gemma Humet: Màtria"
+          time: '23:00'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-gemma-humet-matria-dins-de-la-merce-es-musica'
+          group: 'La Mercè és Música'
+    - "Moll de la Fusta":
+        - event: "Cabiria"
+          time: '18:30'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-cabiria-dins-del-bam-barcelona-accio-musical'
+          group: 'BAM - Barcelona Acció Musical'
+        - event: "Free Sis Mafia"
+          time: '19:30'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-free-sis-mafia-dins-del-bam-barcelona-accio-musical'
+          group: 'BAM - Barcelona Acció Musical'
+        - event: "Centauros"
+          time: '20:30'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-centauros-dins-del-bam-barcelona-accio-musical'
+          group: 'BAM - Barcelona Acció Musical'
+        - event: "Juicy Bae: Yuc Bestfriends"
+          time: '21:30'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-juicy-bae-yuc-bestfriends-dins-el-bam-barcelona-accio-musical'
+          group: 'BAM - Barcelona Acció Musical'
+        - event: "Hidrogenesse"
+          time: '22:30'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-hidrogenesse-dins-del-bam-barcelona-accio-musical'
+          group: 'BAM - Barcelona Acció Musical'
+        - event: "Santa Salut"
+          time: '23:30'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-santa-salut-dins-del-bam-barcelona-accio-musical'
+          group: 'BAM - Barcelona Acció Musical'
+    - "Plataforma marina del Fòrum":
+        - event: "The Crab Apples: Crap"
+          time: '20:20'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-crab-apples-crap-dins-de-la-merce-es-musica'
+          group: 'La Mercè és Música'
+        - event: "Sofia Gabanna: En òrbita"
+          time: '21:40'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-sofia-gabanna-en-orbita-dins-de-la-merce-es-musica'
+          group: 'La Mercè és Música'
+        - event: "Stay Homas: Agua"
+          time: '23:00'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-stay-homas-agua-dins-de-la-merce-es-musica'
+          group: 'La Mercè és Música'
+    - "Plaça Major de Nou Barris":
+        - event: "Orquestra Simfònica de Barcelona i Nacional de Catalunya (OBC): Concert de la Mercè"
+          time: '20:45'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-orquestra-simfonica-de-barcelona-i-nacional-de-catalunya-obc-concert-de-la-merce-dins-de-la'
+          group: 'La Mercè és Música'
+    - "Plaça Reial":
+        - event: "Taller de Músics: Alba Morena"
+          time: '12:00'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-taller-de-musics-alba-morena-dins-de-la-merce-es-musica'
+          group: 'La Mercè és Música'
+        - event: "Concert de la Federació Catalana d'Entitats Corals - Cor Jove de l’Orfeó Atlàntida: "
           time: '18:00'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-marala-trenc-dalba-dins-de-la-merce-es-musica'
-          group: 'La Mercè és Música'
-        - event: "Joan Isaac & Sílvia Comes: Cita amb àngels"
-          time: '21:00'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-joan-isaac-silvia-comes-cita-amb-angels-dins-de-la-merce-es-musica'
-          group: 'La Mercè és Música'
-    - "La Model":
-        - event: "Arnau Obiols: Tost"
-          time: '12:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-arnau-obiols-tost-dins-del-bam-barcelona-accio-musical'
-          group: 'BAM - Barcelona Acció Musical'
-        - event: "Núria Graham"
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-de-la-federacio-catalana-dentitats-corals-cor-jove-de-lorfeo-atlantida-de-mozart-broadway'
+          group: 'De Mozart a Broadway'
+        - event: "Concert de la Federació Catalana d'Entitats Corals - Barcelona Rainbow Singers: "
           time: '18:00'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-nuria-graham-dins-del-bam-barcelona-accio-musical'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-de-la-federacio-catalana-dentitats-corals-barcelona-rainbow-singers-concert-101-aniversari'
+          group: 'Concert 10+1 aniversari'
+    - "Plaça de Joan Coromines":
+        - event: "Rata Negra"
+          time: '20:50'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-rata-negra-dins-del-bam-barcelona-accio-musical'
           group: 'BAM - Barcelona Acció Musical'
-        - event: "b1n0 (feat Nuria Graham, El Petit de Cal Eril, PHOAC & Adriano Galante)"
+        - event: "Una Bèstia Incontrolable"
+          time: '22:10'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-una-bestia-incontrolable-dins-del-bam-barcelona-accio-musical'
+          group: 'BAM - Barcelona Acció Musical'
+        - event: "Viva Belgrado: Bellavista"
+          time: '23:30'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-viva-belgrado-bellavista-dins-del-bam-barcelona-accio-musical'
+          group: 'BAM - Barcelona Acció Musical'
+    - "Recinte de Fabra i Coats":
+        - event: "Flamenco Queer"
+          time: '20:00'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-flamenco-queer-dins-accio-cultura-viva'
+          group: 'Acció Cultura Viva'
+        - event: "Fera y Las Disidentes"
           time: '21:00'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-b1n0-feat-nuria-graham-el-petit-de-cal-eril-phoac-adriano-galante-dins-del-bam-barcelona'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-fera-y-las-disidentes-dins-accio-cultura-viva'
+          group: 'Acció Cultura Viva'
+        - event: "Las Marikarmen"
+          time: '22:00'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-las-marikarmen-dins-accio-cultura-viva'
+          group: 'Acció Cultura Viva'
+        - event: "Suzanna"
+          time: '23:00'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-suzanna-dins-accio-cultura-viva'
+          group: 'Acció Cultura Viva'
+    - "Teatre Grec":
+        - event: "Aziza Brahim: Nòmada Blues"
+          time: '20:20'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-aziza-brahim-nomada-blues-dins-de-la-merce-es-musica'
+          group: 'La Mercè és Música'
+        - event: "Mariola Membrives"
+          time: '21:40'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-mariola-membrives-dins-de-la-merce-es-musica'
+          group: 'La Mercè és Música'
+        - event: "Carmen Linares: 40 años de flamenco"
+          time: '23:00'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-carmen-linares-40-anos-de-flamenco-dins-de-la-merce-es-musica'
+          group: 'La Mercè és Música'
+- DS. 25:
+    - "Antiga Fàbrica Estrella Damm":
+        - event: "Eterna Joventut"
+          time: '12:00'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-eterna-joventut-dins-el-bam-barcelona-accio-musical'
           group: 'BAM - Barcelona Acció Musical'
-    - "Parc del Fòrum 1":
-        - event: "Siwo"
-          time: '12:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-siwo-dins-del-bam-barcelona-accio-musical'
+        - event: "Estruç"
+          time: '13:30'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-estruc-dins-del-bam-barcelona-accio-musical'
           group: 'BAM - Barcelona Acció Musical'
-        - event: "Barney Artist"
+        - event: "Tronco"
+          time: '17:30'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-tronco-dins-del-bam-barcelona-accio-musical'
+          group: 'BAM - Barcelona Acció Musical'
+        - event: "Lidia Damunt"
+          time: '19:00'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-lidia-damunt-dins-del-bam-barcelona-accio-musical'
+          group: 'BAM - Barcelona Acció Musical'
+        - event: "Rusowsky"
+          time: '20:30'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-rusowsky-dins-del-bam-barcelona-accio-musical'
+          group: 'BAM - Barcelona Acció Musical'
+    - "Camp de Futbol Municipal Vall d'Hebron":
+        - event: "Alison Darwin: Alison Darwin en concert"
+          time: '20:20'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-alison-darwin-alison-darwin-en-concert-dins-de-la-merce-es-musica'
+          group: 'La Mercè és Música'
+        - event: "Power Burkas: Naïf, potser"
+          time: '21:40'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-power-burkas-naif-potser-dins-de-la-merce-es-musica'
+          group: 'La Mercè és Música'
+        - event: "Nueva Vulcano: Ensayo"
+          time: '23:00'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-nueva-vulcano-ensayo-dins-de-la-merce-es-musica'
+          group: 'La Mercè és Música'
+    - "Estadi Olímpic Lluís Companys":
+        - event: "Mosaic"
+          time: '20:00'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-escenari-europa-fm-dins-de-les-radios-de-la-merce'
+          group: 'Les Ràdios de la Mercè'
+        - event: "Roba Estesa"
+          time: '20:45'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-escenari-europa-fm-dins-de-les-radios-de-la-merce'
+          group: 'Les Ràdios de la Mercè'
+        - event: "Sense Sal"
+          time: '22:00'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-escenari-europa-fm-dins-de-les-radios-de-la-merce'
+          group: 'Les Ràdios de la Mercè'
+        - event: "Pepet i Marieta"
+          time: '23:15'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-escenari-europa-fm-dins-de-les-radios-de-la-merce'
+          group: 'Les Ràdios de la Mercè'
+    - "Jardins del Doctor Pla i Armengol":
+        - event: "Brot: Quiròfan + Samuel Nagati"
+          time: '12:00'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-brot-quirofan-samuel-nagati-dins-de-la-merce-es-musica'
+          group: 'La Mercè és Música'
+        - event: "Renaldo & Clara: L’amor fa calor"
+          time: '20:20'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-renaldo-clara-lamor-fa-calor-dins-de-la-merce-es-musica'
+          group: 'La Mercè és Música'
+        - event: "Caïm Riba: Llunes de Plutó"
+          time: '21:40'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-caim-riba-llunes-de-pluto-dins-de-la-merce-es-musica'
+          group: 'La Mercè és Música'
+        - event: "Pau Vallvé: La vida és ara"
+          time: '23:00'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-pau-vallve-la-vida-es-ara-dins-de-la-merce-es-musica'
+          group: 'La Mercè és Música'
+    - "Moll de la Fusta":
+        - event: "Sonia María Priego Bárbara: Gira la Hungara"
           time: '18:00'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-barney-artist-dins-del-bam-barcelona-accio-musical'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-sonia-maria-priego-barbara-gira-la-hungara-dins-del-bam-barcelona-accio-musical'
           group: 'BAM - Barcelona Acció Musical'
-        - event: "Novelist"
-          time: '21:00'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-novelist-dins-del-bam-barcelona-accio-musical'
+        - event: "Las Karamba"
+          time: '19:00'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-las-karamba-dins-de-la-merce-es-musica'
+          group: 'La Mercè és Música'
+        - event: "Bea Pelea: Reggaetón Romantico"
+          time: '20:00'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-bea-pelea-reggaeton-romantico-dins-del-bam-barcelona-accio-musical'
           group: 'BAM - Barcelona Acció Musical'
-    - "Parc del Fòrum 2":
-        - event: "Aiala: Nothing less than live"
-          time: '12:30'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-aiala-nothing-less-live-dins-de-la-merce-es-musica'
-          group: 'La Mercè és Música'
-        - event: "The Unfinished Sympathy: Its a crush!"
-          time: '18:00'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-unfinished-sympathy-its-crush-dins-de-la-merce-es-musica'
-          group: 'La Mercè és Música'
-        - event: "Maika Makovski en las Fiestas de La Mercè"
+        - event: "Roberto Fonseca Trío"
           time: '21:00'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-maika-makovski-en-las-fiestas-de-la-merce-dins-de-la-merce-es-musica'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-roberto-fonseca-trio-dins-de-la-merce-es-musica'
           group: 'La Mercè és Música'
-    - "Park Güell":
-        - event: "Calima"
-          time: '18:00'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-calima-dins-de-la-merce-es-musica'
+        - event: "Samantha Hudson"
+          time: '22:00'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-samantha-hudson-dins-del-bam-barcelona-accio-musical'
+          group: 'BAM - Barcelona Acció Musical'
+        - event: "Interactivo: Interactivo de Cuba"
+          time: '23:30'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-interactivo-interactivo-de-cuba-dins-de-la-merce-es-musica'
           group: 'La Mercè és Música'
-        - event: "Pantanito: María Lionza"
-          time: '21:00'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-pantanito-maria-lionza-dins-de-la-merce-es-musica'
+    - "Plataforma marina del Fòrum":
+        - event: "Joana Serrat & The Great Canyoners: Hardcore from the Heart"
+          time: '20:25'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-joana-serrat-great-canyoners-hardcore-heart-dins-de-la-merce-es-musica'
+          group: 'La Mercè és Música'
+        - event: "Buhos: El dia de la victòria"
+          time: '21:35'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-buhos-el-dia-de-la-victoria-dins-de-la-merce-es-musica'
+          group: 'La Mercè és Música'
+        - event: "Stay Homas: Agua"
+          time: '23:00'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-stay-homas-agua-dins-de-la-merce-es-musica'
+          group: 'La Mercè és Música'
+        - event: "Oques Grasses: A tope amb la vida"
+          time: '23:10'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-oques-grasses-tope-amb-la-vida-dins-de-la-merce-es-musica'
+          group: 'La Mercè és Música'
+    - "Plaça Major de Nou Barris":
+        - event: "Orquestra Simfònica del Gran Teatre del Liceu: Carmen Suite"
+          time: '20:45'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-orquestra-simfonica-del-gran-teatre-del-liceu-carmen-suite-dins-de-la-merce-es-musica'
+          group: 'La Mercè és Música'
+    - "Plaça Reial":
+        - event: "Ana Brenes: Camino"
+          time: '12:00'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-ana-brenes-camino-escola-superior-de-musica-de-catalunya-esmuc-dins-de-la-merce-es-musica'
           group: 'La Mercè és Música'
     - "Plaça de Joan Coromines":
-        - event: "Marina Herlop"
-          time: '18:00'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-marina-herlop-dins-del-bam-barcelona-accio-musical'
+        - event: "Ulldeter"
+          time: '20:50'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-ulldeter-dins-del-bam-barcelona-accio-musical'
           group: 'BAM - Barcelona Acció Musical'
-        - event: "12Twelve"
-          time: '21:00'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-12twelve-dins-del-bam-barcelona-accio-musical'
+        - event: "Lyzza i Kai Landre"
+          time: '22:10'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-lyzza-i-kai-landre-dins-del-bam-barcelona-accio-musical'
           group: 'BAM - Barcelona Acció Musical'
-    - "Recinte Camp Nou":
-        - event: "Tribade: Las desheredadas"
-          time: '21:00'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-tribade-las-desheredadas-dins-de-la-merce-es-musica'
-          group: 'La Mercè és Música'
+        - event: "Planningtorock"
+          time: '23:30'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-planningtorock-dins-del-bam-barcelona-accio-musical'
+          group: 'BAM - Barcelona Acció Musical'
+    - "Recinte de Fabra i Coats":
+        - event: "Taller "
+          time: '10:00'
+          link: 'https://www.barcelona.cat/lamerce/ca/taller-confluencia-ii-sintetitza-la-teva-ona-dins-accio-cultura-viva'
+          group: 'Acció Cultura Viva'
+        - event: "Taller "
+          time: '11:00'
+          link: 'https://www.barcelona.cat/lamerce/ca/taller-musica-i-creativitat-dins-accio-cultura-viva'
+          group: 'Acció Cultura Viva'
+        - event: "Concert col·laboratiu "
+          time: '12:00'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-collaboratiu-musiques-i-experiencies-dins-accio-cultura-viva'
+          group: 'Acció Cultura Viva'
+        - event: "La Prenda Roja"
+          time: '12:00'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-la-prenda-roja-dins-accio-cultura-viva'
+          group: 'Acció Cultura Viva'
+        - event: "Discofòrum "
+          time: '12:00'
+          link: 'https://www.barcelona.cat/lamerce/ca/discoforum-confluencia-iii-amb-las-pibas-producen-dins-accio-cultura-viva'
+          group: 'Acció Cultura Viva'
+        - event: "Anna Colom: Cayana"
+          time: '13:00'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-anna-colom-cayana-dins-accio-cultura-viva'
+          group: 'Acció Cultura Viva'
+        - event: "Taller de percussió "
+          time: '16:00'
+          link: 'https://www.barcelona.cat/lamerce/ca/taller-de-percussio-confluencia-i-cercle-de-tambors-dins-accio-cultura-viva'
+          group: 'Acció Cultura Viva'
+        - event: "Fira Discogràfica, Ràdio Comunitària i Bingo Musical "
+          time: '17:00'
+          link: 'https://www.barcelona.cat/lamerce/ca/fira-discografica-radio-comunitaria-i-bingo-musical-confluencia-iv-dins-accio-cultura-viva'
+          group: 'Acció Cultura Viva'
+        - event: "Tilde"
+          time: '19:00'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-tilde-dins-accio-cultura-viva'
+          group: 'Acció Cultura Viva'
+        - event: "Kenya"
+          time: '20:00'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-kenya-dins-accio-cultura-viva'
+          group: 'Acció Cultura Viva'
+        - event: "Mechero"
+          time: '22:00'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-mechero-dins-accio-cultura-viva'
+          group: 'Acció Cultura Viva'
+        - event: "Prince Osito & The Cleftones"
+          time: '22:00'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-prince-osito-cleftones-dins-accio-cultura-viva'
+          group: 'Acció Cultura Viva'
+        - event: "Lil Russia"
+          time: '23:00'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-lil-russia-dins-accio-cultura-viva'
+          group: 'Acció Cultura Viva'
     - "Teatre Grec":
-        - event: "Enric Montefusco: Diagonal"
-          time: '18:00'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-enric-montefusco-diagonal-dins-de-la-merce-es-musica'
+        - event: "Toti Soler: Els dits de la música"
+          time: '20:20'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-toti-soler-els-dits-de-la-musica-dins-de-la-merce-es-musica'
           group: 'La Mercè és Música'
-        - event: "Maria Rodés: Lilith"
-          time: '21:00'
-          link: 'https://www.barcelona.cat/lamerce/ca/concert-maria-rodes-lilith-dins-de-la-merce-es-musica'
+        - event: "Judit Neddermann: Aire"
+          time: '21:40'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-judit-neddermann-aire-dins-de-la-merce-es-musica'
+          group: 'La Mercè és Música'
+        - event: "Clara Peya: Perifèria"
+          time: '23:00'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-clara-peya-periferia-dins-de-la-merce-es-musica'
+          group: 'La Mercè és Música'
+- DG. 26:
+    - "Antiga Fàbrica Estrella Damm":
+        - event: "Antonia Jimenez: Entre primas"
+          time: '17:00'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-antonia-jimenez-entre-primas-dins-del-bam-barcelona-accio-musical'
+          group: 'BAM - Barcelona Acció Musical'
+        - event: "Yndi"
+          time: '18:30'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-yndi-dins-del-bam-barcelona-accio-musical'
+          group: 'BAM - Barcelona Acció Musical'
+    - "Estadi Olímpic Lluís Companys":
+        - event: "Portobello"
+          time: '18:30'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-escenari-rac-105-dins-de-les-radios-de-la-merce'
+          group: 'Les Ràdios de la Mercè'
+        - event: "Suu"
+          time: '19:30'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-escenari-rac-105-dins-de-les-radios-de-la-merce'
+          group: 'Les Ràdios de la Mercè'
+        - event: "La Fúmiga"
+          time: '20:45'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-escenari-rac-105-dins-de-les-radios-de-la-merce'
+          group: 'Les Ràdios de la Mercè'
+    - "Plaça Major de Nou Barris":
+        - event: "Escola de Música Jam Session: Big Band Jam Session"
+          time: '12:00'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-escola-de-musica-jam-session-big-band-jam-session-dins-de-la-merce-es-musica'
+          group: 'La Mercè és Música'
+        - event: "Vozes + José María Vitier + Maria del Mar Bonet: Habana Concerto"
+          time: '19:30'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-vozes-jose-maria-vitier-maria-del-mar-bonet-habana-concerto-dins-de-la-merce-es-musica'
+          group: 'La Mercè és Música'
+    - "Plaça Reial":
+        - event: "Fundació Conservatori Liceu: Liceu BLAM Collective"
+          time: '12:00'
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-fundacio-conservatori-liceu-liceu-blam-collective-dins-de-la-merce-es-musica'
           group: 'La Mercè és Música'
