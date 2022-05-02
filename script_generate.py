@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import yaml
 import html_resources
+import os
 
 STAGE_STRING = (
     '<li class="events-group">'
@@ -30,6 +31,12 @@ STRING_EVENT_FILE = (
 if __name__ == "__main__":
     schedule_data = yaml.load(open('./schedule.yaml'))
     day_id = 0
+
+    dir_name = 'docs'
+    for item in os.listdir(dir_name):
+        if item.endswith(".html"):
+            os.remove(os.path.join(dir_name, item))
+
 
     for day in schedule_data:
         day_name = next(iter(day))
