@@ -45,6 +45,7 @@ if __name__ == "__main__":
         stage_id = 0
 
         lowest_event_time = '22:00'
+        print(day_name)
         for stage in day[day_name]:
             stage_id += 1
             stage_name = next(iter(stage))
@@ -53,11 +54,12 @@ if __name__ == "__main__":
             for event in stage[stage_name]:
                 event_html, event_time = html_resources.get_create_event_html(event, stage_id)
                 if int(event_time.split(':')[0]) > 9 and int(event_time.split(':')[0]) < int(lowest_event_time.split(':')[0]):
-                    lowest_event_time = event_time
+                    lowest_event_time = ':'.join([event_time.split(':')[0], '00'])
                 stage_events.append(event_html)
 
             stage_html = html_resources.get_stage_html(stage_name, stage_events)
             day_stages.append(stage_html)
+        print(lowest_event_time)
 
         html_resources.create_day_html(lowest_event_time, day_name, day_stages, day_id, [next(iter(d)) for d in schedule_data])
         day_id += 1

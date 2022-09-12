@@ -34,6 +34,11 @@ def get_raw_day(lowest_event_time, title, num_stages, day_links, stages_html):
 			'<li><span style="display: none">23:00</span></li>',
 			'<li><span style="display: none">23:30</span></li>',
 			'<li><span style="display: none">00:00</span></li>',
+            '<li><span style="display: none">00:00</span></li>',
+            '<li><span style="display: none">00:30</span></li>',
+            '<li><span style="display: none">00:30</span></li>',
+            '<li><span style="display: none">01:00</span></li>',
+            '<li><span style="display: none">01:00</span></li>',
     ]
     indx_list = 0
     for i, t in enumerate(times):
@@ -190,7 +195,7 @@ def get_create_event_html(event_info, stage_id):
     # Return event HTML
     return '''<li class="single-event" data-start="'''+event_start+'''" data-end="'''+event_end+'''"  data-content="event-'''+str(EVENT_ID)+'''" data-event="event-'''+str(stage_id)+'''">
         <a target="_blank" href="'''+event_youtube+'''">
-            <em class="event-name" style="font-size: 8px; color: #eee">'''+event_group+'''</em>
+            <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">'''+event_group+'''</em>
             <em class="event-name">'''+event_name+'''</em>
         </a>
     </li>''', event_info['time']

@@ -40,8 +40,9 @@ Main Components
 }
 
 .cd-schedule {
-  width: calc(6*150px + 60px);
-  margin: 2em auto;
+    width: calc(100%-40px);
+  min-width: 1200px;
+  margin: 20px;
 }
 .cd-schedule::after {
   clear: both;
@@ -88,8 +89,8 @@ Main Components
 
 
 .cd-schedule .timeline li::after {
-  width: calc(100% - 60px);
-  left: 60px;
+  /* width: calc(100% - 60px);
+  left: 60px; */
 }
 .cd-schedule .timeline li span {
   display: inline-block;
@@ -236,7 +237,7 @@ Main Components
   margin-right: 0;
 }
 .cd-schedule .events .single-event a {
-  padding: 4px;
+  padding: 0 4px;
 }
 .cd-schedule .events .single-event:last-of-type {
   /* reset style */
@@ -249,8 +250,8 @@ Main Components
 
 .cd-schedule .events {
   /* 60px is the .timeline element width */
-  width: calc(100% - 60px);
-  margin-left: 60px;
+  /* width: calc(100% - 60px);
+  margin-left: 60px; */
 }
 
 .cd-schedule.loading .events .single-event {
@@ -268,13 +269,9 @@ Main Components
   -moz-osx-font-smoothing: grayscale;
 }
 
-.cd-schedule .event-name {
-  font-size: 2.4rem;
-}
-
 
 .cd-schedule .event-name {
-  font-size: 14px;
+  font-size: 11px;
 }
 
 button {
@@ -285,10 +282,11 @@ button {
 
 .cd-schedule .event-date {
   /* they are not included in the the HTML but added using JavScript */
-  font-size: 10px;
+  font-size: 8px;
   opacity: .7;
   line-height: 1.2;
   margin-bottom: .2em;
+  display: inline-block;
 }
 
 .cd-schedule .single-event[data-event="event-1"],
@@ -356,56 +354,60 @@ button {
   background: #618da1;
 }
 
+
+
+
+
 .cd-schedule .single-event[data-event="event-9"],
 .cd-schedule [data-event="event-9"] .header-bg {
-  background: #577F92;
+  background: #443453;
 }
 .cd-schedule .single-event[data-event="event-9"]:hover {
-  background: #618da1;
+  background: #513e63;
 }
 
 .cd-schedule .single-event[data-event="event-10"],
 .cd-schedule [data-event="event-10"] .header-bg {
-  background: #577F92;
+  background: #074F82;
 }
 .cd-schedule .single-event[data-event="event-10"]:hover {
-  background: #618da1;
+  background: #016d81;
 }
 
 .cd-schedule .single-event[data-event="event-11"],
 .cd-schedule [data-event="event-11"] .header-bg {
-  background: #577F92;
+  background: #359A82;
 }
 .cd-schedule .single-event[data-event="event-11"]:hover {
-  background: #618da1;
+  background: #5db49f;
 }
 
 .cd-schedule .single-event[data-event="event-12"],
 .cd-schedule [data-event="event-12"] .header-bg {
-  background: #577F92;
+  background: #f6b067;
 }
 .cd-schedule .single-event[data-event="event-12"]:hover {
-  background: #618da1;
+  background: #f7bd7f;
 }
 
 .cd-schedule .single-event[data-event="event-13"],
 .cd-schedule [data-event="event-13"] .header-bg {
-  background: #577F92;
+  background: #A2B9B2;
 }
 .cd-schedule .single-event[data-event="event-13"]:hover {
-  background: #618da1;
+  background: #b1c4be;
 }
 
 .cd-schedule .single-event[data-event="event-14"],
 .cd-schedule [data-event="event-14"] .header-bg {
-  background: #577F92;
+  background: #896682;
 }
 .cd-schedule .single-event[data-event="event-14"]:hover {
-  background: #618da1;
+  background: #9a7a94;
 }
 
 .cd-schedule .single-event[data-event="event-15"],
-.cd-schedule [data-event="event-14"] .header-bg {
+.cd-schedule [data-event="event-15"] .header-bg {
   background: #577F92;
 }
 .cd-schedule .single-event[data-event="event-15"]:hover {
