@@ -73,9 +73,9 @@
           time: '21:30'
           link: 'https://www.barcelona.cat/lamerce/ca/concert-durag-presenta-bobbyblock-munic-hb-lablackie-holics-i-la-peque-fortuna-dins-del-bam'
           group: 'BAM'
-        - event: "(GRUP A DETERMINAR)"
+        - event: "Álvaro Sola"
           time: '23:00'
-          link: ''
+          link: 'https://www.barcelona.cat/lamerce/ca/concert-alvaro-sola-dins-del-bam-barcelona-accio-musical'
           group: 'BAM'
     - "Nau Bostik":
         - event: "La Maga: La Maga"
