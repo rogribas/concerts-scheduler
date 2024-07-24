@@ -1,5 +1,5 @@
 # concerts scheduler
 
-Current: Mercè 2022
+Current: Mercè 2024
 
 https://rogribas.github.io/concerts-scheduler/
