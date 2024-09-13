@@ -181,16 +181,16 @@ def get_create_event_html(event_info, stage_id):
     EVENT_ID += 1
     event_start, event_end, event_name, event_youtube, event_group = get_event_info(event_info)
 
-    # Create event file
-    f_event = open('./docs/event-'+str(EVENT_ID)+'.html', 'w')
-    f_event.write('''<div class="event-info">
-    	<div width="500px">
-    		<iframe class="youtube-video" width="420" height="315" z-index="55555"
-    			src="'''+event_youtube+'''">
-    		</iframe>
-    	</div>
-    </div>''')  # python will convert \n to os.linesep
-    f_event.close()
+    # # Create event file
+    # f_event = open('./docs/event-'+str(EVENT_ID)+'.html', 'w')
+    # f_event.write('''<div class="event-info">
+    # 	<div width="500px">
+    # 		<iframe class="youtube-video" width="420" height="315" z-index="55555"
+    # 			src="'''+event_youtube+'''">
+    # 		</iframe>
+    # 	</div>
+    # </div>''')  # python will convert \n to os.linesep
+    # f_event.close()
 
     # Return event HTML
     return '''<li class="single-event" data-start="'''+event_start+'''" data-end="'''+event_end+'''"  data-content="event-'''+str(EVENT_ID)+'''" data-event="event-'''+str(stage_id)+'''">

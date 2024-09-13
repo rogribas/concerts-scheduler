@@ -29,6 +29,14 @@ STRING_EVENT_FILE = (
 
 
 if __name__ == "__main__":
+    # Load the schedule.yaml file
+    with open('schedule.yaml', 'r', encoding='utf-8') as file:
+        schedule_data = yaml.safe_load(file)
+    
+    # Check if the file is empty or invalid
+    if not schedule_data:
+        print("Error: schedule.yaml is empty or invalid.")
+        exit(1)
     with open('./schedule.yaml', 'r') as file:
         schedule_data = yaml.safe_load(file)
     day_id = 0

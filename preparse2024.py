@@ -30,31 +30,40 @@ def scrape_concerts(url):
     for day_block in soup.find_all('div', class_='block-day'):
         date = day_block.get('day').split('-')[-1]
         date_str = {
-            20: "DV. 20",
-            21: "DS. 22",
-            22: "DG. 23",
-            23: "DL. 24",
-            24: "DM. 25",
+            18: "Dc. 18",
+            19: "Dj. 19",
+            20: "Dv. 20",
+            21: "Ds. 21",
+            22: "Dg. 22",
+            23: "Dl. 23",
+            24: "Dm. 24",
+            29: "Dg. 29",
         }[int(date)]
         concerts[date_str] = {}
         
-        for program in day_block.find_all('div', class_='wrapper-info-program'):
-            location = program.find('div', class_='place').text.strip()
-            if location not in concerts[date_str]:
-                concerts[date_str][location] = []
-            
-            event = clean_event_name(program.find('h5').text.strip())
-            time = program.find('div', class_='wrapper-hour-program').contents[0].strip().split(' a ')[0][:-2].replace('.', ':')
-            link = 'https://www.barcelona.cat' + program.find('a')['href']
-            group = program.find('span', class_='subcat-program').text.strip()
-            
-            concerts[date_str][location].append({
-                'event': event,
-                'time': time,
-                'link': link,
-                'group': group
-            })
-    
+        music_sections = day_block.find_all('div', id="sect-22307")
+
+        for p in music_sections:
+            for program in p.find_all('div', class_='wrapper-info-program'):
+                try:
+                    location = program.find('div', class_='place').text.strip()
+                    if location not in concerts[date_str]:
+                        concerts[date_str][location] = []
+                    
+                    event = clean_event_name(program.find('h5').text.strip())
+                    time = program.find('div', class_='wrapper-hour-program').contents[0].strip().split(' a ')[0][:-2].replace('.', ':')
+                    link = 'https://www.barcelona.cat' + program.find('a')['href']
+                    group = program.find('span', class_='subcat-program').text.strip()
+                    
+                    concerts[date_str][location].append({
+                        'event': event,
+                        'time': time,
+                        'link': link,
+                        'group': group
+                    })
+                except:
+                    print(clean_event_name(program.find('h5').text.strip()))
+        
     return concerts
 
 def generate_yaml(concerts):
