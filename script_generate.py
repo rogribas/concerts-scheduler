@@ -29,7 +29,8 @@ STRING_EVENT_FILE = (
 
 
 if __name__ == "__main__":
-    schedule_data = yaml.load(open('./schedule.yaml'))
+    with open('./schedule.yaml', 'r') as file:
+        schedule_data = yaml.safe_load(file)
     day_id = 0
 
     dir_name = 'docs'
