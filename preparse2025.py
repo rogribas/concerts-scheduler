@@ -5,7 +5,10 @@ import re
 
 def clean_event_name(event):
     # Remove "Concert" and quotation marks
-    event = re.sub(r'^Concert\s*"|"$', '', event).strip()
+    if "Concert de" in event:
+        event = re.sub(r'^Concert de \s*"|"$', '', event).strip()
+    else:
+        event = re.sub(r'^Concert \s*"|"$', '', event).strip()
     
     # Extract the main name and any additional info in parentheses
     match = re.match(r'(.+?)\s*(?:\((.+?)\))?\s*(?:a\s*[\'"](.+?)[\'"])?$', event)
