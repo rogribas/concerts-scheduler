@@ -191,8 +191,8 @@ def get_raw_day(lowest_event_time, title, num_stages, day_links, stages_html):
 	<div class="toggle-switch" id="showToggle">
 		<div class="toggle-slider"></div>
 		<div class="toggle-labels">
-			<span>ALL SHOWS</span>
-			<span>FAVORITES</span>
+			<span style="padding-left: 15px;">TOTS</span>
+			<span>PREFERITS</span>
 		</div>
 	</div>
 </div>
@@ -220,8 +220,8 @@ def get_raw_day(lowest_event_time, title, num_stages, day_links, stages_html):
 	</div>
 
 	<div class="empty-favorites-message" id="emptyFavoritesMessage">
-		<p>No favorite shows selected yet.</p>
-		<p>Click the ★ button on any show to add it to your favorites!</p>
+		<p>Encara no has seleccionat cap concert preferit.</p>
+        <p>Fes clic al botó ★ en qualsevol concert per afegir-lo als teus preferits!</p>
 	</div>
 
 	<div class="event-modal">
