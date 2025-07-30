@@ -63,6 +63,37 @@ def get_raw_day(lowest_event_time, title, num_stages, day_links, stages_html):
 		.cd-schedule .events li.events-group {
 			width: calc(100% /"""+str(num_stages)+""")
 		}
+		
+		/* Star toggle button styles */
+		.star-toggle {
+			position: absolute;
+			top: 5px;
+			right: 8px;
+			background: none;
+			border: none;
+			font-size: 16px;
+			cursor: pointer;
+			color: #ccc;
+			transition: color 0.3s ease;
+			z-index: 10;
+			padding: 2px;
+		}
+		
+		.star-toggle:hover {
+			color: #ffd700;
+		}
+		
+		.star-toggle.highlighted {
+			color: #ffd700;
+		}
+		
+		.single-event {
+			position: relative;
+		}
+		
+		.single-event.highlighted {
+			border-left: 5px solid #ffd700 !important;
+		}
 	</style>
 </head>
 <body>
@@ -118,6 +149,74 @@ def get_raw_day(lowest_event_time, title, num_stages, day_links, stages_html):
 	if( !window.jQuery ) document.write('<script src="js/jquery-3.0.0.min.js"><\/script>');
 </script>
 <script src="js/main.js"></script> <!-- Resource jQuery -->
+
+<script>
+// Cookie utility functions
+function setCookie(name, value, days) {
+    const expires = new Date();
+    expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = name + '=' + value + ';expires=' + expires.toUTCString() + ';path=/';
+}
+
+function getCookie(name) {
+    const nameEQ = name + "=";
+    const ca = document.cookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}
+
+function getHighlightedEvents() {
+    const highlighted = getCookie('highlightedEvents');
+    return highlighted ? JSON.parse(highlighted) : [];
+}
+
+function saveHighlightedEvents(eventIds) {
+    setCookie('highlightedEvents', JSON.stringify(eventIds), 365); // Save for 1 year
+}
+
+// Initialize star toggles when page loads
+$(document).ready(function() {
+    const highlightedEvents = getHighlightedEvents();
+    
+    // Apply saved highlights
+    highlightedEvents.forEach(function(eventId) {
+        const eventElement = $('[data-event-id="' + eventId + '"]');
+        eventElement.addClass('highlighted');
+        eventElement.find('.star-toggle').addClass('highlighted');
+    });
+    
+    // Handle star toggle clicks
+    $(document).on('click', '.star-toggle', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        const button = $(this);
+        const eventElement = button.closest('.single-event');
+        const eventId = eventElement.attr('data-event-id');
+        let highlightedEvents = getHighlightedEvents();
+        
+        if (button.hasClass('highlighted')) {
+            // Remove highlight
+            button.removeClass('highlighted');
+            eventElement.removeClass('highlighted');
+            highlightedEvents = highlightedEvents.filter(id => id !== eventId);
+        } else {
+            // Add highlight
+            button.addClass('highlighted');
+            eventElement.addClass('highlighted');
+            if (!highlightedEvents.includes(eventId)) {
+                highlightedEvents.push(eventId);
+            }
+        }
+        
+        saveHighlightedEvents(highlightedEvents);
+    });
+});
+</script>
 </body>
 </html>
 """)
@@ -181,19 +280,9 @@ def get_create_event_html(event_info, stage_id):
     EVENT_ID += 1
     event_start, event_end, event_name, event_youtube, event_group = get_event_info(event_info)
 
-    # # Create event file
-    # f_event = open('./docs/event-'+str(EVENT_ID)+'.html', 'w')
-    # f_event.write('''<div class="event-info">
-    # 	<div width="500px">
-    # 		<iframe class="youtube-video" width="420" height="315" z-index="55555"
-    # 			src="'''+event_youtube+'''">
-    # 		</iframe>
-    # 	</div>
-    # </div>''')  # python will convert \n to os.linesep
-    # f_event.close()
-
-    # Return event HTML
-    return '''<li class="single-event" data-start="'''+event_start+'''" data-end="'''+event_end+'''"  data-content="event-'''+str(EVENT_ID)+'''" data-event="event-'''+str(stage_id)+'''">
+    # Return event HTML with star toggle button
+    return '''<li class="single-event" data-start="'''+event_start+'''" data-end="'''+event_end+'''"  data-content="event-'''+str(EVENT_ID)+'''" data-event="event-'''+str(stage_id)+'''" data-event-id="event-'''+str(EVENT_ID)+'''">
+        <button class="star-toggle" title="Toggle highlight">★</button>
         <a target="_blank" href="'''+event_youtube+'''">
             <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">'''+event_group+'''</em>
             <em class="event-name">'''+event_name+'''</em>

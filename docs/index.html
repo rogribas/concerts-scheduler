@@ -14,6 +14,37 @@
 		.cd-schedule .events li.events-group {
 			width: calc(100% /1)
 		}
+		
+		/* Star toggle button styles */
+		.star-toggle {
+			position: absolute;
+			top: 5px;
+			right: 8px;
+			background: none;
+			border: none;
+			font-size: 16px;
+			cursor: pointer;
+			color: #ccc;
+			transition: color 0.3s ease;
+			z-index: 10;
+			padding: 2px;
+		}
+		
+		.star-toggle:hover {
+			color: #ffd700;
+		}
+		
+		.star-toggle.highlighted {
+			color: #ffd700;
+		}
+		
+		.single-event {
+			position: relative;
+		}
+		
+		.single-event.highlighted {
+			border-left: 5px solid #ffd700 !important;
+		}
 	</style>
 </head>
 <body>
@@ -45,7 +76,8 @@
 			
 <li class="events-group">
    <div class="top-info"><span>Platja del Bogatell</span></div>
-   <ul><li class="single-event" data-start="21:05" data-end="22:00"  data-content="event-1" data-event="event-1">
+   <ul><li class="single-event" data-start="21:05" data-end="22:00"  data-content="event-1" data-event="event-1" data-event-id="event-1">
+        <button class="star-toggle" title="Toggle highlight">★</button>
         <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-doctor-prats">
             <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Pop-rock</em>
             <em class="event-name">Doctor Prats</em>
@@ -88,5 +120,73 @@
 	if( !window.jQuery ) document.write('<script src="js/jquery-3.0.0.min.js"><\/script>');
 </script>
 <script src="js/main.js"></script> <!-- Resource jQuery -->
+
+<script>
+// Cookie utility functions
+function setCookie(name, value, days) {
+    const expires = new Date();
+    expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = name + '=' + value + ';expires=' + expires.toUTCString() + ';path=/';
+}
+
+function getCookie(name) {
+    const nameEQ = name + "=";
+    const ca = document.cookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}
+
+function getHighlightedEvents() {
+    const highlighted = getCookie('highlightedEvents');
+    return highlighted ? JSON.parse(highlighted) : [];
+}
+
+function saveHighlightedEvents(eventIds) {
+    setCookie('highlightedEvents', JSON.stringify(eventIds), 365); // Save for 1 year
+}
+
+// Initialize star toggles when page loads
+$(document).ready(function() {
+    const highlightedEvents = getHighlightedEvents();
+    
+    // Apply saved highlights
+    highlightedEvents.forEach(function(eventId) {
+        const eventElement = $('[data-event-id="' + eventId + '"]');
+        eventElement.addClass('highlighted');
+        eventElement.find('.star-toggle').addClass('highlighted');
+    });
+    
+    // Handle star toggle clicks
+    $(document).on('click', '.star-toggle', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        const button = $(this);
+        const eventElement = button.closest('.single-event');
+        const eventId = eventElement.attr('data-event-id');
+        let highlightedEvents = getHighlightedEvents();
+        
+        if (button.hasClass('highlighted')) {
+            // Remove highlight
+            button.removeClass('highlighted');
+            eventElement.removeClass('highlighted');
+            highlightedEvents = highlightedEvents.filter(id => id !== eventId);
+        } else {
+            // Add highlight
+            button.addClass('highlighted');
+            eventElement.addClass('highlighted');
+            if (!highlightedEvents.includes(eventId)) {
+                highlightedEvents.push(eventId);
+            }
+        }
+        
+        saveHighlightedEvents(highlightedEvents);
+    });
+});
+</script>
 </body>
 </html>

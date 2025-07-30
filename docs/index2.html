@@ -14,6 +14,37 @@
 		.cd-schedule .events li.events-group {
 			width: calc(100% /4)
 		}
+		
+		/* Star toggle button styles */
+		.star-toggle {
+			position: absolute;
+			top: 5px;
+			right: 8px;
+			background: none;
+			border: none;
+			font-size: 16px;
+			cursor: pointer;
+			color: #ccc;
+			transition: color 0.3s ease;
+			z-index: 10;
+			padding: 2px;
+		}
+		
+		.star-toggle:hover {
+			color: #ffd700;
+		}
+		
+		.star-toggle.highlighted {
+			color: #ffd700;
+		}
+		
+		.single-event {
+			position: relative;
+		}
+		
+		.single-event.highlighted {
+			border-left: 5px solid #ffd700 !important;
+		}
 	</style>
 </head>
 <body>
@@ -65,17 +96,20 @@
 			
 <li class="events-group">
    <div class="top-info"><span>Jardins del Doctor Pla i Armengol</span></div>
-   <ul><li class="single-event" data-start="11:30" data-end="12:25"  data-content="event-17" data-event="event-1">
+   <ul><li class="single-event" data-start="11:30" data-end="12:25"  data-content="event-17" data-event="event-1" data-event-id="event-17">
+        <button class="star-toggle" title="Toggle highlight">★</button>
         <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-liceu-blam-collective">
             <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Música moderna</em>
             <em class="event-name">Liceu BLAM Collective</em>
         </a>
-    </li> <li class="single-event" data-start="13:00" data-end="13:55"  data-content="event-18" data-event="event-1">
+    </li> <li class="single-event" data-start="13:00" data-end="13:55"  data-content="event-18" data-event="event-1" data-event-id="event-18">
+        <button class="star-toggle" title="Toggle highlight">★</button>
         <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-taller-de-musics-xxl-collective">
             <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Jazz / funk</em>
             <em class="event-name">Taller de Músics XXL Collective</em>
         </a>
-    </li> <li class="single-event" data-start="19:00" data-end="19:55"  data-content="event-19" data-event="event-1">
+    </li> <li class="single-event" data-start="19:00" data-end="19:55"  data-content="event-19" data-event="event-1" data-event-id="event-19">
+        <button class="star-toggle" title="Toggle highlight">★</button>
         <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-xamfra-centre-de-musica-i-escena-del-raval">
             <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Música moderna</em>
             <em class="event-name">Xamfrà, Centre de Música i Escena del Raval</em>
@@ -86,7 +120,8 @@
 
 <li class="events-group">
    <div class="top-info"><span>La Plaça de Catalunya</span></div>
-   <ul><li class="single-event" data-start="17:00" data-end="17:55"  data-content="event-20" data-event="event-2">
+   <ul><li class="single-event" data-start="17:00" data-end="17:55"  data-content="event-20" data-event="event-2" data-event-id="event-20">
+        <button class="star-toggle" title="Toggle highlight">★</button>
         <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-catalunya-freestyle">
             <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Rap</em>
             <em class="event-name">Catalunya Freestyle</em>
@@ -97,7 +132,8 @@
 
 <li class="events-group">
    <div class="top-info"><span>Avinguda de la Catedral</span></div>
-   <ul><li class="single-event" data-start="20:00" data-end="20:55"  data-content="event-21" data-event="event-3">
+   <ul><li class="single-event" data-start="20:00" data-end="20:55"  data-content="event-21" data-event="event-3" data-event-id="event-21">
+        <button class="star-toggle" title="Toggle highlight">★</button>
         <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-centenari-dantonio-gonzalez-batista-el-pescadilla">
             <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Flamenc</em>
             <em class="event-name">Centenari d’Antonio González Batista “el Pescadilla”</em>
@@ -108,7 +144,8 @@
 
 <li class="events-group">
    <div class="top-info"><span>Plaça Major de Nou Barris, 1</span></div>
-   <ul><li class="single-event" data-start="20:45" data-end="21:40"  data-content="event-22" data-event="event-4">
+   <ul><li class="single-event" data-start="20:45" data-end="21:40"  data-content="event-22" data-event="event-4" data-event-id="event-22">
+        <button class="star-toggle" title="Toggle highlight">★</button>
         <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-orquestra-simfonica-vozes-la-maria">
             <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Tradicional / innovació (tradinnovació)</em>
             <em class="event-name">Orquestra Simfònica Vozes + La Maria</em>
@@ -151,5 +188,73 @@
 	if( !window.jQuery ) document.write('<script src="js/jquery-3.0.0.min.js"><\/script>');
 </script>
 <script src="js/main.js"></script> <!-- Resource jQuery -->
+
+<script>
+// Cookie utility functions
+function setCookie(name, value, days) {
+    const expires = new Date();
+    expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = name + '=' + value + ';expires=' + expires.toUTCString() + ';path=/';
+}
+
+function getCookie(name) {
+    const nameEQ = name + "=";
+    const ca = document.cookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}
+
+function getHighlightedEvents() {
+    const highlighted = getCookie('highlightedEvents');
+    return highlighted ? JSON.parse(highlighted) : [];
+}
+
+function saveHighlightedEvents(eventIds) {
+    setCookie('highlightedEvents', JSON.stringify(eventIds), 365); // Save for 1 year
+}
+
+// Initialize star toggles when page loads
+$(document).ready(function() {
+    const highlightedEvents = getHighlightedEvents();
+    
+    // Apply saved highlights
+    highlightedEvents.forEach(function(eventId) {
+        const eventElement = $('[data-event-id="' + eventId + '"]');
+        eventElement.addClass('highlighted');
+        eventElement.find('.star-toggle').addClass('highlighted');
+    });
+    
+    // Handle star toggle clicks
+    $(document).on('click', '.star-toggle', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        const button = $(this);
+        const eventElement = button.closest('.single-event');
+        const eventId = eventElement.attr('data-event-id');
+        let highlightedEvents = getHighlightedEvents();
+        
+        if (button.hasClass('highlighted')) {
+            // Remove highlight
+            button.removeClass('highlighted');
+            eventElement.removeClass('highlighted');
+            highlightedEvents = highlightedEvents.filter(id => id !== eventId);
+        } else {
+            // Add highlight
+            button.addClass('highlighted');
+            eventElement.addClass('highlighted');
+            if (!highlightedEvents.includes(eventId)) {
+                highlightedEvents.push(eventId);
+            }
+        }
+        
+        saveHighlightedEvents(highlightedEvents);
+    });
+});
+</script>
 </body>
 </html>

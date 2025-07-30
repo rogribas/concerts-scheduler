@@ -14,6 +14,37 @@
 		.cd-schedule .events li.events-group {
 			width: calc(100% /15)
 		}
+		
+		/* Star toggle button styles */
+		.star-toggle {
+			position: absolute;
+			top: 5px;
+			right: 8px;
+			background: none;
+			border: none;
+			font-size: 16px;
+			cursor: pointer;
+			color: #ccc;
+			transition: color 0.3s ease;
+			z-index: 10;
+			padding: 2px;
+		}
+		
+		.star-toggle:hover {
+			color: #ffd700;
+		}
+		
+		.star-toggle.highlighted {
+			color: #ffd700;
+		}
+		
+		.single-event {
+			position: relative;
+		}
+		
+		.single-event.highlighted {
+			border-left: 5px solid #ffd700 !important;
+		}
 	</style>
 </head>
 <body>
@@ -63,17 +94,20 @@
 			
 <li class="events-group">
    <div class="top-info"><span>Jardins del Doctor Pla i Armengol</span></div>
-   <ul><li class="single-event" data-start="12:00" data-end="12:55"  data-content="event-50" data-event="event-1">
+   <ul><li class="single-event" data-start="12:00" data-end="12:55"  data-content="event-50" data-event="event-1" data-event-id="event-50">
+        <button class="star-toggle" title="Toggle highlight">★</button>
         <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-jamnation-big-band-jam">
             <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Músiques actuals</em>
             <em class="event-name">Jamnation / Big Band Jam</em>
         </a>
-    </li> <li class="single-event" data-start="21:30" data-end="22:25"  data-content="event-51" data-event="event-1">
+    </li> <li class="single-event" data-start="21:30" data-end="22:25"  data-content="event-51" data-event="event-1" data-event-id="event-51">
+        <button class="star-toggle" title="Toggle highlight">★</button>
         <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-danna-ferrer">
             <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Cançó d’autor, arrel, folk</em>
             <em class="event-name">Concert d'"Anna Ferrer</em>
         </a>
-    </li> <li class="single-event" data-start="23:15" data-end="00:10"  data-content="event-52" data-event="event-1">
+    </li> <li class="single-event" data-start="23:15" data-end="00:10"  data-content="event-52" data-event="event-1" data-event-id="event-52">
+        <button class="star-toggle" title="Toggle highlight">★</button>
         <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-mito-y-comadre">
             <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Música del món</em>
             <em class="event-name">Mito y Comadre</em>
@@ -84,12 +118,14 @@
 
 <li class="events-group">
    <div class="top-info"><span>Plaça Major de Nou Barris, 1</span></div>
-   <ul><li class="single-event" data-start="13:00" data-end="13:55"  data-content="event-53" data-event="event-2">
+   <ul><li class="single-event" data-start="13:00" data-end="13:55"  data-content="event-53" data-event="event-2" data-event-id="event-53">
+        <button class="star-toggle" title="Toggle highlight">★</button>
         <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-banda-simfonica-roquetes-de-nou-barris-i-filarmonica-volere-e-potere">
             <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Música simfònica</em>
             <em class="event-name">Banda Simfònica Roquetes de Nou Barris i Filarmonica Volere è Potere</em>
         </a>
-    </li> <li class="single-event" data-start="20:45" data-end="21:40"  data-content="event-54" data-event="event-2">
+    </li> <li class="single-event" data-start="20:45" data-end="21:40"  data-content="event-54" data-event="event-2" data-event-id="event-54">
+        <button class="star-toggle" title="Toggle highlight">★</button>
         <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-orquestra-simfonica-de-barcelona-i-nacional-de-catalunya">
             <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Música simfònica</em>
             <em class="event-name">Orquestra Simfònica de Barcelona i Nacional de Catalunya</em>
@@ -100,12 +136,14 @@
 
 <li class="events-group">
    <div class="top-info"><span>Parc de la Ciutadella</span></div>
-   <ul><li class="single-event" data-start="13:00" data-end="13:55"  data-content="event-55" data-event="event-3">
+   <ul><li class="single-event" data-start="13:00" data-end="13:55"  data-content="event-55" data-event="event-3" data-event-id="event-55">
+        <button class="star-toggle" title="Toggle highlight">★</button>
         <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-juan-andres-ospina-i-lorquesta-efimera">
             <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">World music</em>
             <em class="event-name">Juan Andrés Ospina i l’Orquesta Efímera</em>
         </a>
-    </li> <li class="single-event" data-start="22:30" data-end="23:25"  data-content="event-56" data-event="event-3">
+    </li> <li class="single-event" data-start="22:30" data-end="23:25"  data-content="event-56" data-event="event-3" data-event-id="event-56">
+        <button class="star-toggle" title="Toggle highlight">★</button>
         <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-kokoschca">
             <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Pop / rock / indie</em>
             <em class="event-name">Kokoschca</em>
@@ -116,32 +154,38 @@
 
 <li class="events-group">
    <div class="top-info"><span>Antiga Fàbrica Estrella Damm</span></div>
-   <ul><li class="single-event" data-start="13:15" data-end="14:10"  data-content="event-57" data-event="event-4">
+   <ul><li class="single-event" data-start="13:15" data-end="14:10"  data-content="event-57" data-event="event-4" data-event-id="event-57">
+        <button class="star-toggle" title="Toggle highlight">★</button>
         <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-vennus">
             <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Indie / pop / electrònica</em>
             <em class="event-name">Ven’nus</em>
         </a>
-    </li> <li class="single-event" data-start="14:15" data-end="15:10"  data-content="event-58" data-event="event-4">
+    </li> <li class="single-event" data-start="14:15" data-end="15:10"  data-content="event-58" data-event="event-4" data-event-id="event-58">
+        <button class="star-toggle" title="Toggle highlight">★</button>
         <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-chica-acosta-b2b-phran">
             <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Latin club / house / changa / tecno / acid</em>
             <em class="event-name">Chica Acosta B2B Phran</em>
         </a>
-    </li> <li class="single-event" data-start="16:30" data-end="17:25"  data-content="event-59" data-event="event-4">
+    </li> <li class="single-event" data-start="16:30" data-end="17:25"  data-content="event-59" data-event="event-4" data-event-id="event-59">
+        <button class="star-toggle" title="Toggle highlight">★</button>
         <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-ultralone">
             <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Música urbana</em>
             <em class="event-name">ultralone</em>
         </a>
-    </li> <li class="single-event" data-start="17:40" data-end="18:35"  data-content="event-60" data-event="event-4">
+    </li> <li class="single-event" data-start="17:40" data-end="18:35"  data-content="event-60" data-event="event-4" data-event-id="event-60">
+        <button class="star-toggle" title="Toggle highlight">★</button>
         <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-d-hadren">
             <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Pop alternatiu / ambient / electrònica</em>
             <em class="event-name">Concert d' "Hadren</em>
         </a>
-    </li> <li class="single-event" data-start="18:50" data-end="19:45"  data-content="event-61" data-event="event-4">
+    </li> <li class="single-event" data-start="18:50" data-end="19:45"  data-content="event-61" data-event="event-4" data-event-id="event-61">
+        <button class="star-toggle" title="Toggle highlight">★</button>
         <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-fillas-de-cassandra">
             <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Folk / electrònica</em>
             <em class="event-name">Fillas de Cassandra</em>
         </a>
-    </li> <li class="single-event" data-start="20:15" data-end="21:10"  data-content="event-62" data-event="event-4">
+    </li> <li class="single-event" data-start="20:15" data-end="21:10"  data-content="event-62" data-event="event-4" data-event-id="event-62">
+        <button class="star-toggle" title="Toggle highlight">★</button>
         <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-gregotechno">
             <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Cant gregorià / techno</em>
             <em class="event-name">Gregotechno</em>
@@ -152,7 +196,8 @@
 
 <li class="events-group">
    <div class="top-info"><span>Casal de Barri Ateneu L'Harmonia de Sant Andreu</span></div>
-   <ul><li class="single-event" data-start="17:00" data-end="17:55"  data-content="event-63" data-event="event-5">
+   <ul><li class="single-event" data-start="17:00" data-end="17:55"  data-content="event-63" data-event="event-5" data-event-id="event-63">
+        <button class="star-toggle" title="Toggle highlight">★</button>
         <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-marta-garrett">
             <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Indie / pop / jazz</em>
             <em class="event-name">Marta Garrett</em>
@@ -163,12 +208,14 @@
 
 <li class="events-group">
    <div class="top-info"><span>Fabra i Coats - Fàbrica de Creació</span></div>
-   <ul><li class="single-event" data-start="17:50" data-end="18:45"  data-content="event-64" data-event="event-6">
+   <ul><li class="single-event" data-start="17:50" data-end="18:45"  data-content="event-64" data-event="event-6" data-event-id="event-64">
+        <button class="star-toggle" title="Toggle highlight">★</button>
         <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-olivias">
             <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Folklore experimental</em>
             <em class="event-name">Ölivias</em>
         </a>
-    </li> <li class="single-event" data-start="19:30" data-end="20:25"  data-content="event-65" data-event="event-6">
+    </li> <li class="single-event" data-start="19:30" data-end="20:25"  data-content="event-65" data-event="event-6" data-event-id="event-65">
+        <button class="star-toggle" title="Toggle highlight">★</button>
         <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-syd-depalma">
             <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Deliri pop</em>
             <em class="event-name">Syd dePalma</em>
@@ -179,12 +226,14 @@
 
 <li class="events-group">
    <div class="top-info"><span>Recinte Fabra i Coats</span></div>
-   <ul><li class="single-event" data-start="18:40" data-end="19:35"  data-content="event-66" data-event="event-7">
+   <ul><li class="single-event" data-start="18:40" data-end="19:35"  data-content="event-66" data-event="event-7" data-event-id="event-66">
+        <button class="star-toggle" title="Toggle highlight">★</button>
         <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-damare">
             <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Rock alternatiu / soul</em>
             <em class="event-name">Damare!</em>
         </a>
-    </li> <li class="single-event" data-start="20:20" data-end="21:15"  data-content="event-67" data-event="event-7">
+    </li> <li class="single-event" data-start="20:20" data-end="21:15"  data-content="event-67" data-event="event-7" data-event-id="event-67">
+        <button class="star-toggle" title="Toggle highlight">★</button>
         <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-indar">
             <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Metall</em>
             <em class="event-name">INDAR</em>
@@ -195,22 +244,26 @@
 
 <li class="events-group">
    <div class="top-info"><span>Platja del Bogatell</span></div>
-   <ul><li class="single-event" data-start="20:00" data-end="20:55"  data-content="event-68" data-event="event-8">
+   <ul><li class="single-event" data-start="20:00" data-end="20:55"  data-content="event-68" data-event="event-8" data-event-id="event-68">
+        <button class="star-toggle" title="Toggle highlight">★</button>
         <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-mama-dousha">
             <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Pop urbà</em>
             <em class="event-name">Mama Dousha</em>
         </a>
-    </li> <li class="single-event" data-start="21:05" data-end="22:00"  data-content="event-69" data-event="event-8">
+    </li> <li class="single-event" data-start="21:05" data-end="22:00"  data-content="event-69" data-event="event-8" data-event-id="event-69">
+        <button class="star-toggle" title="Toggle highlight">★</button>
         <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-doctor-prats">
             <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Pop-rock</em>
             <em class="event-name">Doctor Prats</em>
         </a>
-    </li> <li class="single-event" data-start="0:15" data-end="01:10"  data-content="event-70" data-event="event-8">
+    </li> <li class="single-event" data-start="0:15" data-end="01:10"  data-content="event-70" data-event="event-8" data-event-id="event-70">
+        <button class="star-toggle" title="Toggle highlight">★</button>
         <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-tyets">
             <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Trap-reggaeton</em>
             <em class="event-name">The Tyets</em>
         </a>
-    </li> <li class="single-event" data-start="1:45" data-end="02:40"  data-content="event-71" data-event="event-8">
+    </li> <li class="single-event" data-start="1:45" data-end="02:40"  data-content="event-71" data-event="event-8" data-event-id="event-71">
+        <button class="star-toggle" title="Toggle highlight">★</button>
         <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-vicco">
             <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Pop</em>
             <em class="event-name">Vicco</em>
@@ -221,22 +274,26 @@
 
 <li class="events-group">
    <div class="top-info"><span>Avinguda Maria Cristina</span></div>
-   <ul><li class="single-event" data-start="21:00" data-end="21:55"  data-content="event-72" data-event="event-9">
+   <ul><li class="single-event" data-start="21:00" data-end="21:55"  data-content="event-72" data-event="event-9" data-event-id="event-72">
+        <button class="star-toggle" title="Toggle highlight">★</button>
         <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-classe-b">
             <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Pop / funk / disco / electro</em>
             <em class="event-name">Classe B</em>
         </a>
-    </li> <li class="single-event" data-start="22:15" data-end="23:10"  data-content="event-73" data-event="event-9">
+    </li> <li class="single-event" data-start="22:15" data-end="23:10"  data-content="event-73" data-event="event-9" data-event-id="event-73">
+        <button class="star-toggle" title="Toggle highlight">★</button>
         <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-31-fam">
             <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Música urbana</em>
             <em class="event-name">31 FAM</em>
         </a>
-    </li> <li class="single-event" data-start="23:45" data-end="00:40"  data-content="event-74" data-event="event-9">
+    </li> <li class="single-event" data-start="23:45" data-end="00:40"  data-content="event-74" data-event="event-9" data-event-id="event-74">
+        <button class="star-toggle" title="Toggle highlight">★</button>
         <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-marlena">
             <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Pop</em>
             <em class="event-name">Marlena</em>
         </a>
-    </li> <li class="single-event" data-start="1:15" data-end="02:10"  data-content="event-75" data-event="event-9">
+    </li> <li class="single-event" data-start="1:15" data-end="02:10"  data-content="event-75" data-event="event-9" data-event-id="event-75">
+        <button class="star-toggle" title="Toggle highlight">★</button>
         <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-la-la-love-you">
             <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Pop</em>
             <em class="event-name">La La Love You</em>
@@ -247,17 +304,20 @@
 
 <li class="events-group">
    <div class="top-info"><span>La Rambla del Raval</span></div>
-   <ul><li class="single-event" data-start="21:30" data-end="22:25"  data-content="event-76" data-event="event-10">
+   <ul><li class="single-event" data-start="21:30" data-end="22:25"  data-content="event-76" data-event="event-10" data-event-id="event-76">
+        <button class="star-toggle" title="Toggle highlight">★</button>
         <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-girls-96">
             <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Dance-punk - electroclash - indie dance</em>
             <em class="event-name">Girls 96</em>
         </a>
-    </li> <li class="single-event" data-start="23:00" data-end="23:55"  data-content="event-77" data-event="event-10">
+    </li> <li class="single-event" data-start="23:00" data-end="23:55"  data-content="event-77" data-event="event-10" data-event-id="event-77">
+        <button class="star-toggle" title="Toggle highlight">★</button>
         <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-dj-lycox">
             <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Afropop / dance / electrònica</em>
             <em class="event-name">DJ Lycox</em>
         </a>
-    </li> <li class="single-event" data-start="0:30" data-end="01:25"  data-content="event-78" data-event="event-10">
+    </li> <li class="single-event" data-start="0:30" data-end="01:25"  data-content="event-78" data-event="event-10" data-event-id="event-78">
+        <button class="star-toggle" title="Toggle highlight">★</button>
         <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-fidju-kitxora">
             <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Electronic post-diaspora</em>
             <em class="event-name">Fidju Kitxora</em>
@@ -268,17 +328,20 @@
 
 <li class="events-group">
    <div class="top-info"><span>Plaça de Can Fabra</span></div>
-   <ul><li class="single-event" data-start="21:30" data-end="22:25"  data-content="event-79" data-event="event-11">
+   <ul><li class="single-event" data-start="21:30" data-end="22:25"  data-content="event-79" data-event="event-11" data-event-id="event-79">
+        <button class="star-toggle" title="Toggle highlight">★</button>
         <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-bigwe">
             <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">R&B / zouk / pop / jazz fusió</em>
             <em class="event-name">Bigwé</em>
         </a>
-    </li> <li class="single-event" data-start="22:50" data-end="23:45"  data-content="event-80" data-event="event-11">
+    </li> <li class="single-event" data-start="22:50" data-end="23:45"  data-content="event-80" data-event="event-11" data-event-id="event-80">
+        <button class="star-toggle" title="Toggle highlight">★</button>
         <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-carmen-xia">
             <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Rap / copla</em>
             <em class="event-name">Carmen Xía</em>
         </a>
-    </li> <li class="single-event" data-start="0:10" data-end="01:05"  data-content="event-81" data-event="event-11">
+    </li> <li class="single-event" data-start="0:10" data-end="01:05"  data-content="event-81" data-event="event-11" data-event-id="event-81">
+        <button class="star-toggle" title="Toggle highlight">★</button>
         <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-thelee">
             <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Big beat / electrònica</em>
             <em class="event-name">thelee</em>
@@ -289,17 +352,20 @@
 
 <li class="events-group">
    <div class="top-info"><span>Moll de la Fusta</span></div>
-   <ul><li class="single-event" data-start="21:30" data-end="22:25"  data-content="event-82" data-event="event-12">
+   <ul><li class="single-event" data-start="21:30" data-end="22:25"  data-content="event-82" data-event="event-12" data-event-id="event-82">
+        <button class="star-toggle" title="Toggle highlight">★</button>
         <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-dj-set-merca-bae">
             <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Electrònica</em>
             <em class="event-name">DJ Set - MERCA BAE</em>
         </a>
-    </li> <li class="single-event" data-start="22:30" data-end="23:25"  data-content="event-83" data-event="event-12">
+    </li> <li class="single-event" data-start="22:30" data-end="23:25"  data-content="event-83" data-event="event-12" data-event-id="event-83">
+        <button class="star-toggle" title="Toggle highlight">★</button>
         <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-elsas">
             <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Pop alternatiu / electrònica</em>
             <em class="event-name">Elsas</em>
         </a>
-    </li> <li class="single-event" data-start="1:30" data-end="02:25"  data-content="event-84" data-event="event-12">
+    </li> <li class="single-event" data-start="1:30" data-end="02:25"  data-content="event-84" data-event="event-12" data-event-id="event-84">
+        <button class="star-toggle" title="Toggle highlight">★</button>
         <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-safety-trance">
             <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Música electrònica / acid / house / tecno</em>
             <em class="event-name">Safety Trance</em>
@@ -310,7 +376,8 @@
 
 <li class="events-group">
    <div class="top-info"><span>Teatre Grec</span></div>
-   <ul><li class="single-event" data-start="22:00" data-end="22:55"  data-content="event-85" data-event="event-13">
+   <ul><li class="single-event" data-start="22:00" data-end="22:55"  data-content="event-85" data-event="event-13" data-event-id="event-85">
+        <button class="star-toggle" title="Toggle highlight">★</button>
         <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-maria-arnal">
             <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Pop / electrònica</em>
             <em class="event-name">Maria Arnal</em>
@@ -321,17 +388,20 @@
 
 <li class="events-group">
    <div class="top-info"><span>La Plaça de Catalunya</span></div>
-   <ul><li class="single-event" data-start="22:30" data-end="23:25"  data-content="event-86" data-event="event-14">
+   <ul><li class="single-event" data-start="22:30" data-end="23:25"  data-content="event-86" data-event="event-14" data-event-id="event-86">
+        <button class="star-toggle" title="Toggle highlight">★</button>
         <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-gazella">
             <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Indie / pop</em>
             <em class="event-name">Gazella</em>
         </a>
-    </li> <li class="single-event" data-start="0:00" data-end="00:55"  data-content="event-87" data-event="event-14">
+    </li> <li class="single-event" data-start="0:00" data-end="00:55"  data-content="event-87" data-event="event-14" data-event-id="event-87">
+        <button class="star-toggle" title="Toggle highlight">★</button>
         <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-alvilda">
             <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Punk / rock / pop</em>
             <em class="event-name">Alvilda</em>
         </a>
-    </li> <li class="single-event" data-start="1:30" data-end="02:25"  data-content="event-88" data-event="event-14">
+    </li> <li class="single-event" data-start="1:30" data-end="02:25"  data-content="event-88" data-event="event-14" data-event-id="event-88">
+        <button class="star-toggle" title="Toggle highlight">★</button>
         <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-biznaga">
             <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Rock</em>
             <em class="event-name">Biznaga</em>
@@ -342,7 +412,8 @@
 
 <li class="events-group">
    <div class="top-info"><span>Avinguda de la Catedral</span></div>
-   <ul><li class="single-event" data-start="0:00" data-end="00:55"  data-content="event-89" data-event="event-15">
+   <ul><li class="single-event" data-start="0:00" data-end="00:55"  data-content="event-89" data-event="event-15" data-event-id="event-89">
+        <button class="star-toggle" title="Toggle highlight">★</button>
         <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-seward">
             <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Cançó lliure</em>
             <em class="event-name">Seward</em>
@@ -385,5 +456,73 @@
 	if( !window.jQuery ) document.write('<script src="js/jquery-3.0.0.min.js"><\/script>');
 </script>
 <script src="js/main.js"></script> <!-- Resource jQuery -->
+
+<script>
+// Cookie utility functions
+function setCookie(name, value, days) {
+    const expires = new Date();
+    expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = name + '=' + value + ';expires=' + expires.toUTCString() + ';path=/';
+}
+
+function getCookie(name) {
+    const nameEQ = name + "=";
+    const ca = document.cookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}
+
+function getHighlightedEvents() {
+    const highlighted = getCookie('highlightedEvents');
+    return highlighted ? JSON.parse(highlighted) : [];
+}
+
+function saveHighlightedEvents(eventIds) {
+    setCookie('highlightedEvents', JSON.stringify(eventIds), 365); // Save for 1 year
+}
+
+// Initialize star toggles when page loads
+$(document).ready(function() {
+    const highlightedEvents = getHighlightedEvents();
+    
+    // Apply saved highlights
+    highlightedEvents.forEach(function(eventId) {
+        const eventElement = $('[data-event-id="' + eventId + '"]');
+        eventElement.addClass('highlighted');
+        eventElement.find('.star-toggle').addClass('highlighted');
+    });
+    
+    // Handle star toggle clicks
+    $(document).on('click', '.star-toggle', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        const button = $(this);
+        const eventElement = button.closest('.single-event');
+        const eventId = eventElement.attr('data-event-id');
+        let highlightedEvents = getHighlightedEvents();
+        
+        if (button.hasClass('highlighted')) {
+            // Remove highlight
+            button.removeClass('highlighted');
+            eventElement.removeClass('highlighted');
+            highlightedEvents = highlightedEvents.filter(id => id !== eventId);
+        } else {
+            // Add highlight
+            button.addClass('highlighted');
+            eventElement.addClass('highlighted');
+            if (!highlightedEvents.includes(eventId)) {
+                highlightedEvents.push(eventId);
+            }
+        }
+        
+        saveHighlightedEvents(highlightedEvents);
+    });
+});
+</script>
 </body>
 </html>
