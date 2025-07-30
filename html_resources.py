@@ -94,11 +94,109 @@ def get_raw_day(lowest_event_time, title, num_stages, day_links, stages_html):
 		.single-event.highlighted {
 			border-left: 5px solid #ffd700 !important;
 		}
+		
+		/* Show toggle styles */
+		.show-toggle-container {
+			text-align: center;
+			margin: 20px 0;
+			padding: 15px;
+			background: #f5f5f5;
+			border-radius: 8px;
+		}
+		
+		.show-toggle-container h3 {
+			margin: 0 0 15px 0;
+			color: #333;
+			font-size: 18px;
+		}
+		
+		.toggle-switch {
+			position: relative;
+			display: inline-block;
+			width: 180px;
+			height: 40px;
+			background: #ddd;
+			border-radius: 20px;
+			cursor: pointer;
+			transition: background 0.3s ease;
+		}
+		
+		.toggle-switch.favorites-mode {
+			background: #ffd700;
+		}
+		
+		.toggle-slider {
+			position: absolute;
+			top: 3px;
+			left: 3px;
+			width: 85px;
+			height: 34px;
+			background: white;
+			border-radius: 17px;
+			transition: transform 0.3s ease;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-weight: 600;
+			font-size: 12px;
+			color: #333;
+		}
+		
+		.toggle-switch.favorites-mode .toggle-slider {
+			transform: translateX(90px);
+		}
+		
+		.toggle-labels {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 0 15px;
+			font-size: 12px;
+			font-weight: 600;
+			color: #666;
+			pointer-events: none;
+		}
+		
+		.single-event.hidden-by-filter {
+			display: none !important;
+		}
+		
+		.events-group.empty-after-filter {
+			display: none !important;
+		}
+		
+		.empty-favorites-message {
+			display: none;
+			text-align: center;
+			padding: 40px 20px;
+			color: #666;
+			font-style: italic;
+		}
+		
+		.empty-favorites-message.show {
+			display: block;
+		}
 	</style>
 </head>
 <body>
 
 """+day_links+"""
+
+<div class="show-toggle-container">
+	<div class="toggle-switch" id="showToggle">
+		<div class="toggle-slider"></div>
+		<div class="toggle-labels">
+			<span>ALL SHOWS</span>
+			<span>FAVORITES</span>
+		</div>
+	</div>
+</div>
+
 <div class="cd-schedule loading">
 	<div class="timeline">
 		<ul>
@@ -121,7 +219,10 @@ def get_raw_day(lowest_event_time, title, num_stages, day_links, stages_html):
 		</ul>
 	</div>
 
-
+	<div class="empty-favorites-message" id="emptyFavoritesMessage">
+		<p>No favorite shows selected yet.</p>
+		<p>Click the ★ button on any show to add it to your favorites!</p>
+	</div>
 
 	<div class="event-modal">
 		<header class="header">
@@ -178,7 +279,63 @@ function saveHighlightedEvents(eventIds) {
     setCookie('highlightedEvents', JSON.stringify(eventIds), 365); // Save for 1 year
 }
 
-// Initialize star toggles when page loads
+function getShowMode() {
+    const mode = getCookie('showMode');
+    return mode || 'all';
+}
+
+function saveShowMode(mode) {
+    setCookie('showMode', mode, 365);
+}
+
+function applyShowFilter() {
+    const showMode = getShowMode();
+    const highlightedEvents = getHighlightedEvents();
+    const toggle = $('#showToggle');
+    const slider = toggle.find('.toggle-slider');
+    const emptyMessage = $('#emptyFavoritesMessage');
+    
+    if (showMode === 'favorites') {
+        toggle.addClass('favorites-mode');
+        
+        
+        // Hide all non-favorite events
+        $('.single-event').each(function() {
+            const eventId = $(this).attr('data-event-id');
+            if (!highlightedEvents.includes(eventId)) {
+                $(this).addClass('hidden-by-filter');
+            } else {
+                $(this).removeClass('hidden-by-filter');
+            }
+        });
+        
+        // Check if any favorites exist and are visible
+        const visibleFavorites = $('.single-event.highlighted:not(.hidden-by-filter)').length;
+        if (visibleFavorites === 0) {
+            emptyMessage.addClass('show');
+        } else {
+            emptyMessage.removeClass('show');
+        }
+        
+    } else {
+        toggle.removeClass('favorites-mode');
+        
+        $('.single-event').removeClass('hidden-by-filter');
+        emptyMessage.removeClass('show');
+    }
+    
+    // Update stage group visibility
+    $('.events-group').each(function() {
+        const visibleEvents = $(this).find('.single-event:not(.hidden-by-filter)').length;
+        if (visibleEvents === 0 && showMode === 'favorites') {
+            $(this).addClass('empty-after-filter');
+        } else {
+            $(this).removeClass('empty-after-filter');
+        }
+    });
+}
+
+// Initialize everything when page loads
 $(document).ready(function() {
     const highlightedEvents = getHighlightedEvents();
     
@@ -187,6 +344,17 @@ $(document).ready(function() {
         const eventElement = $('[data-event-id="' + eventId + '"]');
         eventElement.addClass('highlighted');
         eventElement.find('.star-toggle').addClass('highlighted');
+    });
+    
+    // Apply saved show mode
+    applyShowFilter();
+    
+    // Handle show toggle clicks
+    $('#showToggle').on('click', function() {
+        const currentMode = getShowMode();
+        const newMode = currentMode === 'all' ? 'favorites' : 'all';
+        saveShowMode(newMode);
+        applyShowFilter();
     });
     
     // Handle star toggle clicks
@@ -214,6 +382,9 @@ $(document).ready(function() {
         }
         
         saveHighlightedEvents(highlightedEvents);
+        
+        // Reapply filter in case we're in favorites mode
+        applyShowFilter();
     });
 });
 </script>
