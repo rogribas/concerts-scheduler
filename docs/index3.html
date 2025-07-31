@@ -471,6 +471,21 @@ function saveShowMode(mode) {
     setCookie('showMode', mode, 365);
 }
 
+function updateColumnWidths() {
+    const visibleStages = $('.events-group:not(.empty-after-filter)').length;
+    const totalStages = $('.events-group').length;
+    
+    if (visibleStages > 0) {
+        const newWidth = 100 / visibleStages;
+        $('.events-group:not(.empty-after-filter)').css('width', newWidth + '%');
+        $('.events-group.empty-after-filter').css('width', '0%');
+    } else {
+        // Reset to original width if no stages are visible
+        const originalWidth = 100 / totalStages;
+        $('.events-group').css('width', originalWidth + '%');
+    }
+}
+
 function applyShowFilter() {
     const showMode = getShowMode();
     const highlightedEvents = getHighlightedEvents();
@@ -480,7 +495,6 @@ function applyShowFilter() {
     
     if (showMode === 'favorites') {
         toggle.addClass('favorites-mode');
-        
         
         // Hide all non-favorite events
         $('.single-event').each(function() {
@@ -516,6 +530,9 @@ function applyShowFilter() {
             $(this).removeClass('empty-after-filter');
         }
     });
+    
+    // Update column widths after filtering
+    updateColumnWidths();
 }
 
 // Initialize everything when page loads
