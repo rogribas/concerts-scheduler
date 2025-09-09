@@ -42,7 +42,7 @@ def scrape_concerts(url):
         }[int(date)]
         concerts[date_str] = {}
         
-        music_sections = day_block.find_all('div', id="sect-23855")
+        music_sections = day_block.find_all('div', id="sect-27140")
 
         for p in music_sections:
             for program in p.find_all('div', class_='wrapper-info-program'):

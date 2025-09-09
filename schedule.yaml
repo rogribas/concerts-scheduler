@@ -1,11 +1,30 @@
-- Ds. 20:
-  - Platja del Bogatell:
-    - event: Doctor Prats
-      time: '21:05'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-doctor-prats
-      group: Pop-rock
 - Dm. 23:
-  - Plaça Major de Nou Barris, 1:
+  - La Plaça de Catalunya:
+    - event: Bru
+      time: '19:00'
+      link: https://www.barcelona.cat/lamerce/ca/concert-de-bru
+      group: Bedroom Pop
+    - event: Cloe Riembau
+      time: '19:00'
+      link: https://www.barcelona.cat/lamerce/ca/concert-de-cloe-riembau
+      group: Indie pop
+    - event: Sodi
+      time: '20:00'
+      link: https://www.barcelona.cat/lamerce/ca/concert-de-sodi
+      group: Pop-rock
+    - event: gavina.mp3
+      time: '20:30'
+      link: https://www.barcelona.cat/lamerce/ca/concert-gavinamp3
+      group: Pop
+    - event: PUSSY RIOT
+      time: '23:00'
+      link: https://www.barcelona.cat/lamerce/ca/concert-de-pussy-riot
+      group: Punk – Música – Video
+    - event: Ladilla Rusa
+      time: '1:00'
+      link: https://www.barcelona.cat/lamerce/ca/concert-ladilla-rusa
+      group: Electropop, rumba, electronica
+  - Plaça Major de Nou Barris:
     - event: Banda Municipal de Barcelona
       time: '20:45'
       link: https://www.barcelona.cat/lamerce/ca/concert-de-banda-municipal-de-barcelona
@@ -63,15 +82,6 @@
       time: '1:30'
       link: https://www.barcelona.cat/lamerce/ca/concert-de-kiddy-smile
       group: Vogue/dance/electro
-  - La Plaça de Catalunya:
-    - event: PUSSY RIOT
-      time: '23:00'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-pussy-riot
-      group: Punk – Música – Video
-    - event: Ladilla Rusa
-      time: '1:00'
-      link: https://www.barcelona.cat/lamerce/ca/concert-ladilla-rusa
-      group: Electropop, rumba, electronica
 - Dc. 24:
   - Jardins del Doctor Pla i Armengol:
     - event: Liceu BLAM Collective
@@ -96,7 +106,7 @@
       time: '20:00'
       link: https://www.barcelona.cat/lamerce/ca/concert-de-centenari-dantonio-gonzalez-batista-el-pescadilla
       group: Flamenc
-  - Plaça Major de Nou Barris, 1:
+  - Plaça Major de Nou Barris:
     - event: Orquestra Simfònica Vozes + La Maria
       time: '20:45'
       link: https://www.barcelona.cat/lamerce/ca/concert-orquestra-simfonica-vozes-la-maria
@@ -144,7 +154,7 @@
       time: '1:30'
       link: https://www.barcelona.cat/lamerce/ca/concert-de-svsto
       group: Darkineo
-  - Plaça Major de Nou Barris, 1:
+  - Plaça Major de Nou Barris:
     - event: Concert de l' "Orquestra i Cor del Gran Teatre del Liceu
       time: '20:45'
       link: https://www.barcelona.cat/lamerce/ca/concert-de-l-orquestra-i-cor-del-gran-teatre-del-liceu
@@ -158,15 +168,6 @@
       time: '23:15'
       link: https://www.barcelona.cat/lamerce/ca/concert-de-myriam-swanson
       group: Pop / rock
-  - Teatre Grec:
-    - event: Al corazón de Marta Valdés
-      time: '21:00'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-al-corazon-de-marta-valdes
-      group: Cançó / filin / jazz
-    - event: Bongeziwe Mabandla
-      time: '23:30'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-bongeziwe-mabandla
-      group: African Soul /Indie Folk
   - Platja del Bogatell:
     - event: Mushka
       time: '21:00'
@@ -180,6 +181,15 @@
       time: '1:00'
       link: https://www.barcelona.cat/lamerce/ca/concert-de-lia-kali
       group: Música urbana
+  - Teatre Grec:
+    - event: Al corazón de Marta Valdés
+      time: '21:00'
+      link: https://www.barcelona.cat/lamerce/ca/concert-de-al-corazon-de-marta-valdes
+      group: Cançó / filin / jazz
+    - event: Bongeziwe Mabandla
+      time: '23:30'
+      link: https://www.barcelona.cat/lamerce/ca/concert-de-bongeziwe-mabandla
+      group: African Soul /Indie Folk
   - La Rambla del Raval:
     - event: cabezadenego
       time: '21:30'
@@ -234,7 +244,7 @@
       time: '23:15'
       link: https://www.barcelona.cat/lamerce/ca/concert-de-mito-y-comadre
       group: Música del món
-  - Plaça Major de Nou Barris, 1:
+  - Plaça Major de Nou Barris:
     - event: Banda Simfònica Roquetes de Nou Barris i Filarmonica Volere è Potere
       time: '13:00'
       link: https://www.barcelona.cat/lamerce/ca/concert-banda-simfonica-roquetes-de-nou-barris-i-filarmonica-volere-e-potere
@@ -248,9 +258,9 @@
       time: '13:00'
       link: https://www.barcelona.cat/lamerce/ca/concert-de-juan-andres-ospina-i-lorquesta-efimera
       group: World music
-    - event: Kokoschca
+    - event: Kokoshca
       time: '22:30'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-kokoschca
+      link: https://www.barcelona.cat/lamerce/ca/concert-de-kokoshca
       group: Pop / rock / indie
   - Antiga Fàbrica Estrella Damm:
     - event: Ven’nus
@@ -360,24 +370,33 @@
       time: 0:10
       link: https://www.barcelona.cat/lamerce/ca/concert-de-thelee
       group: Big beat / electrònica
-  - Moll de la Fusta:
-    - event: DJ Set - MERCA BAE
-      time: '21:30'
-      link: https://www.barcelona.cat/lamerce/ca/concert-dj-set-merca-bae
-      group: Electrònica
-    - event: Elsas
-      time: '22:30'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-elsas
-      group: Pop alternatiu / electrònica
-    - event: Safety Trance
-      time: '1:30'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-safety-trance
-      group: Música electrònica / acid / house / tecno
   - Teatre Grec:
     - event: Maria Arnal
       time: '22:00'
       link: https://www.barcelona.cat/lamerce/ca/concert-de-maria-arnal
       group: Pop / electrònica
+    - event: Seward
+      time: 0:00
+      link: https://www.barcelona.cat/lamerce/ca/concert-de-seward
+      group: Cançó lliure
+  - Avinguda de la Catedral:
+    - event: Sidonie
+      time: '22:00'
+      link: https://www.barcelona.cat/lamerce/ca/concert-de-sidonie
+      group: Pop-rock
+  - Moll de la Fusta:
+    - event: Elsas
+      time: '22:30'
+      link: https://www.barcelona.cat/lamerce/ca/concert-de-elsas
+      group: Pop alternatiu / electrònica
+    - event: DJ Set - MERCA BAE
+      time: 0:00
+      link: https://www.barcelona.cat/lamerce/ca/concert-dj-set-merca-bae
+      group: Electrònica
+    - event: Safety Trance
+      time: '1:30'
+      link: https://www.barcelona.cat/lamerce/ca/concert-de-safety-trance
+      group: Música electrònica / acid / house / tecno
   - La Plaça de Catalunya:
     - event: Gazella
       time: '22:30'
@@ -391,11 +410,6 @@
       time: '1:30'
       link: https://www.barcelona.cat/lamerce/ca/concert-de-biznaga
       group: Rock
-  - Avinguda de la Catedral:
-    - event: Seward
-      time: 0:00
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-seward
-      group: Cançó lliure
 - Dg. 28:
   - Jardins del Doctor Pla i Armengol:
     - event: ESMUC Band / RNCM Band
