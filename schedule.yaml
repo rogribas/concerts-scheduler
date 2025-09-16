@@ -1,20 +1,20 @@
 - Dm. 23:
   - La Plaça de Catalunya:
-    - event: Bru
+    - event: Bru" - Sona 9
       time: '19:00'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-bru
+      link: https://www.barcelona.cat/lamerce/ca/concert-de-bru-sona-9
       group: Bedroom Pop
-    - event: Cloe Riembau
+    - event: Cloe Riembau" - Sona 9
       time: '19:00'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-cloe-riembau
+      link: https://www.barcelona.cat/lamerce/ca/concert-de-cloe-riembau-sona-9
       group: Indie pop
-    - event: Sodi
+    - event: Sodi" - Sona 9
       time: '20:00'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-sodi
+      link: https://www.barcelona.cat/lamerce/ca/concert-de-sodi-sona-9
       group: Pop-rock
-    - event: gavina.mp3
+    - event: gavina.mp3" - Sona 9
       time: '20:30'
-      link: https://www.barcelona.cat/lamerce/ca/concert-gavinamp3
+      link: https://www.barcelona.cat/lamerce/ca/concert-gavinamp3-sona-9
       group: Pop
     - event: PUSSY RIOT
       time: '23:00'
@@ -172,6 +172,10 @@
     - event: Mushka
       time: '21:00'
       link: https://www.barcelona.cat/lamerce/ca/concert-mushka
+      group: Pop urbà
+    - event: Beret
+      time: '22:30'
+      link: https://www.barcelona.cat/lamerce/ca/concert-de-beret
       group: Pop urbà
     - event: Rigoberta Bandini
       time: '23:00'
@@ -384,19 +388,6 @@
       time: '22:00'
       link: https://www.barcelona.cat/lamerce/ca/concert-de-sidonie
       group: Pop-rock
-  - Moll de la Fusta:
-    - event: Elsas
-      time: '22:30'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-elsas
-      group: Pop alternatiu / electrònica
-    - event: DJ Set - MERCA BAE
-      time: 0:00
-      link: https://www.barcelona.cat/lamerce/ca/concert-dj-set-merca-bae
-      group: Electrònica
-    - event: Safety Trance
-      time: '1:30'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-safety-trance
-      group: Música electrònica / acid / house / tecno
   - La Plaça de Catalunya:
     - event: Gazella
       time: '22:30'
@@ -410,6 +401,19 @@
       time: '1:30'
       link: https://www.barcelona.cat/lamerce/ca/concert-de-biznaga
       group: Rock
+  - Moll de la Fusta:
+    - event: Elsas
+      time: '22:30'
+      link: https://www.barcelona.cat/lamerce/ca/concert-de-elsas
+      group: Pop alternatiu / electrònica
+    - event: DJ Set - MERCA BAE
+      time: 0:00
+      link: https://www.barcelona.cat/lamerce/ca/concert-dj-set-merca-bae
+      group: Electrònica
+    - event: Safety Trance
+      time: '1:30'
+      link: https://www.barcelona.cat/lamerce/ca/concert-de-safety-trance
+      group: Música electrònica / acid / house / tecno
 - Dg. 28:
   - Jardins del Doctor Pla i Armengol:
     - event: ESMUC Band / RNCM Band

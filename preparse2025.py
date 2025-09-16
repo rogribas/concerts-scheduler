@@ -33,16 +33,18 @@ def scrape_concerts(url):
     for day_block in soup.find_all('div', class_='block-day'):
         date = day_block.get('day').split('-')[-1]
         date_str = {
-            20: "Ds. 20",
+            21: "Dg. 21",
+            22: "Dll. 22",
             23: "Dm. 23",
             24: "Dc. 24",
+            25: "Dj. 25",
             26: "Dv. 26",
             27: "Ds. 27",
             28: "Dg. 28",
         }[int(date)]
         concerts[date_str] = {}
         
-        music_sections = day_block.find_all('div', id="sect-27140")
+        music_sections = day_block.find_all('div', id="sect-27711")
 
         for p in music_sections:
             for program in p.find_all('div', class_='wrapper-info-program'):
