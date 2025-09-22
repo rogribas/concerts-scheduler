@@ -102,10 +102,10 @@
       link: https://www.barcelona.cat/lamerce/ca/concert-de-catalunya-freestyle
       group: Rap
   - Avinguda de la Catedral:
-    - event: Centenari d’Antonio González Batista “el Pescadilla”
+    - event: Centenari d’Antonio González Batista 'el Pescadilla'”
       time: '20:00'
       link: https://www.barcelona.cat/lamerce/ca/concert-de-centenari-dantonio-gonzalez-batista-el-pescadilla
-      group: Flamenc
+      group: Flamenc / Rumba
   - Plaça Major de Nou Barris:
     - event: Orquestra Simfònica Vozes + La Maria
       time: '20:45'
@@ -172,10 +172,6 @@
     - event: Mushka
       time: '21:00'
       link: https://www.barcelona.cat/lamerce/ca/concert-mushka
-      group: Pop urbà
-    - event: Beret
-      time: '22:30'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-beret
       group: Pop urbà
     - event: Rigoberta Bandini
       time: '23:00'
@@ -323,6 +319,10 @@
       time: '21:05'
       link: https://www.barcelona.cat/lamerce/ca/concert-de-doctor-prats
       group: Pop-rock
+    - event: Beret
+      time: '22:45'
+      link: https://www.barcelona.cat/lamerce/ca/concert-de-beret
+      group: Pop urbà
     - event: The Tyets
       time: 0:15
       link: https://www.barcelona.cat/lamerce/ca/concert-de-tyets
@@ -380,7 +380,7 @@
       link: https://www.barcelona.cat/lamerce/ca/concert-de-maria-arnal
       group: Pop / electrònica
     - event: Seward
-      time: 0:00
+      time: '23:30'
       link: https://www.barcelona.cat/lamerce/ca/concert-de-seward
       group: Cançó lliure
   - Avinguda de la Catedral:
@@ -388,19 +388,10 @@
       time: '22:00'
       link: https://www.barcelona.cat/lamerce/ca/concert-de-sidonie
       group: Pop-rock
-  - La Plaça de Catalunya:
-    - event: Gazella
-      time: '22:30'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-gazella
-      group: Indie / pop
-    - event: Alvilda
+    - event: Son Rompe Pera
       time: 0:00
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-alvilda
-      group: Punk / rock / pop
-    - event: Biznaga
-      time: '1:30'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-biznaga
-      group: Rock
+      link: https://www.barcelona.cat/lamerce/ca/concert-de-son-rompe-pera
+      group: Punk / cúmbia - Mèxic
   - Moll de la Fusta:
     - event: Elsas
       time: '22:30'
@@ -414,6 +405,19 @@
       time: '1:30'
       link: https://www.barcelona.cat/lamerce/ca/concert-de-safety-trance
       group: Música electrònica / acid / house / tecno
+  - La Plaça de Catalunya:
+    - event: Gazella
+      time: '22:30'
+      link: https://www.barcelona.cat/lamerce/ca/concert-de-gazella
+      group: Indie / pop
+    - event: Alvilda
+      time: 0:00
+      link: https://www.barcelona.cat/lamerce/ca/concert-de-alvilda
+      group: Punk / rock / pop
+    - event: Biznaga
+      time: '1:30'
+      link: https://www.barcelona.cat/lamerce/ca/concert-de-biznaga
+      group: Rock
 - Dg. 28:
   - Jardins del Doctor Pla i Armengol:
     - event: ESMUC Band / RNCM Band
@@ -442,7 +446,7 @@
       time: '13:00'
       link: https://www.barcelona.cat/lamerce/ca/concert-de-rioghnach-connolly-honeyfeet
       group: Jazz / pop / folk
-    - event: Sehar Gul Khan
+    - event: Sehar Gul Khan".
       time: '19:30'
       link: https://www.barcelona.cat/lamerce/ca/concert-de-sehar-gul-khan
       group: Folk / Pop
