@@ -1,486 +1,358 @@
-- Dm. 23:
-  - La Plaça de Catalunya:
-    - event: Bru" - Sona 9
-      time: '19:00'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-bru-sona-9
-      group: Bedroom Pop
-    - event: Cloe Riembau" - Sona 9
-      time: '19:00'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-cloe-riembau-sona-9
-      group: Indie pop
-    - event: Sodi" - Sona 9
-      time: '20:00'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-sodi-sona-9
-      group: Pop-rock
-    - event: gavina.mp3" - Sona 9
-      time: '20:30'
-      link: https://www.barcelona.cat/lamerce/ca/concert-gavinamp3-sona-9
-      group: Pop
-    - event: PUSSY RIOT
-      time: '23:00'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-pussy-riot
-      group: Punk – Música – Video
-    - event: Ladilla Rusa
-      time: '1:00'
-      link: https://www.barcelona.cat/lamerce/ca/concert-ladilla-rusa
-      group: Electropop, rumba, electronica
-  - Plaça Major de Nou Barris:
-    - event: Banda Municipal de Barcelona
-      time: '20:45'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-banda-municipal-de-barcelona
-      group: Simfònica / banda
+- date: 23 de setembre
+  period: Nit
+  locations:
   - Jardins del Doctor Pla i Armengol:
-    - event: Extraño Weys Orquestra
-      time: '21:00'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-extrano-weys-orquestra
-      group: Hip-hop/jazz/funk
-    - event: Porij
-      time: '23:15'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-porij
-      group: Electronic / dance / rock
-  - La Rambla del Raval:
-    - event: Companyia Les Solidàries
-      time: '21:30'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-companyia-les-solidaries
-      group: Musical rock
-    - event: The Ex
-      time: '23:00'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-ex
-      group: Rock / jazz / improvisació / punk
-    - event: Muqawama
-      time: 0:30
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-muqawama
-      group: Rap / músiques del món
+    - event: Shanghai Conservatory of Music Jazz Ensemble
+      start_time: '21:00'
+      end_time: '22:30'
+      link: https://www.barcelona.cat/lamerce/ca/concert-shanghai-conservatory-music-jazz-ensemble
+      group: Jazz
+    - event: Shanghai Restoration Project feat. Angelo Manhenzane & Abdul Basit
+      start_time: '23:00'
+      end_time: 00:30
+      link: https://www.barcelona.cat/lamerce/ca/concert-shanghai-restoration-project-feat-angelo-manhenzane-abdul-basit
+      group: Música electrònica
   - Teatre Grec:
-    - event: Tarta Relena
-      time: '22:00'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-tarta-relena
-      group: Folk contemporani
-    - event: Space Afrika
-      time: 0:00
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-space-afrika
-      group: Ambient / electrònica / hip-hop
+    - event: Pol Batlle
+      start_time: '21:30'
+      end_time: '23:00'
+      link: https://www.barcelona.cat/lamerce/ca/concert-pol-batlle
+      group: Cançó d’autor, indie folk
+    - event: Luísa Sobral
+      start_time: '23:30'
+      end_time: 01:00
+      link: https://www.barcelona.cat/lamerce/ca/concert-luisa-sobral
+      group: Música d’autor, folk
   - Avinguda de la Catedral:
-    - event: Rocío Márquez
-      time: '22:30'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-rocio-marquez
-      group: Flamenc experimental
-    - event: Niño de Elche
-      time: 0:00
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-nino-de-elche
-      group: Flamenc contemporani
-  - Moll de la Fusta:
-    - event: ASIA
-      time: '22:30'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-asia
-      group: Música clàssica i contemporània
-    - event: Lido Pimienta
-      time: 0:00
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-lido-pimienta
-      group: Art / folk
-    - event: Kiddy Smile
-      time: '1:30'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-kiddy-smile
-      group: Vogue/dance/electro
-- Dc. 24:
+    - event: Sabor de Gràcia
+      start_time: '22:00'
+      end_time: '23:30'
+      link: https://www.barcelona.cat/lamerce/ca/concert-sabor-de-gracia
+      group: Rumba catalana
+    - event: Arp Frique and the Perpetual Singers
+      start_time: 00:00
+      end_time: 01:30
+      link: https://www.barcelona.cat/lamerce/ca/concert-arp-frique-and-perpetual-singers
+      group: Gòspel, funk
+- date: 24 de setembre
+  period: Matí
+  locations:
   - Jardins del Doctor Pla i Armengol:
-    - event: Liceu BLAM Collective
-      time: '11:30'
-      link: https://www.barcelona.cat/lamerce/ca/concert-liceu-blam-collective
+    - event: Vicente Marín Trio
+      start_time: '12:00'
+      end_time: '13:00'
+      link: https://www.barcelona.cat/lamerce/ca/concert-vicente-marin-trio
+      group: Jazz
+- date: 24 de setembre
+  period: Tarda
+  locations:
+  - Jardins del Doctor Pla i Armengol:
+    - event: Bandes i Grup Vocal dels Joves de Xamfrà
+      start_time: '19:00'
+      end_time: '21:00'
+      link: https://www.barcelona.cat/lamerce/ca/concert-bandes-i-grup-vocal-dels-joves-de-xamfra
       group: Música moderna
-    - event: Taller de Músics XXL Collective
-      time: '13:00'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-taller-de-musics-xxl-collective
-      group: Jazz / funk
-    - event: Xamfrà, Centre de Música i Escena del Raval
-      time: '19:00'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-xamfra-centre-de-musica-i-escena-del-raval
-      group: Música moderna
-  - La Plaça de Catalunya:
-    - event: Catalunya Freestyle
-      time: '17:00'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-catalunya-freestyle
-      group: Rap
+- date: 24 de setembre
+  period: Nit
+  locations:
   - Avinguda de la Catedral:
-    - event: Centenari d’Antonio González Batista 'el Pescadilla'”
-      time: '20:00'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-centenari-dantonio-gonzalez-batista-el-pescadilla
-      group: Flamenc / Rumba
+    - event: María Terremoto
+      start_time: '21:00'
+      end_time: '22:00'
+      link: https://www.barcelona.cat/lamerce/ca/concert-maria-terremoto
+      group: Flamenc
+    - event: La Barcelona Flamenca
+      start_time: '22:15'
+      end_time: '23:30'
+      link: https://www.barcelona.cat/lamerce/ca/concert-la-barcelona-flamenca
+      group: Flamenc
   - Plaça Major de Nou Barris:
-    - event: Orquestra Simfònica Vozes + La Maria
-      time: '20:45'
-      link: https://www.barcelona.cat/lamerce/ca/concert-orquestra-simfonica-vozes-la-maria
-      group: Tradicional / innovació (tradinnovació)
-- Dv. 26:
+    - event: Cor del Gran Teatre del Liceu
+      start_time: '21:00'
+      end_time: '22:00'
+      link: https://www.barcelona.cat/lamerce/ca/concert-cor-del-gran-teatre-del-liceu
+      group: Música coral
+- date: 25 de setembre
+  period: Tarda
+  locations:
+  - Platja del Bogatell:
+    - event: Aina Machuca
+      start_time: '19:45'
+      end_time: '20:05'
+      link: https://www.barcelona.cat/lamerce/ca/concert-aina-machuca
+      group: Pop
+    - event: Sexenni
+      start_time: '20:30'
+      end_time: '21:30'
+      link: https://www.barcelona.cat/lamerce/ca/concert-sexenni
+      group: Pop
   - Avinguda Maria Cristina:
-    - event: Suu
-      time: '20:00'
-      link: https://www.barcelona.cat/lamerce/ca/concert-suu
-      group: Pop/indie
+    - event: Maria Jaume
+      start_time: '20:30'
+      end_time: '21:20'
+      link: https://www.barcelona.cat/lamerce/ca/concert-maria-jaume
+      group: Pop-indie electrònic
+  - Plaça Major de Nou Barris:
+    - event: Orquestra Simfònica de Barcelona i Nacional de Catalunya - OBC
+      start_time: '20:45'
+      end_time: '22:00'
+      link: https://www.barcelona.cat/lamerce/ca/concert-orquestra-simfonica-de-barcelona-i-nacional-de-catalunya-obc
+      group: Música simfònica
+- date: 25 de setembre
+  period: Nit
+  locations:
+  - Platja del Bogatell:
+    - event: Sexenni
+      start_time: '20:30'
+      end_time: '21:30'
+      link: https://www.barcelona.cat/lamerce/ca/concert-sexenni
+      group: Pop
+    - event: Miki Núñez
+      start_time: '22:00'
+      end_time: '23:00'
+      link: https://www.barcelona.cat/lamerce/ca/concert-miki-nunez
+      group: Pop
     - event: Buhos
-      time: '21:15'
+      start_time: 01:15
+      end_time: 02:45
       link: https://www.barcelona.cat/lamerce/ca/concert-buhos
       group: Pop festiu
-    - event: Ginestà
-      time: '22:35'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-ginesta
-      group: Pop
-    - event: Figa Flawas
-      time: 0:00
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-figa-flawas
-      group: Pop urbà
-    - event: Triquell
-      time: '1:30'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-triquell
-      group: Pop electrònic
-  - La Plaça de Catalunya:
-    - event: Potser dimarts
-      time: '20:30'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-potser-dimarts
-      group: Indie pop rural
-    - event: Samuel Nagati
-      time: '21:15'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-samuel-nagati
-      group: Urbana/reggaeton
-    - event: Cançons amagades" d'Anna Andreu, Mar Pujol, Ferran Palau i Bruna González
-      time: '22:30'
-      link: https://www.barcelona.cat/lamerce/ca/concert-cancons-amagades-danna-andreu-mar-pujol-ferran-palau-i-bruna-gonzalez
-      group: Cançons d'autor
-    - event: Σtella
-      time: 0:00
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-stella
-      group: Indie / alternativa
-    - event: SVSTO
-      time: '1:30'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-svsto
-      group: Darkineo
-  - Plaça Major de Nou Barris:
-    - event: Concert de l' "Orquestra i Cor del Gran Teatre del Liceu
-      time: '20:45'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-l-orquestra-i-cor-del-gran-teatre-del-liceu
-      group: Música simfònica
-  - Jardins del Doctor Pla i Armengol:
-    - event: Maria Mazzotta
-      time: '21:00'
-      link: https://www.barcelona.cat/lamerce/ca/concert-maria-mazzotta
-      group: Itàlia - folk elèctric
-    - event: Myriam Swanson
-      time: '23:15'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-myriam-swanson
-      group: Pop / rock
-  - Platja del Bogatell:
-    - event: Mushka
-      time: '21:00'
-      link: https://www.barcelona.cat/lamerce/ca/concert-mushka
-      group: Pop urbà
-    - event: Rigoberta Bandini
-      time: '23:00'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-rigoberta-bandini
-      group: Pop
-    - event: Lia Kali
-      time: '1:00'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-lia-kali
-      group: Música urbana
-  - Teatre Grec:
-    - event: Al corazón de Marta Valdés
-      time: '21:00'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-al-corazon-de-marta-valdes
-      group: Cançó / filin / jazz
-    - event: Bongeziwe Mabandla
-      time: '23:30'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-bongeziwe-mabandla
-      group: African Soul /Indie Folk
-  - La Rambla del Raval:
-    - event: cabezadenego
-      time: '21:30'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-cabezadenego
-      group: Experimental
-    - event: Dis Fig
-      time: '23:00'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-dis-fig
-      group: Experimental/electrònica - Alemanya
-    - event: Children of Zeus
-      time: 0:30
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-children-zeus
-      group: Soul / hip-hop
-  - Avinguda de la Catedral:
-    - event: Chloe Slater
-      time: '22:00'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-chloe-slater
-      group: Alternativa / indie / rock
-    - event: Queralt Lahoz & Werkha
-      time: 0:00
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-queralt-lahoz-werkha
-      group: Flamenc / pop / música urbana / hip-hop
-  - Moll de la Fusta:
-    - event: La Tania
-      time: '22:30'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-la-tania
-      group: Folklore / fusió
-    - event: Martha Da’ro
-      time: 0:00
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-martha-daro
-      group: R&B / Indie
-    - event: Villano Antillano
-      time: '1:30'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-villano-antillano
-      group: Trap llatí / reggaeton
-  - Parc de la Ciutadella:
-    - event: Son de Madera
-      time: '22:30'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-son-de-madera
-      group: Son jarocho
-- Ds. 27:
-  - Jardins del Doctor Pla i Armengol:
-    - event: Jamnation / Big Band Jam
-      time: '12:00'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-jamnation-big-band-jam
-      group: Músiques actuals
-    - event: Concert d'"Anna Ferrer
-      time: '21:30'
-      link: https://www.barcelona.cat/lamerce/ca/concert-danna-ferrer
-      group: Cançó d’autor, arrel, folk
-    - event: Mito y Comadre
-      time: '23:15'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-mito-y-comadre
-      group: Música del món
-  - Plaça Major de Nou Barris:
-    - event: Banda Simfònica Roquetes de Nou Barris i Filarmonica Volere è Potere
-      time: '13:00'
-      link: https://www.barcelona.cat/lamerce/ca/concert-banda-simfonica-roquetes-de-nou-barris-i-filarmonica-volere-e-potere
-      group: Música simfònica
-    - event: Orquestra Simfònica de Barcelona i Nacional de Catalunya
-      time: '20:45'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-orquestra-simfonica-de-barcelona-i-nacional-de-catalunya
-      group: Música simfònica
-  - Parc de la Ciutadella:
-    - event: Juan Andrés Ospina i l’Orquesta Efímera
-      time: '13:00'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-juan-andres-ospina-i-lorquesta-efimera
-      group: World music
-    - event: Kokoshca
-      time: '22:30'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-kokoshca
-      group: Pop / rock / indie
-  - Antiga Fàbrica Estrella Damm:
-    - event: Ven’nus
-      time: '13:15'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-vennus
-      group: Indie / pop / electrònica
-    - event: Chica Acosta B2B Phran
-      time: '14:15'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-chica-acosta-b2b-phran
-      group: Latin club / house / changa / tecno / acid
-    - event: ultralone
-      time: '16:30'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-ultralone
-      group: Música urbana
-    - event: Concert d' "Hadren
-      time: '17:40'
-      link: https://www.barcelona.cat/lamerce/ca/concert-d-hadren
-      group: Pop alternatiu / ambient / electrònica
-    - event: Fillas de Cassandra
-      time: '18:50'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-fillas-de-cassandra
-      group: Folk / electrònica
-    - event: Gregotechno
-      time: '20:15'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-gregotechno
-      group: Cant gregorià / techno
-  - Casal de Barri Ateneu L'Harmonia de Sant Andreu:
-    - event: Marta Garrett
-      time: '17:00'
-      link: https://www.barcelona.cat/lamerce/ca/concert-marta-garrett
-      group: Indie / pop / jazz
-  - Fabra i Coats - Fàbrica de Creació:
-    - event: Ölivias
-      time: '17:50'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-olivias
-      group: Folklore experimental
-    - event: Syd dePalma
-      time: '19:30'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-syd-depalma
-      group: Deliri pop
-  - Recinte Fabra i Coats:
-    - event: Damare!
-      time: '18:40'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-damare
-      group: Rock alternatiu / soul
-    - event: INDAR
-      time: '20:20'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-indar
-      group: Metall
-  - Platja del Bogatell:
-    - event: Mama Dousha
-      time: '20:00'
-      link: https://www.barcelona.cat/lamerce/ca/concert-mama-dousha
-      group: Pop urbà
-    - event: Doctor Prats
-      time: '21:05'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-doctor-prats
-      group: Pop-rock
-    - event: Beret
-      time: '22:45'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-beret
-      group: Pop urbà
-    - event: The Tyets
-      time: 0:15
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-tyets
-      group: Trap-reggaeton
-    - event: Vicco
-      time: '1:45'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-vicco
-      group: Pop
   - Avinguda Maria Cristina:
-    - event: Classe B
-      time: '21:00'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-classe-b
-      group: Pop / funk / disco / electro
-    - event: 31 FAM
-      time: '22:15'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-31-fam
-      group: Música urbana
-    - event: Marlena
-      time: '23:45'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-marlena
+    - event: Maria Jaume
+      start_time: '20:30'
+      end_time: '21:20'
+      link: https://www.barcelona.cat/lamerce/ca/concert-maria-jaume
+      group: Pop-indie electrònic
+    - event: Markos amb K
+      start_time: '21:30'
+      end_time: '22:40'
+      link: https://www.barcelona.cat/lamerce/ca/concert-markos-amb-k
+      group: Pop festiu
+    - event: Els Amics de les Arts
+      start_time: '22:00'
+      end_time: '23:15'
+      link: https://www.barcelona.cat/lamerce/ca/concert-els-amics-de-les-arts
       group: Pop
-    - event: La La Love You
-      time: '1:15'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-la-la-love-you
-      group: Pop
-  - La Rambla del Raval:
-    - event: Girls 96
-      time: '21:30'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-girls-96
-      group: Dance-punk - electroclash - indie dance
-    - event: DJ Lycox
-      time: '23:00'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-dj-lycox
-      group: Afropop / dance / electrònica
-    - event: Fidju Kitxora
-      time: 0:30
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-fidju-kitxora
-      group: Electronic post-diaspora
-  - Plaça de Can Fabra:
-    - event: Bigwé
-      time: '21:30'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-bigwe
-      group: R&B / zouk / pop / jazz fusió
-    - event: Carmen Xía
-      time: '22:50'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-carmen-xia
-      group: Rap / copla
-    - event: thelee
-      time: 0:10
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-thelee
-      group: Big beat / electrònica
-  - Teatre Grec:
-    - event: Maria Arnal
-      time: '22:00'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-maria-arnal
-      group: Pop / electrònica
-    - event: Seward
-      time: '23:30'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-seward
-      group: Cançó lliure
-  - Avinguda de la Catedral:
-    - event: Sidonie
-      time: '22:00'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-sidonie
+    - event: Els Catarres
+      start_time: '23:45'
+      end_time: 01:10
+      link: https://www.barcelona.cat/lamerce/ca/concert-els-catarres
+      group: Pop festiu
+    - event: Teràpia de Shock
+      start_time: 01:30
+      end_time: 02:30
+      link: https://www.barcelona.cat/lamerce/ca/concert-terapia-de-shock
       group: Pop-rock
-    - event: Son Rompe Pera
-      time: 0:00
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-son-rompe-pera
-      group: Punk / cúmbia - Mèxic
-  - Moll de la Fusta:
-    - event: Elsas
-      time: '22:30'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-elsas
-      group: Pop alternatiu / electrònica
-    - event: DJ Set - MERCA BAE
-      time: 0:00
-      link: https://www.barcelona.cat/lamerce/ca/concert-dj-set-merca-bae
-      group: Electrònica
-    - event: Safety Trance
-      time: '1:30'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-safety-trance
-      group: Música electrònica / acid / house / tecno
-  - La Plaça de Catalunya:
-    - event: Gazella
-      time: '22:30'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-gazella
-      group: Indie / pop
-    - event: Alvilda
-      time: 0:00
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-alvilda
-      group: Punk / rock / pop
-    - event: Biznaga
-      time: '1:30'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-biznaga
-      group: Rock
-- Dg. 28:
+  - Plaça Major de Nou Barris:
+    - event: Orquestra Simfònica de Barcelona i Nacional de Catalunya - OBC
+      start_time: '20:45'
+      end_time: '22:00'
+      link: https://www.barcelona.cat/lamerce/ca/concert-orquestra-simfonica-de-barcelona-i-nacional-de-catalunya-obc
+      group: Música simfònica
   - Jardins del Doctor Pla i Armengol:
-    - event: ESMUC Band / RNCM Band
-      time: '12:00'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-esmuc-band-rncm-band
-      group: Jazz
-  - Plaça de Can Fabra:
-    - event: Ikram Essaghir, acompanyada de Diara Dgy
-      time: '13:00'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-ikram-essaghir-acompanyada-de-diara-dgy
-      group: Electrònica i pop
-    - event: La Otra Rumba
-      time: '14:00'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-la-otra-rumba
-      group: Llatinoamericana / africana / latin
-    - event: Paco Pecado
-      time: '16:00'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-paco-pecado
-      group: Cantautor kitsch
-    - event: Sonido San Francisco
-      time: '17:30'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-sonido-san-francisco
-      group: Cúmbia electrònica
+    - event: Fuensanta
+      start_time: '21:00'
+      end_time: '22:30'
+      link: https://www.barcelona.cat/lamerce/ca/concert-fuensanta
+      group: Cançó experimental
+    - event: Marina y su Melao
+      start_time: '23:00'
+      end_time: 00:30
+      link: https://www.barcelona.cat/lamerce/ca/concert-marina-y-su-melao
+      group: Bomba caribenya
+  - Teatre Grec:
+    - event: Nacho Vegas
+      start_time: '21:30'
+      end_time: '23:00'
+      link: https://www.barcelona.cat/lamerce/ca/concert-nacho-vegas
+      group: Rock independent, folk independent
+    - event: La Paloma
+      start_time: '23:30'
+      end_time: 01:00
+      link: https://www.barcelona.cat/lamerce/ca/concert-la-paloma
+      group: Rock-Indie
   - Parc de la Ciutadella:
-    - event: Ríoghnach Connolly & Honeyfeet
-      time: '13:00'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-rioghnach-connolly-honeyfeet
-      group: Jazz / pop / folk
-    - event: Sehar Gul Khan".
-      time: '19:30'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-sehar-gul-khan
-      group: Folk / Pop
-  - Antiga Fàbrica Estrella Damm:
-    - event: St. Frances
-      time: '13:15'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-st-frances
-      group: Pop / grunge
-    - event: POLYGLOT SOUNDSYSTEM presenta EYRA b2b ADRASHA & MUCK b2b MIRAMIZU
-      time: '14:15'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-polyglot-soundsystem-presenta-eyra-b2b-adrasha-muck-b2b-miramizu
-      group: DJ / dansa
-    - event: Sofia
-      time: '16:30'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-sofia
-      group: Pop/Synth
-    - event: Gigi Ros
-      time: '17:40'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-gigi-ros
-      group: Pop experimental
-    - event: Concert d' "Ani in the Hall
-      time: '18:50'
-      link: https://www.barcelona.cat/lamerce/ca/concert-d-ani-hall
-      group: Folk / electrònica
-    - event: Verde Prato
-      time: '20:15'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-verde-prato
-      group: Neofolk / cançó experimental
+    - event: Azucarillo Kings
+      start_time: '22:30'
+      end_time: 00:00
+      link: https://www.barcelona.cat/lamerce/ca/concert-azucarillo-kings
+      group: Pop-rock
+  - Avinguda de la Catedral:
+    - event: Shanghai Chinese Orchestra
+      start_time: '23:00'
+      end_time: 00:30
+      link: https://www.barcelona.cat/lamerce/ca/concert-shanghai-chinese-orchestra
+      group: Tradicional xinesa
+- date: 26 de setembre
+  period: Matí
+  locations:
+  - Plaça Major de Nou Barris:
+    - event: Banda Simfònica Roquetes-Nou Barris i Banda Mollet
+      start_time: '12:00'
+      end_time: '13:00'
+      link: https://www.barcelona.cat/lamerce/ca/concert-banda-simfonica-roquetes-nou-barris-i-banda-mollet
+      group: Estils diferents
+  - Jardins del Doctor Pla i Armengol:
+    - event: Jam Nation
+      start_time: '12:00'
+      end_time: '13:30'
+      link: https://www.barcelona.cat/lamerce/ca/concert-jam-nation
+      group: Pop, funk, rock, R&B i jazz
+  - Parc de la Ciutadella:
+    - event: Marco de Ana
+      start_time: '12:30'
+      end_time: '13:05'
+      link: https://www.barcelona.cat/lamerce/ca/espectacle-marco-de-ana
+      group: Dansa flamenca, performance
+    - event: Marco de Ana
+      start_time: '13:30'
+      end_time: '14:05'
+      link: https://www.barcelona.cat/lamerce/ca/espectacle-marco-de-ana
+      group: Dansa flamenca, performance
+    - event: Marco de Ana
+      start_time: '14:30'
+      end_time: '15:05'
+      link: https://www.barcelona.cat/lamerce/ca/espectacle-marco-de-ana
+      group: Dansa flamenca, performance
+- date: 26 de setembre
+  period: Tarda
+  locations:
+  - Parc de la Ciutadella:
+    - event: Marco de Ana
+      start_time: '14:30'
+      end_time: '15:05'
+      link: https://www.barcelona.cat/lamerce/ca/espectacle-marco-de-ana
+      group: Dansa flamenca, performance
+  - Platja del Bogatell:
+    - event: Al·lèrgiques al Pol·len
+      start_time: '20:00'
+      end_time: '21:00'
+      link: https://www.barcelona.cat/lamerce/ca/concert-allergiques-al-pollen
+      group: Pop-rock, pop independent, rock
+  - Plaça Major de Nou Barris:
+    - event: Banda Municipal de Barcelona
+      start_time: '20:45'
+      end_time: '22:00'
+      link: https://www.barcelona.cat/lamerce/ca/concert-banda-municipal-de-barcelona
+      group: Música simfònica
+- date: 26 de setembre
+  period: Nit
+  locations:
+  - Plaça Major de Nou Barris:
+    - event: Banda Municipal de Barcelona
+      start_time: '20:45'
+      end_time: '22:00'
+      link: https://www.barcelona.cat/lamerce/ca/concert-banda-municipal-de-barcelona
+      group: Música simfònica
+  - Avinguda Maria Cristina:
+    - event: Ivan Herzog
+      start_time: '21:00'
+      end_time: '21:30'
+      link: https://www.barcelona.cat/lamerce/ca/concert-ivan-herzog
+      group: Pop
+    - event: Banda Neon
+      start_time: '21:45'
+      end_time: '22:45'
+      link: https://www.barcelona.cat/lamerce/ca/concert-banda-neon
+      group: Pop
+    - event: Paula Koops
+      start_time: '23:00'
+      end_time: 00:00
+      link: https://www.barcelona.cat/lamerce/ca/concert-paula-koops
+      group: Pop
+    - event: Leire Martínez
+      start_time: 01:15
+      end_time: 02:30
+      link: https://www.barcelona.cat/lamerce/ca/concert-leire-martinez
+      group: Pop
+  - Jardins del Doctor Pla i Armengol:
+    - event: Marc Vilajuana
+      start_time: '21:30'
+      end_time: '22:30'
+      link: https://www.barcelona.cat/lamerce/ca/concert-marc-vilajuana
+      group: Cançó d’autor, cant antic, música experimental
+    - event: El Extintor + LaTorre
+      start_time: '23:00'
+      end_time: 00:30
+      link: https://www.barcelona.cat/lamerce/ca/concert-el-extintor-latorre
+      group: Folktrònica
+  - Platja del Bogatell:
+    - event: La Pegatina
+      start_time: '21:30'
+      end_time: '23:00'
+      link: https://www.barcelona.cat/lamerce/ca/concert-la-pegatina
+      group: Rumba, ska, mestissatge
+    - event: Love of Lesbian
+      start_time: '23:45'
+      end_time: 01:15
+      link: https://www.barcelona.cat/lamerce/ca/concert-love-lesbian
+      group: Pop independent
+    - event: Svetlana
+      start_time: 01:30
+      end_time: 02:30
+      link: https://www.barcelona.cat/lamerce/ca/concert-svetlana
+      group: Electropop
+  - Teatre Grec:
+    - event: Ana Rossi i Joana Queiroz
+      start_time: '21:30'
+      end_time: '23:00'
+      link: https://www.barcelona.cat/lamerce/ca/concert-ana-rossi-i-joana-queiroz
+      group: Música contemporània de creació
+    - event: Def Mama Def
+      start_time: '23:30'
+      end_time: 01:00
+      link: https://www.barcelona.cat/lamerce/ca/concert-def-mama-def
+      group: Hip-hop - fusió africana
+  - Avinguda de la Catedral:
+    - event: Aterciopelados
+      start_time: '22:00'
+      end_time: '23:30'
+      link: https://www.barcelona.cat/lamerce/ca/concert-aterciopelados
+      group: Rock colombià
+    - event: Maika Makovski
+      start_time: 00:00
+      end_time: 01:30
+      link: https://www.barcelona.cat/lamerce/ca/concert-maika-makovski
+      group: Rock
+  - Parc de la Ciutadella:
+    - event: Sorvina
+      start_time: '22:30'
+      end_time: 00:00
+      link: https://www.barcelona.cat/lamerce/ca/concert-sorvina
+      group: Hip-hop, jazz-rap
+- date: 27 de setembre
+  period: Matí
+  locations:
+  - Jardins del Doctor Pla i Armengol:
+    - event: Conservatori Superior de Música Liceu
+      start_time: '12:00'
+      end_time: '13:30'
+      link: https://www.barcelona.cat/lamerce/ca/concert-conservatori-superior-de-musica-liceu
+      group: Rock
+  - Parc de la Ciutadella:
+    - event: TUMBAKIN
+      start_time: '13:00'
+      end_time: '14:30'
+      link: https://www.barcelona.cat/lamerce/ca/concert-tumbakin
+      group: Salsa i timba cubanes
+- date: 27 de setembre
+  period: Tarda
+  locations:
+  - Plaça Major de Nou Barris:
+    - event: Vozes + Marco Mezquida
+      start_time: '19:00'
+      end_time: '20:15'
+      link: https://www.barcelona.cat/lamerce/ca/concert-vozes-marco-mezquida
+      group: Jazz-clàssica
   - La Plaça de Sant Jaume:
-    - event: Albéricas
-      time: '19:30'
-      link: https://www.barcelona.cat/lamerce/ca/concert-albericas
-      group: Havaneres
-    - event: 'Havaneres: Óscar Sánchez + Marbis Manzanet'
-      time: '21:30'
-      link: https://www.barcelona.cat/lamerce/ca/concert-de-havaneres-oscar-sanchez-marbis-manzanet
-      group: Havaneres
+    - event: Carola Ortiz
+      start_time: '19:00'
+      end_time: '20:30'
+      link: https://www.barcelona.cat/lamerce/ca/concert-carola-ortiz
+      group: Havaneres i cançons de mar
+  - Parc de la Ciutadella:
+    - event: Giulia Valle
+      start_time: '19:30'
+      end_time: '21:00'
+      link: https://www.barcelona.cat/lamerce/ca/concert-giulia-valle
+      group: Jazz contemporani

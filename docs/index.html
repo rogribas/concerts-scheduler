@@ -1,528 +1,152 @@
-<!doctype html>
-<html lang="en" class="no-js">
+<!DOCTYPE html>
+<html lang="ca">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Programa de música — La Mercè</title>
+<style>
+:root {
+  --bg: #0f1116;
+  --panel: #171a21;
+  --panel-2: #1e222b;
+  --text: #eef0f5;
+  --muted: #9aa2b1;
+  --border: #2a2f3a;
+  --accent: #ef476f;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+.page-header { text-align: center; padding: 36px 20px 6px; }
+.page-header h1 { margin: 0 0 6px; font-size: 28px; letter-spacing: .3px; }
+.page-header p { margin: 0; color: var(--muted); font-size: 14px; }
 
-	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet">
-	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
-	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+.day-tabs {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;
+  padding: 22px 16px 24px;
+}
+.day-tabs label {
+  padding: 10px 18px; border-radius: 999px; cursor: pointer; user-select: none;
+  background: var(--panel); color: var(--muted); border: 1px solid var(--border);
+  font-weight: 600; font-size: 14px; transition: background .15s ease, color .15s ease;
+}
+.day-tabs label:hover { color: var(--text); border-color: var(--accent); }
+.day-radio { position: absolute; opacity: 0; width: 1px; height: 1px; overflow: hidden; }
 
-	<title>Dm. 23</title>
+.day-view { display: none; padding: 0 16px 48px; text-align: center; }
 
-	<style>
-		.cd-schedule .events li.events-group {
-			width: calc(100% /7)
-		}
-		
-		/* Star toggle button styles */
-		.star-toggle {
-			position: absolute;
-			top: 5px;
-			right: 8px;
-			background: none;
-			border: none;
-			font-size: 16px;
-			cursor: pointer;
-			color: #ccc;
-			transition: color 0.3s ease;
-			z-index: 10;
-			padding: 2px;
-		}
-		
-		.star-toggle:hover {
-			color: #ffd700;
-		}
-		
-		.star-toggle.highlighted {
-			color: #ffd700;
-		}
-		
-		.single-event {
-			position: relative;
-		}
-		
-		.single-event.highlighted {
-			border-left: 5px solid #ffd700 !important;
-		}
-		
-		/* Show toggle styles */
-		.show-toggle-container {
-			text-align: center;
-			margin: 20px 0;
-			padding: 15px;
-			background: #f5f5f5;
-			border-radius: 8px;
-		}
-		
-		.show-toggle-container h3 {
-			margin: 0 0 15px 0;
-			color: #333;
-			font-size: 18px;
-		}
-		
-		.toggle-switch {
-			position: relative;
-			display: inline-block;
-			width: 180px;
-			height: 40px;
-			background: #ddd;
-			border-radius: 20px;
-			cursor: pointer;
-			transition: background 0.3s ease;
-		}
-		
-		.toggle-switch.favorites-mode {
-			background: #ffd700;
-		}
-		
-		.toggle-slider {
-			position: absolute;
-			top: 3px;
-			left: 3px;
-			width: 85px;
-			height: 34px;
-			background: white;
-			border-radius: 17px;
-			transition: transform 0.3s ease;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			font-weight: 600;
-			font-size: 12px;
-			color: #333;
-		}
-		
-		.toggle-switch.favorites-mode .toggle-slider {
-			transform: translateX(90px);
-		}
-		
-		.toggle-labels {
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			padding: 0 15px;
-			font-size: 12px;
-			font-weight: 600;
-			color: #666;
-			pointer-events: none;
-		}
-		
-		.single-event.hidden-by-filter {
-			display: none !important;
-		}
-		
-		.events-group.empty-after-filter {
-			display: none !important;
-		}
-		
-		.empty-favorites-message {
-			display: none;
-			text-align: center;
-			padding: 40px 20px;
-			color: #666;
-			font-style: italic;
-		}
-		
-		.empty-favorites-message.show {
-			display: block;
-		}
-	</style>
+.grid-scroll {
+  display: inline-block; text-align: left; width: fit-content;
+  max-width: 100%; overflow: auto; max-height: 74vh;
+  border: 1px solid var(--border); border-radius: 14px; background: var(--panel);
+}
+.grid { display: flex; width: max-content; }
+
+.time-col {
+  position: sticky; left: 0; z-index: 3; width: 60px; flex-shrink: 0;
+  background: var(--panel); border-right: 1px solid var(--border);
+}
+.corner {
+  position: sticky; top: 0; z-index: 4; height: 60px;
+  background: var(--panel); border-bottom: 1px solid var(--border);
+}
+.time-marks { position: relative; }
+.time-mark {
+  position: absolute; left: 0; right: 6px; transform: translateY(-50%);
+  font-size: 11px; color: var(--muted); text-align: right;
+}
+
+.stages { display: flex; }
+.stage-col { width: 220px; flex-shrink: 0; border-right: 1px solid var(--border); }
+.stage-header {
+  position: sticky; top: 0; z-index: 2; height: 60px;
+  background: var(--panel-2); border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  font-weight: 700; font-size: 12.5px; line-height: 1.25; padding: 6px 10px;
+}
+.stage-body {
+  position: relative;
+  background-image: repeating-linear-gradient(
+    to bottom, var(--border) 0, var(--border) 1px,
+    transparent 1px, transparent 126px
+  );
+}
+
+.event {
+  position: absolute; left: 4px; right: 4px; border-radius: 8px;
+  padding: 6px 8px; overflow: hidden; text-decoration: none; color: #fff;
+  display: flex; flex-direction: column; gap: 2px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.35);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.event:hover, .event:focus-visible {
+  transform: scale(1.03); box-shadow: 0 6px 16px rgba(0,0,0,.45); z-index: 5;
+  outline: none;
+}
+.event-time { font-size: 10.5px; font-weight: 700; opacity: .9; }
+.event-name {
+  font-size: 12.5px; font-weight: 700; line-height: 1.2;
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+  text-shadow: 0 1px 2px rgba(0,0,0,.35);
+}
+.event-group {
+  font-size: 10px; font-style: italic; opacity: .85; white-space: nowrap;
+  overflow: hidden; text-overflow: ellipsis;
+}
+
+.page-footer {
+  text-align: center; color: var(--muted); font-size: 12.5px; padding: 8px 16px 40px;
+}
+.page-footer a { color: var(--muted); }
+
+@media (max-width: 640px) {
+  .page-header h1 { font-size: 22px; }
+  .stage-col { width: 180px; }
+}
+#day-0:checked ~ .day-tabs label[for="day-0"]{background:var(--accent);color:#fff;border-color:var(--accent);box-shadow:0 2px 10px rgba(0,0,0,.25)}
+#day-0:checked ~ .day-views #view-0{display:block}
+#day-0:focus-visible ~ .day-tabs label[for="day-0"]{outline:2px solid var(--accent);outline-offset:2px}
+#day-1:checked ~ .day-tabs label[for="day-1"]{background:var(--accent);color:#fff;border-color:var(--accent);box-shadow:0 2px 10px rgba(0,0,0,.25)}
+#day-1:checked ~ .day-views #view-1{display:block}
+#day-1:focus-visible ~ .day-tabs label[for="day-1"]{outline:2px solid var(--accent);outline-offset:2px}
+#day-2:checked ~ .day-tabs label[for="day-2"]{background:var(--accent);color:#fff;border-color:var(--accent);box-shadow:0 2px 10px rgba(0,0,0,.25)}
+#day-2:checked ~ .day-views #view-2{display:block}
+#day-2:focus-visible ~ .day-tabs label[for="day-2"]{outline:2px solid var(--accent);outline-offset:2px}
+#day-3:checked ~ .day-tabs label[for="day-3"]{background:var(--accent);color:#fff;border-color:var(--accent);box-shadow:0 2px 10px rgba(0,0,0,.25)}
+#day-3:checked ~ .day-views #view-3{display:block}
+#day-3:focus-visible ~ .day-tabs label[for="day-3"]{outline:2px solid var(--accent);outline-offset:2px}
+#day-4:checked ~ .day-tabs label[for="day-4"]{background:var(--accent);color:#fff;border-color:var(--accent);box-shadow:0 2px 10px rgba(0,0,0,.25)}
+#day-4:checked ~ .day-views #view-4{display:block}
+#day-4:focus-visible ~ .day-tabs label[for="day-4"]{outline:2px solid var(--accent);outline-offset:2px}
+</style>
 </head>
 <body>
-
-<a href="./index.html"><button disabled>Dm. 23</button></a><a href="./index1.html"><button>Dc. 24</button></a><a href="./index2.html"><button>Dv. 26</button></a><a href="./index3.html"><button>Ds. 27</button></a><a href="./index4.html"><button>Dg. 28</button></a>
-
-<div class="show-toggle-container">
-	<div class="toggle-switch" id="showToggle">
-		<div class="toggle-slider"></div>
-		<div class="toggle-labels">
-			<span style="padding-left: 15px;">TOTS</span>
-			<span>PREFERITS</span>
-		</div>
-	</div>
+<div class="page-header">
+  <h1>Programa de música — La Mercè</h1>
+  <p>5 dies · 53 concerts · tria un dia i mira'l hora a hora</p>
 </div>
 
-<div class="cd-schedule loading">
-	<div class="timeline">
-		<ul>
-<li><span style="display: none">19:00</span></li>
-<li><span style="display: none">19:30</span></li>
-<li><span style="display: none">20:00</span></li>
-<li><span style="display: none">20:30</span></li>
-<li><span style="display: none">21:00</span></li>
-<li><span style="display: none">21:30</span></li>
-<li><span style="display: none">22:00</span></li>
-<li><span style="display: none">22:30</span></li>
-<li><span style="display: none">23:00</span></li>
-<li><span style="display: none">23:30</span></li>
-<li><span style="display: none">00:00</span></li>
-<li><span style="display: none">00:00</span></li>
-<li><span style="display: none">00:30</span></li>
-<li><span style="display: none">00:30</span></li>
-<li><span style="display: none">01:00</span></li>
-<li><span style="display: none">01:00</span></li>
-		</ul>
-	</div> <!-- .timeline -->
+<input type="radio" name="day" id="day-0" class="day-radio" checked><input type="radio" name="day" id="day-1" class="day-radio"><input type="radio" name="day" id="day-2" class="day-radio"><input type="radio" name="day" id="day-3" class="day-radio"><input type="radio" name="day" id="day-4" class="day-radio">
 
-	<div class="events">
-		<ul>
+<div class="day-tabs">
+<label for="day-0">23 de setembre</label><label for="day-1">24 de setembre</label><label for="day-2">25 de setembre</label><label for="day-3">26 de setembre</label><label for="day-4">27 de setembre</label>
+</div>
 
+<div class="day-views">
+<div class="day-view" id="view-0"><div class="grid-scroll"><div class="grid"><div class="time-col"><div class="corner"></div><div class="time-marks" style="height:630px"><span class="time-mark" style="top:0px">21:00</span><span class="time-mark" style="top:126px">22:00</span><span class="time-mark" style="top:252px">23:00</span><span class="time-mark" style="top:378px">00:00</span><span class="time-mark" style="top:504px">01:00</span><span class="time-mark" style="top:630px">02:00</span></div></div><div class="stages"><div class="stage-col"><div class="stage-header">Avinguda de la Catedral</div><div class="stage-body" style="height:630px"><a class="event" style="top:126px;height:189px;background:#7209b7" href="https://www.barcelona.cat/lamerce/ca/concert-sabor-de-gracia" target="_blank" rel="noopener" title="Sabor de Gràcia · 22:00–23:30 · Avinguda de la Catedral"><span class="event-time">22:00–23:30</span><span class="event-name">Sabor de Gràcia</span><span class="event-group">Rumba catalana</span></a><a class="event" style="top:378px;height:189px;background:#284b63" href="https://www.barcelona.cat/lamerce/ca/concert-arp-frique-and-perpetual-singers" target="_blank" rel="noopener" title="Arp Frique and the Perpetual Singers · 00:00–01:30 · Avinguda de la Catedral"><span class="event-time">00:00–01:30</span><span class="event-name">Arp Frique and the Perpetual Singers</span><span class="event-group">Gòspel, funk</span></a></div></div><div class="stage-col"><div class="stage-header">Jardins del Doctor Pla i Armengol</div><div class="stage-body" style="height:630px"><a class="event" style="top:0px;height:189px;background:#284b63" href="https://www.barcelona.cat/lamerce/ca/concert-shanghai-conservatory-music-jazz-ensemble" target="_blank" rel="noopener" title="Shanghai Conservatory of Music Jazz Ensemble · 21:00–22:30 · Jardins del Doctor Pla i Armengol"><span class="event-time">21:00–22:30</span><span class="event-name">Shanghai Conservatory of Music Jazz Ensemble</span><span class="event-group">Jazz</span></a><a class="event" style="top:252px;height:189px;background:#006d77" href="https://www.barcelona.cat/lamerce/ca/concert-shanghai-restoration-project-feat-angelo-manhenzane-abdul-basit" target="_blank" rel="noopener" title="Shanghai Restoration Project feat. Angelo Manhenzane &amp; Abdul Basit · 23:00–00:30 · Jardins del Doctor Pla i Armengol"><span class="event-time">23:00–00:30</span><span class="event-name">Shanghai Restoration Project feat. Angelo Manhenzane &amp; Abdul Basit</span><span class="event-group">Música electrònica</span></a></div></div><div class="stage-col"><div class="stage-header">Teatre Grec</div><div class="stage-body" style="height:630px"><a class="event" style="top:63px;height:189px;background:#9a031e" href="https://www.barcelona.cat/lamerce/ca/concert-pol-batlle" target="_blank" rel="noopener" title="Pol Batlle · 21:30–23:00 · Teatre Grec"><span class="event-time">21:30–23:00</span><span class="event-name">Pol Batlle</span><span class="event-group">Cançó d’autor, indie folk</span></a><a class="event" style="top:315px;height:189px;background:#9a031e" href="https://www.barcelona.cat/lamerce/ca/concert-luisa-sobral" target="_blank" rel="noopener" title="Luísa Sobral · 23:30–01:00 · Teatre Grec"><span class="event-time">23:30–01:00</span><span class="event-name">Luísa Sobral</span><span class="event-group">Música d’autor, folk</span></a></div></div></div></div></div></div>
+<div class="day-view" id="view-1"><div class="grid-scroll"><div class="grid"><div class="time-col"><div class="corner"></div><div class="time-marks" style="height:1512px"><span class="time-mark" style="top:0px">12:00</span><span class="time-mark" style="top:126px">13:00</span><span class="time-mark" style="top:252px">14:00</span><span class="time-mark" style="top:378px">15:00</span><span class="time-mark" style="top:504px">16:00</span><span class="time-mark" style="top:630px">17:00</span><span class="time-mark" style="top:756px">18:00</span><span class="time-mark" style="top:882px">19:00</span><span class="time-mark" style="top:1008px">20:00</span><span class="time-mark" style="top:1134px">21:00</span><span class="time-mark" style="top:1260px">22:00</span><span class="time-mark" style="top:1386px">23:00</span><span class="time-mark" style="top:1512px">00:00</span></div></div><div class="stages"><div class="stage-col"><div class="stage-header">Avinguda de la Catedral</div><div class="stage-body" style="height:1512px"><a class="event" style="top:1134px;height:126px;background:#264653" href="https://www.barcelona.cat/lamerce/ca/concert-maria-terremoto" target="_blank" rel="noopener" title="María Terremoto · 21:00–22:00 · Avinguda de la Catedral"><span class="event-time">21:00–22:00</span><span class="event-name">María Terremoto</span><span class="event-group">Flamenc</span></a><a class="event" style="top:1292px;height:158px;background:#264653" href="https://www.barcelona.cat/lamerce/ca/concert-la-barcelona-flamenca" target="_blank" rel="noopener" title="La Barcelona Flamenca · 22:15–23:30 · Avinguda de la Catedral"><span class="event-time">22:15–23:30</span><span class="event-name">La Barcelona Flamenca</span><span class="event-group">Flamenc</span></a></div></div><div class="stage-col"><div class="stage-header">Jardins del Doctor Pla i Armengol</div><div class="stage-body" style="height:1512px"><a class="event" style="top:0px;height:126px;background:#284b63" href="https://www.barcelona.cat/lamerce/ca/concert-vicente-marin-trio" target="_blank" rel="noopener" title="Vicente Marín Trio · 12:00–13:00 · Jardins del Doctor Pla i Armengol"><span class="event-time">12:00–13:00</span><span class="event-name">Vicente Marín Trio</span><span class="event-group">Jazz</span></a><a class="event" style="top:882px;height:252px;background:#3d5a80" href="https://www.barcelona.cat/lamerce/ca/concert-bandes-i-grup-vocal-dels-joves-de-xamfra" target="_blank" rel="noopener" title="Bandes i Grup Vocal dels Joves de Xamfrà · 19:00–21:00 · Jardins del Doctor Pla i Armengol"><span class="event-time">19:00–21:00</span><span class="event-name">Bandes i Grup Vocal dels Joves de Xamfrà</span><span class="event-group">Música moderna</span></a></div></div><div class="stage-col"><div class="stage-header">Plaça Major de Nou Barris</div><div class="stage-body" style="height:1512px"><a class="event" style="top:1134px;height:126px;background:#9d4edd" href="https://www.barcelona.cat/lamerce/ca/concert-cor-del-gran-teatre-del-liceu" target="_blank" rel="noopener" title="Cor del Gran Teatre del Liceu · 21:00–22:00 · Plaça Major de Nou Barris"><span class="event-time">21:00–22:00</span><span class="event-name">Cor del Gran Teatre del Liceu</span><span class="event-group">Música coral</span></a></div></div></div></div></div></div>
+<div class="day-view" id="view-2"><div class="grid-scroll"><div class="grid"><div class="time-col"><div class="corner"></div><div class="time-marks" style="height:1008px"><span class="time-mark" style="top:0px">19:00</span><span class="time-mark" style="top:126px">20:00</span><span class="time-mark" style="top:252px">21:00</span><span class="time-mark" style="top:378px">22:00</span><span class="time-mark" style="top:504px">23:00</span><span class="time-mark" style="top:630px">00:00</span><span class="time-mark" style="top:756px">01:00</span><span class="time-mark" style="top:882px">02:00</span><span class="time-mark" style="top:1008px">03:00</span></div></div><div class="stages"><div class="stage-col"><div class="stage-header">Avinguda de la Catedral</div><div class="stage-body" style="height:1008px"><a class="event" style="top:504px;height:189px;background:#264653" href="https://www.barcelona.cat/lamerce/ca/concert-shanghai-chinese-orchestra" target="_blank" rel="noopener" title="Shanghai Chinese Orchestra · 23:00–00:30 · Avinguda de la Catedral"><span class="event-time">23:00–00:30</span><span class="event-name">Shanghai Chinese Orchestra</span><span class="event-group">Tradicional xinesa</span></a></div></div><div class="stage-col"><div class="stage-header">Avinguda Maria Cristina</div><div class="stage-body" style="height:1008px"><a class="event" style="top:189px;height:105px;background:#9d4edd" href="https://www.barcelona.cat/lamerce/ca/concert-maria-jaume" target="_blank" rel="noopener" title="Maria Jaume · 20:30–21:20 · Avinguda Maria Cristina"><span class="event-time">20:30–21:20</span><span class="event-name">Maria Jaume</span><span class="event-group">Pop-indie electrònic</span></a><a class="event" style="top:315px;height:147px;background:#284b63" href="https://www.barcelona.cat/lamerce/ca/concert-markos-amb-k" target="_blank" rel="noopener" title="Markos amb K · 21:30–22:40 · Avinguda Maria Cristina"><span class="event-time">21:30–22:40</span><span class="event-name">Markos amb K</span><span class="event-group">Pop festiu</span></a><a class="event" style="top:378px;height:158px;background:#006d77" href="https://www.barcelona.cat/lamerce/ca/concert-els-amics-de-les-arts" target="_blank" rel="noopener" title="Els Amics de les Arts · 22:00–23:15 · Avinguda Maria Cristina"><span class="event-time">22:00–23:15</span><span class="event-name">Els Amics de les Arts</span><span class="event-group">Pop</span></a><a class="event" style="top:598px;height:178px;background:#284b63" href="https://www.barcelona.cat/lamerce/ca/concert-els-catarres" target="_blank" rel="noopener" title="Els Catarres · 23:45–01:10 · Avinguda Maria Cristina"><span class="event-time">23:45–01:10</span><span class="event-name">Els Catarres</span><span class="event-group">Pop festiu</span></a><a class="event" style="top:819px;height:126px;background:#3d5a80" href="https://www.barcelona.cat/lamerce/ca/concert-terapia-de-shock" target="_blank" rel="noopener" title="Teràpia de Shock · 01:30–02:30 · Avinguda Maria Cristina"><span class="event-time">01:30–02:30</span><span class="event-name">Teràpia de Shock</span><span class="event-group">Pop-rock</span></a></div></div><div class="stage-col"><div class="stage-header">Jardins del Doctor Pla i Armengol</div><div class="stage-body" style="height:1008px"><a class="event" style="top:252px;height:189px;background:#bb3e03" href="https://www.barcelona.cat/lamerce/ca/concert-fuensanta" target="_blank" rel="noopener" title="Fuensanta · 21:00–22:30 · Jardins del Doctor Pla i Armengol"><span class="event-time">21:00–22:30</span><span class="event-name">Fuensanta</span><span class="event-group">Cançó experimental</span></a><a class="event" style="top:504px;height:189px;background:#006d77" href="https://www.barcelona.cat/lamerce/ca/concert-marina-y-su-melao" target="_blank" rel="noopener" title="Marina y su Melao · 23:00–00:30 · Jardins del Doctor Pla i Armengol"><span class="event-time">23:00–00:30</span><span class="event-name">Marina y su Melao</span><span class="event-group">Bomba caribenya</span></a></div></div><div class="stage-col"><div class="stage-header">Parc de la Ciutadella</div><div class="stage-body" style="height:1008px"><a class="event" style="top:441px;height:189px;background:#3d5a80" href="https://www.barcelona.cat/lamerce/ca/concert-azucarillo-kings" target="_blank" rel="noopener" title="Azucarillo Kings · 22:30–00:00 · Parc de la Ciutadella"><span class="event-time">22:30–00:00</span><span class="event-name">Azucarillo Kings</span><span class="event-group">Pop-rock</span></a></div></div><div class="stage-col"><div class="stage-header">Platja del Bogatell</div><div class="stage-body" style="height:1008px"><a class="event" style="top:94px;height:42px;background:#006d77" href="https://www.barcelona.cat/lamerce/ca/concert-aina-machuca" target="_blank" rel="noopener" title="Aina Machuca · 19:45–20:05 · Platja del Bogatell"><span class="event-time">19:45–20:05</span><span class="event-name">Aina Machuca</span></a><a class="event" style="top:189px;height:126px;background:#006d77" href="https://www.barcelona.cat/lamerce/ca/concert-sexenni" target="_blank" rel="noopener" title="Sexenni · 20:30–21:30 · Platja del Bogatell"><span class="event-time">20:30–21:30</span><span class="event-name">Sexenni</span><span class="event-group">Pop</span></a><a class="event" style="top:378px;height:126px;background:#006d77" href="https://www.barcelona.cat/lamerce/ca/concert-miki-nunez" target="_blank" rel="noopener" title="Miki Núñez · 22:00–23:00 · Platja del Bogatell"><span class="event-time">22:00–23:00</span><span class="event-name">Miki Núñez</span><span class="event-group">Pop</span></a><a class="event" style="top:788px;height:189px;background:#284b63" href="https://www.barcelona.cat/lamerce/ca/concert-buhos" target="_blank" rel="noopener" title="Buhos · 01:15–02:45 · Platja del Bogatell"><span class="event-time">01:15–02:45</span><span class="event-name">Buhos</span><span class="event-group">Pop festiu</span></a></div></div><div class="stage-col"><div class="stage-header">Plaça Major de Nou Barris</div><div class="stage-body" style="height:1008px"><a class="event" style="top:220px;height:158px;background:#3d5a80" href="https://www.barcelona.cat/lamerce/ca/concert-orquestra-simfonica-de-barcelona-i-nacional-de-catalunya-obc" target="_blank" rel="noopener" title="Orquestra Simfònica de Barcelona i Nacional de Catalunya - OBC · 20:45–22:00 · Plaça Major de Nou Barris"><span class="event-time">20:45–22:00</span><span class="event-name">Orquestra Simfònica de Barcelona i Nacional de Catalunya - OBC</span><span class="event-group">Música simfònica</span></a></div></div><div class="stage-col"><div class="stage-header">Teatre Grec</div><div class="stage-body" style="height:1008px"><a class="event" style="top:315px;height:189px;background:#3d5a80" href="https://www.barcelona.cat/lamerce/ca/concert-nacho-vegas" target="_blank" rel="noopener" title="Nacho Vegas · 21:30–23:00 · Teatre Grec"><span class="event-time">21:30–23:00</span><span class="event-name">Nacho Vegas</span><span class="event-group">Rock independent, folk independent</span></a><a class="event" style="top:567px;height:189px;background:#006d77" href="https://www.barcelona.cat/lamerce/ca/concert-la-paloma" target="_blank" rel="noopener" title="La Paloma · 23:30–01:00 · Teatre Grec"><span class="event-time">23:30–01:00</span><span class="event-name">La Paloma</span><span class="event-group">Rock-Indie</span></a></div></div></div></div></div></div>
+<div class="day-view" id="view-3"><div class="grid-scroll"><div class="grid"><div class="time-col"><div class="corner"></div><div class="time-marks" style="height:1890px"><span class="time-mark" style="top:0px">12:00</span><span class="time-mark" style="top:126px">13:00</span><span class="time-mark" style="top:252px">14:00</span><span class="time-mark" style="top:378px">15:00</span><span class="time-mark" style="top:504px">16:00</span><span class="time-mark" style="top:630px">17:00</span><span class="time-mark" style="top:756px">18:00</span><span class="time-mark" style="top:882px">19:00</span><span class="time-mark" style="top:1008px">20:00</span><span class="time-mark" style="top:1134px">21:00</span><span class="time-mark" style="top:1260px">22:00</span><span class="time-mark" style="top:1386px">23:00</span><span class="time-mark" style="top:1512px">00:00</span><span class="time-mark" style="top:1638px">01:00</span><span class="time-mark" style="top:1764px">02:00</span><span class="time-mark" style="top:1890px">03:00</span></div></div><div class="stages"><div class="stage-col"><div class="stage-header">Avinguda de la Catedral</div><div class="stage-body" style="height:1890px"><a class="event" style="top:1260px;height:189px;background:#264653" href="https://www.barcelona.cat/lamerce/ca/concert-aterciopelados" target="_blank" rel="noopener" title="Aterciopelados · 22:00–23:30 · Avinguda de la Catedral"><span class="event-time">22:00–23:30</span><span class="event-name">Aterciopelados</span><span class="event-group">Rock colombià</span></a><a class="event" style="top:1512px;height:189px;background:#6a4c93" href="https://www.barcelona.cat/lamerce/ca/concert-maika-makovski" target="_blank" rel="noopener" title="Maika Makovski · 00:00–01:30 · Avinguda de la Catedral"><span class="event-time">00:00–01:30</span><span class="event-name">Maika Makovski</span><span class="event-group">Rock</span></a></div></div><div class="stage-col"><div class="stage-header">Avinguda Maria Cristina</div><div class="stage-body" style="height:1890px"><a class="event" style="top:1134px;height:63px;background:#006d77" href="https://www.barcelona.cat/lamerce/ca/concert-ivan-herzog" target="_blank" rel="noopener" title="Ivan Herzog · 21:00–21:30 · Avinguda Maria Cristina"><span class="event-time">21:00–21:30</span><span class="event-name">Ivan Herzog</span><span class="event-group">Pop</span></a><a class="event" style="top:1228px;height:126px;background:#006d77" href="https://www.barcelona.cat/lamerce/ca/concert-banda-neon" target="_blank" rel="noopener" title="Banda Neon · 21:45–22:45 · Avinguda Maria Cristina"><span class="event-time">21:45–22:45</span><span class="event-name">Banda Neon</span><span class="event-group">Pop</span></a><a class="event" style="top:1386px;height:126px;background:#006d77" href="https://www.barcelona.cat/lamerce/ca/concert-paula-koops" target="_blank" rel="noopener" title="Paula Koops · 23:00–00:00 · Avinguda Maria Cristina"><span class="event-time">23:00–00:00</span><span class="event-name">Paula Koops</span><span class="event-group">Pop</span></a><a class="event" style="top:1670px;height:158px;background:#006d77" href="https://www.barcelona.cat/lamerce/ca/concert-leire-martinez" target="_blank" rel="noopener" title="Leire Martínez · 01:15–02:30 · Avinguda Maria Cristina"><span class="event-time">01:15–02:30</span><span class="event-name">Leire Martínez</span><span class="event-group">Pop</span></a></div></div><div class="stage-col"><div class="stage-header">Jardins del Doctor Pla i Armengol</div><div class="stage-body" style="height:1890px"><a class="event" style="top:0px;height:189px;background:#bb3e03" href="https://www.barcelona.cat/lamerce/ca/concert-jam-nation" target="_blank" rel="noopener" title="Jam Nation · 12:00–13:30 · Jardins del Doctor Pla i Armengol"><span class="event-time">12:00–13:30</span><span class="event-name">Jam Nation</span><span class="event-group">Pop, funk, rock, R&amp;B i jazz</span></a><a class="event" style="top:1197px;height:126px;background:#7b2cbf" href="https://www.barcelona.cat/lamerce/ca/concert-marc-vilajuana" target="_blank" rel="noopener" title="Marc Vilajuana · 21:30–22:30 · Jardins del Doctor Pla i Armengol"><span class="event-time">21:30–22:30</span><span class="event-name">Marc Vilajuana</span><span class="event-group">Cançó d’autor, cant antic, música experimental</span></a><a class="event" style="top:1386px;height:189px;background:#284b63" href="https://www.barcelona.cat/lamerce/ca/concert-el-extintor-latorre" target="_blank" rel="noopener" title="El Extintor + LaTorre · 23:00–00:30 · Jardins del Doctor Pla i Armengol"><span class="event-time">23:00–00:30</span><span class="event-name">El Extintor + LaTorre</span><span class="event-group">Folktrònica</span></a></div></div><div class="stage-col"><div class="stage-header">Parc de la Ciutadella</div><div class="stage-body" style="height:1890px"><a class="event" style="top:63px;height:74px;background:#941b0c" href="https://www.barcelona.cat/lamerce/ca/espectacle-marco-de-ana" target="_blank" rel="noopener" title="Marco de Ana · 12:30–13:05 · Parc de la Ciutadella"><span class="event-time">12:30–13:05</span><span class="event-name">Marco de Ana</span><span class="event-group">Dansa flamenca, performance</span></a><a class="event" style="top:189px;height:74px;background:#941b0c" href="https://www.barcelona.cat/lamerce/ca/espectacle-marco-de-ana" target="_blank" rel="noopener" title="Marco de Ana · 13:30–14:05 · Parc de la Ciutadella"><span class="event-time">13:30–14:05</span><span class="event-name">Marco de Ana</span><span class="event-group">Dansa flamenca, performance</span></a><a class="event" style="top:315px;height:74px;background:#941b0c" href="https://www.barcelona.cat/lamerce/ca/espectacle-marco-de-ana" target="_blank" rel="noopener" title="Marco de Ana · 14:30–15:05 · Parc de la Ciutadella"><span class="event-time">14:30–15:05</span><span class="event-name">Marco de Ana</span><span class="event-group">Dansa flamenca, performance</span></a><a class="event" style="top:1323px;height:189px;background:#bb3e03" href="https://www.barcelona.cat/lamerce/ca/concert-sorvina" target="_blank" rel="noopener" title="Sorvina · 22:30–00:00 · Parc de la Ciutadella"><span class="event-time">22:30–00:00</span><span class="event-name">Sorvina</span><span class="event-group">Hip-hop, jazz-rap</span></a></div></div><div class="stage-col"><div class="stage-header">Platja del Bogatell</div><div class="stage-body" style="height:1890px"><a class="event" style="top:1008px;height:126px;background:#006d77" href="https://www.barcelona.cat/lamerce/ca/concert-allergiques-al-pollen" target="_blank" rel="noopener" title="Al·lèrgiques al Pol·len · 20:00–21:00 · Platja del Bogatell"><span class="event-time">20:00–21:00</span><span class="event-name">Al·lèrgiques al Pol·len</span><span class="event-group">Pop-rock, pop independent, rock</span></a><a class="event" style="top:1197px;height:189px;background:#08605f" href="https://www.barcelona.cat/lamerce/ca/concert-la-pegatina" target="_blank" rel="noopener" title="La Pegatina · 21:30–23:00 · Platja del Bogatell"><span class="event-time">21:30–23:00</span><span class="event-name">La Pegatina</span><span class="event-group">Rumba, ska, mestissatge</span></a><a class="event" style="top:1480px;height:189px;background:#08605f" href="https://www.barcelona.cat/lamerce/ca/concert-love-lesbian" target="_blank" rel="noopener" title="Love of Lesbian · 23:45–01:15 · Platja del Bogatell"><span class="event-time">23:45–01:15</span><span class="event-name">Love of Lesbian</span><span class="event-group">Pop independent</span></a><a class="event" style="top:1701px;height:126px;background:#5f0f40" href="https://www.barcelona.cat/lamerce/ca/concert-svetlana" target="_blank" rel="noopener" title="Svetlana · 01:30–02:30 · Platja del Bogatell"><span class="event-time">01:30–02:30</span><span class="event-name">Svetlana</span><span class="event-group">Electropop</span></a></div></div><div class="stage-col"><div class="stage-header">Plaça Major de Nou Barris</div><div class="stage-body" style="height:1890px"><a class="event" style="top:0px;height:126px;background:#bb3e03" href="https://www.barcelona.cat/lamerce/ca/concert-banda-simfonica-roquetes-nou-barris-i-banda-mollet" target="_blank" rel="noopener" title="Banda Simfònica Roquetes-Nou Barris i Banda Mollet · 12:00–13:00 · Plaça Major de Nou Barris"><span class="event-time">12:00–13:00</span><span class="event-name">Banda Simfònica Roquetes-Nou Barris i Banda Mollet</span><span class="event-group">Estils diferents</span></a><a class="event" style="top:1102px;height:158px;background:#3d5a80" href="https://www.barcelona.cat/lamerce/ca/concert-banda-municipal-de-barcelona" target="_blank" rel="noopener" title="Banda Municipal de Barcelona · 20:45–22:00 · Plaça Major de Nou Barris"><span class="event-time">20:45–22:00</span><span class="event-name">Banda Municipal de Barcelona</span><span class="event-group">Música simfònica</span></a></div></div><div class="stage-col"><div class="stage-header">Teatre Grec</div><div class="stage-body" style="height:1890px"><a class="event" style="top:1197px;height:189px;background:#006d77" href="https://www.barcelona.cat/lamerce/ca/concert-ana-rossi-i-joana-queiroz" target="_blank" rel="noopener" title="Ana Rossi i Joana Queiroz · 21:30–23:00 · Teatre Grec"><span class="event-time">21:30–23:00</span><span class="event-name">Ana Rossi i Joana Queiroz</span><span class="event-group">Música contemporània de creació</span></a><a class="event" style="top:1449px;height:189px;background:#284b63" href="https://www.barcelona.cat/lamerce/ca/concert-def-mama-def" target="_blank" rel="noopener" title="Def Mama Def · 23:30–01:00 · Teatre Grec"><span class="event-time">23:30–01:00</span><span class="event-name">Def Mama Def</span><span class="event-group">Hip-hop - fusió africana</span></a></div></div></div></div></div></div>
+<div class="day-view" id="view-4"><div class="grid-scroll"><div class="grid"><div class="time-col"><div class="corner"></div><div class="time-marks" style="height:1134px"><span class="time-mark" style="top:0px">12:00</span><span class="time-mark" style="top:126px">13:00</span><span class="time-mark" style="top:252px">14:00</span><span class="time-mark" style="top:378px">15:00</span><span class="time-mark" style="top:504px">16:00</span><span class="time-mark" style="top:630px">17:00</span><span class="time-mark" style="top:756px">18:00</span><span class="time-mark" style="top:882px">19:00</span><span class="time-mark" style="top:1008px">20:00</span><span class="time-mark" style="top:1134px">21:00</span></div></div><div class="stages"><div class="stage-col"><div class="stage-header">Jardins del Doctor Pla i Armengol</div><div class="stage-body" style="height:1134px"><a class="event" style="top:0px;height:189px;background:#6a4c93" href="https://www.barcelona.cat/lamerce/ca/concert-conservatori-superior-de-musica-liceu" target="_blank" rel="noopener" title="Conservatori Superior de Música Liceu · 12:00–13:30 · Jardins del Doctor Pla i Armengol"><span class="event-time">12:00–13:30</span><span class="event-name">Conservatori Superior de Música Liceu</span><span class="event-group">Rock</span></a></div></div><div class="stage-col"><div class="stage-header">La Plaça de Sant Jaume</div><div class="stage-body" style="height:1134px"><a class="event" style="top:882px;height:189px;background:#941b0c" href="https://www.barcelona.cat/lamerce/ca/concert-carola-ortiz" target="_blank" rel="noopener" title="Carola Ortiz · 19:00–20:30 · La Plaça de Sant Jaume"><span class="event-time">19:00–20:30</span><span class="event-name">Carola Ortiz</span><span class="event-group">Havaneres i cançons de mar</span></a></div></div><div class="stage-col"><div class="stage-header">Parc de la Ciutadella</div><div class="stage-body" style="height:1134px"><a class="event" style="top:126px;height:189px;background:#284b63" href="https://www.barcelona.cat/lamerce/ca/concert-tumbakin" target="_blank" rel="noopener" title="TUMBAKIN · 13:00–14:30 · Parc de la Ciutadella"><span class="event-time">13:00–14:30</span><span class="event-name">TUMBAKIN</span><span class="event-group">Salsa i timba cubanes</span></a><a class="event" style="top:945px;height:189px;background:#941b0c" href="https://www.barcelona.cat/lamerce/ca/concert-giulia-valle" target="_blank" rel="noopener" title="Giulia Valle · 19:30–21:00 · Parc de la Ciutadella"><span class="event-time">19:30–21:00</span><span class="event-name">Giulia Valle</span><span class="event-group">Jazz contemporani</span></a></div></div><div class="stage-col"><div class="stage-header">Plaça Major de Nou Barris</div><div class="stage-body" style="height:1134px"><a class="event" style="top:882px;height:158px;background:#c1121f" href="https://www.barcelona.cat/lamerce/ca/concert-vozes-marco-mezquida" target="_blank" rel="noopener" title="Vozes + Marco Mezquida · 19:00–20:15 · Plaça Major de Nou Barris"><span class="event-time">19:00–20:15</span><span class="event-name">Vozes + Marco Mezquida</span><span class="event-group">Jazz-clàssica</span></a></div></div></div></div></div></div>
+</div>
 
-
-			
-<li class="events-group">
-   <div class="top-info"><span>La Plaça de Catalunya</span></div>
-   <ul><li class="single-event" data-start="19:00" data-end="19:55"  data-content="event-1" data-event="event-1" data-event-id="event-1">
-        <button class="star-toggle" title="Toggle highlight">★</button>
-        <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-bru-sona-9">
-            <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Bedroom Pop</em>
-            <em class="event-name">Bru" - Sona 9</em>
-        </a>
-    </li> <li class="single-event" data-start="19:00" data-end="19:55"  data-content="event-2" data-event="event-1" data-event-id="event-2">
-        <button class="star-toggle" title="Toggle highlight">★</button>
-        <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-cloe-riembau-sona-9">
-            <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Indie pop</em>
-            <em class="event-name">Cloe Riembau" - Sona 9</em>
-        </a>
-    </li> <li class="single-event" data-start="20:00" data-end="20:55"  data-content="event-3" data-event="event-1" data-event-id="event-3">
-        <button class="star-toggle" title="Toggle highlight">★</button>
-        <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-sodi-sona-9">
-            <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Pop-rock</em>
-            <em class="event-name">Sodi" - Sona 9</em>
-        </a>
-    </li> <li class="single-event" data-start="20:30" data-end="21:25"  data-content="event-4" data-event="event-1" data-event-id="event-4">
-        <button class="star-toggle" title="Toggle highlight">★</button>
-        <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-gavinamp3-sona-9">
-            <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Pop</em>
-            <em class="event-name">gavina.mp3" - Sona 9</em>
-        </a>
-    </li> <li class="single-event" data-start="23:00" data-end="23:55"  data-content="event-5" data-event="event-1" data-event-id="event-5">
-        <button class="star-toggle" title="Toggle highlight">★</button>
-        <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-pussy-riot">
-            <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Punk – Música – Video</em>
-            <em class="event-name">PUSSY RIOT</em>
-        </a>
-    </li> <li class="single-event" data-start="1:00" data-end="01:55"  data-content="event-6" data-event="event-1" data-event-id="event-6">
-        <button class="star-toggle" title="Toggle highlight">★</button>
-        <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-ladilla-rusa">
-            <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Electropop, rumba, electronica</em>
-            <em class="event-name">Ladilla Rusa</em>
-        </a>
-    </li></ul>
-</li>
-
-
-<li class="events-group">
-   <div class="top-info"><span>Plaça Major de Nou Barris</span></div>
-   <ul><li class="single-event" data-start="20:45" data-end="21:40"  data-content="event-7" data-event="event-2" data-event-id="event-7">
-        <button class="star-toggle" title="Toggle highlight">★</button>
-        <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-banda-municipal-de-barcelona">
-            <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Simfònica / banda</em>
-            <em class="event-name">Banda Municipal de Barcelona</em>
-        </a>
-    </li></ul>
-</li>
-
-
-<li class="events-group">
-   <div class="top-info"><span>Jardins del Doctor Pla i Armengol</span></div>
-   <ul><li class="single-event" data-start="21:00" data-end="21:55"  data-content="event-8" data-event="event-3" data-event-id="event-8">
-        <button class="star-toggle" title="Toggle highlight">★</button>
-        <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-extrano-weys-orquestra">
-            <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Hip-hop/jazz/funk</em>
-            <em class="event-name">Extraño Weys Orquestra</em>
-        </a>
-    </li> <li class="single-event" data-start="23:15" data-end="00:10"  data-content="event-9" data-event="event-3" data-event-id="event-9">
-        <button class="star-toggle" title="Toggle highlight">★</button>
-        <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-porij">
-            <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Electronic / dance / rock</em>
-            <em class="event-name">Porij</em>
-        </a>
-    </li></ul>
-</li>
-
-
-<li class="events-group">
-   <div class="top-info"><span>La Rambla del Raval</span></div>
-   <ul><li class="single-event" data-start="21:30" data-end="22:25"  data-content="event-10" data-event="event-4" data-event-id="event-10">
-        <button class="star-toggle" title="Toggle highlight">★</button>
-        <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-companyia-les-solidaries">
-            <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Musical rock</em>
-            <em class="event-name">Companyia Les Solidàries</em>
-        </a>
-    </li> <li class="single-event" data-start="23:00" data-end="23:55"  data-content="event-11" data-event="event-4" data-event-id="event-11">
-        <button class="star-toggle" title="Toggle highlight">★</button>
-        <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-ex">
-            <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Rock / jazz / improvisació / punk</em>
-            <em class="event-name">The Ex</em>
-        </a>
-    </li> <li class="single-event" data-start="0:30" data-end="01:25"  data-content="event-12" data-event="event-4" data-event-id="event-12">
-        <button class="star-toggle" title="Toggle highlight">★</button>
-        <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-muqawama">
-            <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Rap / músiques del món</em>
-            <em class="event-name">Muqawama</em>
-        </a>
-    </li></ul>
-</li>
-
-
-<li class="events-group">
-   <div class="top-info"><span>Teatre Grec</span></div>
-   <ul><li class="single-event" data-start="22:00" data-end="22:55"  data-content="event-13" data-event="event-5" data-event-id="event-13">
-        <button class="star-toggle" title="Toggle highlight">★</button>
-        <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-tarta-relena">
-            <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Folk contemporani</em>
-            <em class="event-name">Tarta Relena</em>
-        </a>
-    </li> <li class="single-event" data-start="0:00" data-end="00:55"  data-content="event-14" data-event="event-5" data-event-id="event-14">
-        <button class="star-toggle" title="Toggle highlight">★</button>
-        <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-space-afrika">
-            <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Ambient / electrònica / hip-hop</em>
-            <em class="event-name">Space Afrika</em>
-        </a>
-    </li></ul>
-</li>
-
-
-<li class="events-group">
-   <div class="top-info"><span>Avinguda de la Catedral</span></div>
-   <ul><li class="single-event" data-start="22:30" data-end="23:25"  data-content="event-15" data-event="event-6" data-event-id="event-15">
-        <button class="star-toggle" title="Toggle highlight">★</button>
-        <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-rocio-marquez">
-            <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Flamenc experimental</em>
-            <em class="event-name">Rocío Márquez</em>
-        </a>
-    </li> <li class="single-event" data-start="0:00" data-end="00:55"  data-content="event-16" data-event="event-6" data-event-id="event-16">
-        <button class="star-toggle" title="Toggle highlight">★</button>
-        <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-nino-de-elche">
-            <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Flamenc contemporani</em>
-            <em class="event-name">Niño de Elche</em>
-        </a>
-    </li></ul>
-</li>
-
-
-<li class="events-group">
-   <div class="top-info"><span>Moll de la Fusta</span></div>
-   <ul><li class="single-event" data-start="22:30" data-end="23:25"  data-content="event-17" data-event="event-7" data-event-id="event-17">
-        <button class="star-toggle" title="Toggle highlight">★</button>
-        <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-asia">
-            <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Música clàssica i contemporània</em>
-            <em class="event-name">ASIA</em>
-        </a>
-    </li> <li class="single-event" data-start="0:00" data-end="00:55"  data-content="event-18" data-event="event-7" data-event-id="event-18">
-        <button class="star-toggle" title="Toggle highlight">★</button>
-        <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-lido-pimienta">
-            <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Art / folk</em>
-            <em class="event-name">Lido Pimienta</em>
-        </a>
-    </li> <li class="single-event" data-start="1:30" data-end="02:25"  data-content="event-19" data-event="event-7" data-event-id="event-19">
-        <button class="star-toggle" title="Toggle highlight">★</button>
-        <a target="_blank" href="https://www.barcelona.cat/lamerce/ca/concert-de-kiddy-smile">
-            <em class="event-name" style="display: inline-block; font-size: 8px; color: #eee">Vogue/dance/electro</em>
-            <em class="event-name">Kiddy Smile</em>
-        </a>
-    </li></ul>
-</li>
-
-
-
-
-
-		</ul>
-	</div>
-
-	<div class="empty-favorites-message" id="emptyFavoritesMessage">
-		<p>Encara no has seleccionat cap concert preferit.</p>
-        <p>Fes clic al botó ★ en qualsevol concert per afegir-lo als teus preferits!</p>
-	</div>
-
-	<div class="event-modal">
-		<header class="header">
-			<div class="content">
-				<span class="event-date"></span>
-				<h3 class="event-name"></h3>
-			</div>
-
-			<div class="header-bg"></div>
-		</header>
-
-		<div class="body">
-			<div class="event-info"></div>
-			<div class="body-bg"></div>
-		</div>
-
-		<a href="#0" class="close">Close</a>
-	</div>
-
-	<div class="cover-layer"></div>
-</div> <!-- .cd-schedule -->
-<script src="js/modernizr.js"></script>
-<script src="js/jquery-3.0.0.min.js"></script>
-<script>
-	if( !window.jQuery ) document.write('<script src="js/jquery-3.0.0.min.js"><\/script>');
-</script>
-<script src="js/main.js"></script> <!-- Resource jQuery -->
-
-<script>
-// Cookie utility functions
-function setCookie(name, value, days) {
-    const expires = new Date();
-    expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
-    document.cookie = name + '=' + value + ';expires=' + expires.toUTCString() + ';path=/';
-}
-
-function getCookie(name) {
-    const nameEQ = name + "=";
-    const ca = document.cookie.split(';');
-    for(let i = 0; i < ca.length; i++) {
-        let c = ca[i];
-        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-    }
-    return null;
-}
-
-function getHighlightedEvents() {
-    const highlighted = getCookie('highlightedEvents');
-    return highlighted ? JSON.parse(highlighted) : [];
-}
-
-function saveHighlightedEvents(eventIds) {
-    setCookie('highlightedEvents', JSON.stringify(eventIds), 365); // Save for 1 year
-}
-
-function getShowMode() {
-    const mode = getCookie('showMode');
-    return mode || 'all';
-}
-
-function saveShowMode(mode) {
-    setCookie('showMode', mode, 365);
-}
-
-function updateColumnWidths() {
-    const visibleStages = $('.events-group:not(.empty-after-filter)').length;
-    const totalStages = $('.events-group').length;
-    
-    if (visibleStages > 0) {
-        const newWidth = 100 / visibleStages;
-        $('.events-group:not(.empty-after-filter)').css('width', newWidth + '%');
-        $('.events-group.empty-after-filter').css('width', '0%');
-    } else {
-        // Reset to original width if no stages are visible
-        const originalWidth = 100 / totalStages;
-        $('.events-group').css('width', originalWidth + '%');
-    }
-}
-
-function applyShowFilter() {
-    const showMode = getShowMode();
-    const highlightedEvents = getHighlightedEvents();
-    const toggle = $('#showToggle');
-    const slider = toggle.find('.toggle-slider');
-    const emptyMessage = $('#emptyFavoritesMessage');
-    
-    if (showMode === 'favorites') {
-        toggle.addClass('favorites-mode');
-        
-        // Hide all non-favorite events
-        $('.single-event').each(function() {
-            const eventId = $(this).attr('data-event-id');
-            if (!highlightedEvents.includes(eventId)) {
-                $(this).addClass('hidden-by-filter');
-            } else {
-                $(this).removeClass('hidden-by-filter');
-            }
-        });
-        
-        // Check if any favorites exist and are visible
-        const visibleFavorites = $('.single-event.highlighted:not(.hidden-by-filter)').length;
-        if (visibleFavorites === 0) {
-            emptyMessage.addClass('show');
-        } else {
-            emptyMessage.removeClass('show');
-        }
-        
-    } else {
-        toggle.removeClass('favorites-mode');
-        
-        $('.single-event').removeClass('hidden-by-filter');
-        emptyMessage.removeClass('show');
-    }
-    
-    // Update stage group visibility
-    $('.events-group').each(function() {
-        const visibleEvents = $(this).find('.single-event:not(.hidden-by-filter)').length;
-        if (visibleEvents === 0 && showMode === 'favorites') {
-            $(this).addClass('empty-after-filter');
-        } else {
-            $(this).removeClass('empty-after-filter');
-        }
-    });
-    
-    // Update column widths after filtering
-    updateColumnWidths();
-}
-
-// Initialize everything when page loads
-$(document).ready(function() {
-    const highlightedEvents = getHighlightedEvents();
-    
-    // Apply saved highlights
-    highlightedEvents.forEach(function(eventId) {
-        const eventElement = $('[data-event-id="' + eventId + '"]');
-        eventElement.addClass('highlighted');
-        eventElement.find('.star-toggle').addClass('highlighted');
-    });
-    
-    // Apply saved show mode
-    applyShowFilter();
-    
-    // Handle show toggle clicks
-    $('#showToggle').on('click', function() {
-        const currentMode = getShowMode();
-        const newMode = currentMode === 'all' ? 'favorites' : 'all';
-        saveShowMode(newMode);
-        applyShowFilter();
-    });
-    
-    // Handle star toggle clicks
-    $(document).on('click', '.star-toggle', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        
-        const button = $(this);
-        const eventElement = button.closest('.single-event');
-        const eventId = eventElement.attr('data-event-id');
-        let highlightedEvents = getHighlightedEvents();
-        
-        if (button.hasClass('highlighted')) {
-            // Remove highlight
-            button.removeClass('highlighted');
-            eventElement.removeClass('highlighted');
-            highlightedEvents = highlightedEvents.filter(id => id !== eventId);
-        } else {
-            // Add highlight
-            button.addClass('highlighted');
-            eventElement.addClass('highlighted');
-            if (!highlightedEvents.includes(eventId)) {
-                highlightedEvents.push(eventId);
-            }
-        }
-        
-        saveHighlightedEvents(highlightedEvents);
-        
-        // Reapply filter in case we're in favorites mode
-        applyShowFilter();
-    });
-});
-</script>
+<div class="page-footer">
+  Generat automàticament el 15/09/2026 23:35 a partir de
+  <a href="https://www.barcelona.cat/lamerce/ca/musica-merce" target="_blank" rel="noopener">barcelona.cat/lamerce</a>.
+</div>
 </body>
 </html>
